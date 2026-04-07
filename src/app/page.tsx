@@ -391,7 +391,7 @@ export default function HomePage() {
           COMMISSARY — white bg, large image, overlapping feature cards
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
-        <div className="max-w-7xl">
+        <div className="max-w-7xl mx-auto">
           {/* Heading row */}
           <div className="grid lg:grid-cols-2 gap-8 items-end mb-12">
             <div>
