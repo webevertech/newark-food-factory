@@ -392,68 +392,87 @@ export default function HomePage() {
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Heading row */}
-          <div className="grid lg:grid-cols-2 gap-8 items-end mb-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left — stacked images */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative rounded-2xl overflow-hidden h-52 sm:h-64 lg:h-72 col-span-2">
+                <Image
+                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=90"
+                  alt="Commissary kitchen prep area"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width:1024px) 50vw, 100vw"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden h-36 sm:h-44">
+                <Image
+                  src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=90"
+                  alt="Chef preparing food"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width:1024px) 25vw, 50vw"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden h-36 sm:h-44">
+                <Image
+                  src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=800&q=90"
+                  alt="Commercial kitchen equipment"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width:1024px) 25vw, 50vw"
+                />
+              </div>
+            </div>
+
+            {/* Right — text + feature list */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
                 Commissary Kitchen
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-                Your Home Base for Food Truck & Catering Businesses
+                Your Home Base for Food Truck &amp; Catering Businesses
               </h2>
-            </div>
-            <div>
-              <p className="text-gray-600 leading-relaxed lg:text-right">
+              <p className="mt-4 text-gray-600 leading-relaxed">
                 Newark Food Factory operates as a{" "}
                 <strong>licensed commissary kitchen</strong>, providing food
                 truck owners and caterers with everything they need to grow —
                 from prep space to compliance support.
               </p>
-            </div>
-          </div>
 
-          {/* Large image */}
-          <div className="relative rounded-2xl overflow-hidden h-72 sm:h-96 lg:h-[28rem] mb-[-4rem]">
-            <Image
-              src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=1600&q=95"
-              alt="Commercial commissary kitchen"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-          </div>
-
-          {/* Overlapping feature cards */}
-          <div className="relative z-10 grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {[
-              { icon: Warehouse, title: "Prep Space", desc: "Fully equipped commercial stations" },
-              { icon: ShieldCheck, title: "Compliance", desc: "Health dept. & licensing support" },
-              { icon: Clock, title: "Flexible Hours", desc: "24/7 kitchen access for members" },
-              { icon: Truck, title: "Storage", desc: "Dry, cold, and frozen storage" },
-              { icon: Award, title: "Coaching", desc: "Business mentorship & guidance" },
-              { icon: CalendarDays, title: "Scheduling", desc: "Easy online booking system" },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div
-                key={title}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-5 text-center hover:shadow-xl hover:-translate-y-1 transition-all"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {title}
-                </h3>
-                <p className="mt-1 text-xs text-gray-500">{desc}</p>
+              {/* Feature grid */}
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {[
+                  { icon: Warehouse, title: "Prep Space", desc: "Fully equipped commercial stations" },
+                  { icon: ShieldCheck, title: "Compliance", desc: "Health dept. & licensing support" },
+                  { icon: Clock, title: "Flexible Hours", desc: "24/7 kitchen access for members" },
+                  { icon: Truck, title: "Storage", desc: "Dry, cold, and frozen storage" },
+                  { icon: Award, title: "Coaching", desc: "Business mentorship & guidance" },
+                  { icon: CalendarDays, title: "Scheduling", desc: "Easy online booking system" },
+                ].map(({ icon: Icon, title, desc }) => (
+                  <div
+                    key={title}
+                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 text-sm">
+                        {title}
+                      </h3>
+                      <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="mt-10 flex justify-center gap-4">
-            <Button href="/kitchen-membership">Join Membership</Button>
-            <Button href="/kitchen-membership#pricing" variant="outline">
-              Explore Plans
-            </Button>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button href="/kitchen-membership">Join Membership</Button>
+                <Button href="/kitchen-membership#pricing" variant="outline">
+                  Explore Plans
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -494,7 +513,7 @@ export default function HomePage() {
                   key={label}
                   className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 text-center hover:bg-white/15 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-3">
                     <Icon className="h-6 w-6 text-primary-bright" />
                   </div>
                   <p className="font-semibold text-white">{label}</p>
