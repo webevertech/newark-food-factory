@@ -89,6 +89,57 @@ export default function WorkBasedLearningPage() {
         </div>
       </section>
 
+      {/* REAL PRODUCTION ENVIRONMENT */}
+      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-bright mb-3">
+              Real Work, Real Impact
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+              Real Production Environment
+            </h2>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+              Students work on actual food operations that serve the Newark
+              community every day — not simulations, not practice runs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                icon: UtensilsCrossed,
+                title: "Daily Meals",
+                desc: "Prepare breakfast, lunch, and dinner for pickup and delivery — real customers, real deadlines.",
+              },
+              {
+                icon: CalendarDays,
+                title: "Event Catering",
+                desc: "Plan, prep, and execute catering for weddings, corporate events, and community gatherings.",
+              },
+              {
+                icon: Truck,
+                title: "Food Truck Operations",
+                desc: "Learn the full food truck workflow — from commissary prep to on-site service.",
+              },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="rounded-2xl bg-white/[0.05] border border-white/10 p-6 text-center hover:bg-white/[0.08] transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-4">
+                  <Icon className="h-6 w-6 text-primary-bright" />
+                </div>
+                <h3 className="font-bold text-white text-lg">{title}</h3>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                  {desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS — numbered steps */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -233,6 +284,9 @@ export default function WorkBasedLearningPage() {
             </Button>
             <Button href="/about" variant="outline-light">
               Learn More
+            </Button>
+            <Button href="/meals-events#events" variant="outline-light">
+              Book an Event
             </Button>
           </div>
         </div>

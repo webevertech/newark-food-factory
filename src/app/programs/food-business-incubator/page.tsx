@@ -117,6 +117,7 @@ export default function FoodBusinessIncubatorPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/contact" variant="white">Apply Now</Button>
             <Button href="/about" variant="outline-light">Learn More</Button>
+            <Button href="/meals-events#events" variant="outline-light">Book an Event</Button>
           </div>
         </div>
       </section>

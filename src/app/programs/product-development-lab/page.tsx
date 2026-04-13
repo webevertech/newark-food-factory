@@ -158,6 +158,7 @@ export default function ProductDevelopmentLabPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/contact" variant="white">Apply Now</Button>
             <Button href="/programs/food-business-incubator" variant="outline-light">Explore Incubator</Button>
+            <Button href="/meals-events#events" variant="outline-light">Book an Event</Button>
           </div>
         </div>
       </section>

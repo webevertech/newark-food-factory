@@ -18,6 +18,7 @@ import {
   Clock,
   Award,
   Flame,
+  Balloon,
 } from "lucide-react";
 import { Button } from "@/components/button";
 import Image from "next/image";
@@ -45,7 +46,7 @@ export default function HomePage() {
 
             <div className="relative">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-light mb-6">
-                Let&apos;s grow your business
+                Let&apos;s grow your Food business
               </p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold tracking-tight leading-[1.1] text-white">
@@ -53,16 +54,31 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
-                A food innovation hub powering daily meals, delivery, events,
-                and food entrepreneurs — you can launch your business, grow your
-                brand, and serve your community.
+                A food innovation hub powering{" "}
+                <strong className="text-white">
+                  daily meals, delivery, events, and food entrepreneurs
+                </strong>
+                —from students to food truck owners.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Button href="/start-a-food-business">Get Started</Button>
-                <Button href="/contact" variant="outline-light">
-                  Book a Tour
-                </Button>
+              <div className="mt-10">
+                <Button href="/start-a-food-business">Start Your Journey</Button>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {[
+                  { label: "Order Meals", href: "/meals-events", icon: UtensilsCrossed },
+                  { label: "Book a Tour", href: "/contact", icon: Warehouse },
+                  { label: "Book an Event", href: "/meals-events#events", icon: CalendarDays },
+                ].map(({ label, href, icon: Icon }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="group flex items-center gap-2 rounded-lg bg-white/[0.08] backdrop-blur-sm border border-white/15 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/15 transition-colors"
+                  >
+                    <Icon className="h-4 w-4 text-primary-bright" />
+                    {label}
+                  </Link>
+                ))}
               </div>
 
               {/* Stat cards */}
@@ -139,14 +155,14 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          WHAT WE ARE — dark section, text left + glass icon cards right
+          WHO WE ARE — dark section, text left + glass icon cards right
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gray-950 py-24 px-6 sm:px-10 lg:px-16 xl:px-20 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-bright mb-4">
-              What We Are
+              Who We Are
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Not just a kitchen.
@@ -434,7 +450,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed">
                 Newark Food Factory operates as a{" "}
-                <strong>licensed commissary kitchen</strong>, providing food
+                <strong>commissary kitchen</strong>, providing food
                 truck owners and caterers with everything they need to grow —
                 from prep space to compliance support.
               </p>
@@ -503,8 +519,9 @@ export default function HomePage() {
               markets, and community celebrations.
             </p>
 
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {[
+                { label: "Birthdays", icon: Balloon },
                 { label: "Weddings", icon: Heart },
                 { label: "Corporate", icon: Briefcase },
                 { label: "Markets", icon: Store },
@@ -528,9 +545,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          IMPACT — dark section, ecosystem flow, gradient stat cards
-      ════════════════════════════════════════════════════════════════ */}
+      {/* IMPACT — dark section, ecosystem flow, gradient stat cards */}
       <section className="bg-gray-950 py-24 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -628,6 +643,9 @@ export default function HomePage() {
             </Button>
             <Button href="/meals-events" variant="outline-light">
               Order Food
+            </Button>
+            <Button href="/meals-events#events" variant="outline-light">
+              Book an Event
             </Button>
           </div>
         </div>

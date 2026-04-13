@@ -236,6 +236,9 @@ export default function StartFoodBusinessPage() {
             <Button href="/contact" variant="outline-light">
               Learn More
             </Button>
+            <Button href="/meals-events#events" variant="outline-light">
+              Book an Event
+            </Button>
           </div>
         </div>
       </section>

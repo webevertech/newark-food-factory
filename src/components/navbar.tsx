@@ -58,111 +58,115 @@ export function Navbar() {
           scrolled ? "border-gray-200 shadow-sm" : "border-gray-100"
         }`}
       >
-        <nav aria-label="Main navigation" className="px-6 lg:px-10 xl:px-16">
-          <div className="flex h-16 items-center justify-between">
+        <nav aria-label="Main navigation" className="px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="flex h-16 items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Newark Food Factory - Home">
-              <ChefHat className="h-7 w-7 text-primary" aria-hidden="true" />
-              <span className="font-bold text-lg text-gray-900 tracking-tight hidden sm:inline">
+            <Link href="/" className="flex items-center gap-2 shrink-0 mr-6" aria-label="Newark Food Factory - Home">
+              <ChefHat className="h-6 w-6 text-primary" aria-hidden="true" />
+              <span className="font-bold text-base text-gray-900 tracking-tight hidden sm:inline">
                 Newark Food Factory
               </span>
-              <span className="font-bold text-lg text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
+              <span className="font-bold text-base text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
                 NFF
               </span>
             </Link>
 
-            {/* Desktop nav links */}
-            <div className="hidden xl:flex items-center gap-1" role="menubar">
-              <DesktopLink href="/">Home</DesktopLink>
-              <DesktopLink href="/start-a-food-business">Start a Business</DesktopLink>
+            {/* Desktop nav links — centered */}
+            <div className="hidden xl:flex items-center flex-1" role="menubar">
+              <div className="flex items-center gap-0.5 mx-auto">
+                <DesktopLink href="/">Home</DesktopLink>
+                <DesktopLink href="/start-a-food-business">Start a Food Business</DesktopLink>
 
-              {/* Programs dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setProgramsOpen(true)}
-                onMouseLeave={() => setProgramsOpen(false)}
-              >
-                <button
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-1"
-                  aria-expanded={programsOpen}
-                  aria-haspopup="true"
-                  onClick={() => setProgramsOpen((p) => !p)}
-                  type="button"
+                {/* Programs dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setProgramsOpen(true)}
+                  onMouseLeave={() => setProgramsOpen(false)}
                 >
-                  Programs
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${programsOpen ? "rotate-180" : ""}`} aria-hidden="true" />
-                </button>
-                {programsOpen && (
-                  <div className="absolute top-full left-0 w-[320px] pt-2" role="menu">
-                    <div className="rounded-lg bg-white shadow-lg border border-gray-200 py-2">
-                      {programs.map(({ href, name, icon: Icon, desc }) => (
-                        <Link
-                          key={href}
-                          href={href}
-                          role="menuitem"
-                          className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
-                        >
-                          <Icon className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">{name}</p>
-                            <p className="text-xs text-gray-500">{desc}</p>
-                          </div>
-                        </Link>
-                      ))}
+                  <button
+                    className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-0.5 whitespace-nowrap"
+                    aria-expanded={programsOpen}
+                    aria-haspopup="true"
+                    onClick={() => setProgramsOpen((p) => !p)}
+                    type="button"
+                  >
+                    Programs
+                    <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${programsOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                  </button>
+                  {programsOpen && (
+                    <div className="absolute top-full left-0 w-[300px] pt-2" role="menu">
+                      <div className="rounded-lg bg-white shadow-lg border border-gray-200 py-2">
+                        {programs.map(({ href, name, icon: Icon, desc }) => (
+                          <Link
+                            key={href}
+                            href={href}
+                            role="menuitem"
+                            className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                          >
+                            <Icon className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
+                            <div>
+                              <p className="text-sm font-medium text-gray-900">{name}</p>
+                              <p className="text-xs text-gray-500">{desc}</p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
 
-              <DesktopLink href="/meals-events">Meals + Events</DesktopLink>
+                <DesktopLink href="/meals-events">Meals + Events</DesktopLink>
 
-              {/* Kitchen dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setKitchenOpen(true)}
-                onMouseLeave={() => setKitchenOpen(false)}
-              >
-                <button
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-1"
-                  aria-expanded={kitchenOpen}
-                  aria-haspopup="true"
-                  onClick={() => setKitchenOpen((k) => !k)}
-                  type="button"
+                {/* Kitchen Membership dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setKitchenOpen(true)}
+                  onMouseLeave={() => setKitchenOpen(false)}
                 >
-                  Kitchen
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
-                </button>
-                {kitchenOpen && (
-                  <div className="absolute top-full left-0 w-[280px] pt-2" role="menu">
-                    <div className="rounded-lg bg-white shadow-lg border border-gray-200 py-2">
-                      {kitchenLinks.map(({ href, name, icon: Icon, desc }) => (
-                        <Link
-                          key={href}
-                          href={href}
-                          role="menuitem"
-                          className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
-                        >
-                          <Icon className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">{name}</p>
-                            <p className="text-xs text-gray-500">{desc}</p>
-                          </div>
-                        </Link>
-                      ))}
+                  <button
+                    className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-0.5 whitespace-nowrap"
+                    aria-expanded={kitchenOpen}
+                    aria-haspopup="true"
+                    onClick={() => setKitchenOpen((k) => !k)}
+                    type="button"
+                  >
+                    Kitchen Membership
+                    <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                  </button>
+                  {kitchenOpen && (
+                    <div className="absolute top-full left-0 w-[270px] pt-2" role="menu">
+                      <div className="rounded-lg bg-white shadow-lg border border-gray-200 py-2">
+                        {kitchenLinks.map(({ href, name, icon: Icon, desc }) => (
+                          <Link
+                            key={href}
+                            href={href}
+                            role="menuitem"
+                            className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
+                          >
+                            <Icon className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
+                            <div>
+                              <p className="text-sm font-medium text-gray-900">{name}</p>
+                              <p className="text-xs text-gray-500">{desc}</p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
 
-              <DesktopLink href="/about">About</DesktopLink>
-              <DesktopLink href="/contact">Contact</DesktopLink>
+                <DesktopLink href="/food-entrepreneurs">Food Entrepreneurs</DesktopLink>
+                <DesktopLink href="/chef-studio">Chef Studio</DesktopLink>
+                <DesktopLink href="/about">About</DesktopLink>
+                <DesktopLink href="/contact">Contact</DesktopLink>
+              </div>
             </div>
 
             {/* Right side */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 ml-auto xl:ml-4 shrink-0">
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-white hover:bg-primary-dark transition-colors"
+                className="hidden sm:inline-flex rounded-lg bg-primary px-4 py-2 text-[13px] font-semibold text-white hover:bg-primary-dark transition-colors whitespace-nowrap"
               >
                 Apply Now
               </Link>
@@ -217,7 +221,8 @@ export function Navbar() {
               ))}
             </div>
 
-            <MobileLink href="/partners" onClick={closeMobile}>Partners</MobileLink>
+            <MobileLink href="/food-entrepreneurs" onClick={closeMobile}>Food Entrepreneurs</MobileLink>
+            <MobileLink href="/chef-studio" onClick={closeMobile}>Chef Studio</MobileLink>
             <MobileLink href="/about" onClick={closeMobile}>About</MobileLink>
             <MobileLink href="/contact" onClick={closeMobile}>Contact</MobileLink>
 
@@ -250,7 +255,7 @@ function DesktopLink({ href, children }: { href: string; children: React.ReactNo
   return (
     <Link
       href={href}
-      className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+      className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"
     >
       {children}
     </Link>

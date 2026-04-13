@@ -82,7 +82,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 space-y-1">
+          <p>Newark Food Factory at Maker Hoods — Social Enterprise of Ideal Institute of Technology</p>
           <p>&copy; {new Date().getFullYear()} Newark Food Factory. All rights reserved.</p>
         </div>
       </div>
