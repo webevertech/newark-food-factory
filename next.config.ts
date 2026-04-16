@@ -2,8 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  output: "export",
-  distDir: ".next-build",
   images: {
     unoptimized: true,
     remotePatterns: [
