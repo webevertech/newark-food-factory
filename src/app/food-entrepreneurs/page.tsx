@@ -5,14 +5,15 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Food Entrepreneurs",
   description:
     "Resources, support, and community for food entrepreneurs at Newark Food Factory. Launch, operate, and scale your food business.",
-  alternates: { canonical: "/food-entrepreneurs" },
-};
+  path: "/food-entrepreneurs",
+  keywords: ["food entrepreneur Newark", "food business support NJ", "food startup resources", "culinary entrepreneur program"],
+});
 
 export default function FoodEntrepreneursPage() {
   return (

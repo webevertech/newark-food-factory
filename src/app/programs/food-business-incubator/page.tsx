@@ -9,18 +9,25 @@ import {
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Food Business Incubator",
   description:
     "A structured program to take your food business from concept to revenue with mentorship, kitchen access, and real customers in Newark, NJ.",
-  alternates: { canonical: "/programs/food-business-incubator" },
-};
+  path: "/programs/food-business-incubator",
+  keywords: ["food business incubator Newark", "food startup program NJ", "culinary business mentorship", "food venture accelerator"],
+});
+
+const breadcrumb = breadcrumbJsonLd([
+  { name: "Programs", path: "/start-a-food-business" },
+  { name: "Food Business Incubator", path: "/programs/food-business-incubator" },
+]);
 
 export default function FoodBusinessIncubatorPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <PageHero
         icon={Rocket}
         title="Food Business Incubator"

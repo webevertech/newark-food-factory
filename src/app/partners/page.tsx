@@ -11,14 +11,15 @@ import {
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Partners",
   description:
     "Partner with Newark Food Factory to support workforce development, small business growth, and community food access in Newark, NJ.",
-  alternates: { canonical: "/partners" },
-};
+  path: "/partners",
+  keywords: ["partner with Newark Food Factory", "community food access", "workforce development Newark", "food business sponsorship"],
+});
 
 export default function PartnersPage() {
   return (

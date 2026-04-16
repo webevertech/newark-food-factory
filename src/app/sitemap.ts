@@ -26,6 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { path: "/partners", priority: 0.7, changeFrequency: "monthly" as const },
     {
+      path: "/food-entrepreneurs",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    },
+    {
+      path: "/chef-studio",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/programs/work-based-learning",
       priority: 0.7,
       changeFrequency: "monthly" as const,

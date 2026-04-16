@@ -14,14 +14,15 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Start a Food Business",
   description:
     "Launch your food business with Newark Food Factory. Kitchen access, coaching, sales channels, and community support from idea to scale.",
-  alternates: { canonical: "/start-a-food-business" },
-};
+  path: "/start-a-food-business",
+  keywords: ["start food business Newark", "how to start a food business NJ", "food business startup", "commercial kitchen access Newark"],
+});
 
 export default function StartFoodBusinessPage() {
   return (

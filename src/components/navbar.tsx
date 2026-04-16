@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import {
-  ChefHat,
   Menu,
   X,
   ChevronDown,
@@ -59,14 +58,12 @@ export function Navbar() {
         }`}
       >
         <nav aria-label="Main navigation" className="px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="flex h-16 items-center">
+          <div className="flex h-20 items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0 mr-6" aria-label="Newark Food Factory - Home">
-              <ChefHat className="h-6 w-6 text-primary" aria-hidden="true" />
-              <span className="font-bold text-base text-gray-900 tracking-tight hidden sm:inline">
-                Newark Food Factory
-              </span>
-              <span className="font-bold text-base text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
+            <Link href="/" className="flex items-center shrink-0 mr-8" aria-label="Newark Food Factory - Home">
+              <img src="/3.png" alt="" className="h-14 w-14" aria-hidden="true" />
+              <img src="/7.png" alt="Newark Food Factory" className="h-26 w-auto hidden sm:block" />
+              <span className="font-bold text-lg text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
                 NFF
               </span>
             </Link>
@@ -192,7 +189,7 @@ export function Navbar() {
       {/* Mobile nav overlay */}
       {mobileOpen && (
         <div
-          className="xl:hidden fixed inset-0 top-16 z-[60] bg-white overflow-y-auto"
+          className="xl:hidden fixed inset-0 top-20 z-[60] bg-white overflow-y-auto"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"

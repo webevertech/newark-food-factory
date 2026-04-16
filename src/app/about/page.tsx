@@ -8,14 +8,15 @@ import {
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "About Us",
   description:
     "Learn about Newark Food Factory — a food innovation hub at the intersection of education, production, and entrepreneurship in Newark, NJ.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  keywords: ["about Newark Food Factory", "food innovation hub Newark", "community kitchen Newark NJ", "food business ecosystem"],
+});
 
 export default function AboutPage() {
   return (

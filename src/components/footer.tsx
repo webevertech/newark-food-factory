@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChefHat, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -25,9 +25,9 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2 text-white mb-4" aria-label="Newark Food Factory - Home">
-              <ChefHat className="h-7 w-7 text-primary" aria-hidden="true" />
-              <span className="font-bold text-lg">Newark Food Factory</span>
+            <Link href="/" className="flex items-center text-white mb-4" aria-label="Newark Food Factory - Home">
+              <img src="/2.png" alt="" className="h-14 w-14" aria-hidden="true" />
+              <img src="/6.png" alt="Newark Food Factory" className="h-26 w-auto" />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               A food innovation hub powering daily meals, delivery, events, and food entrepreneurs in Newark.
@@ -67,15 +67,15 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" aria-hidden="true" />
+                <MapPin className="h-4 w-4 mt-0.5 text-primary-bright shrink-0" aria-hidden="true" />
                 <span>Newark, NJ</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
+                <Phone className="h-4 w-4 text-primary-bright shrink-0" aria-hidden="true" />
                 <a href="tel:+19735550100" className="hover:text-white transition-colors">(973) 555-0100</a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
+                <Mail className="h-4 w-4 text-primary-bright shrink-0" aria-hidden="true" />
                 <a href="mailto:info@newarkfoodfactory.com" className="break-all hover:text-white transition-colors">info@newarkfoodfactory.com</a>
               </li>
             </ul>

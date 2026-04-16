@@ -12,18 +12,25 @@ import {
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Food Truck Membership",
   description:
     "Commissary kitchen access, storage, and business growth support for food truck owners and caterers in Newark, NJ.",
-  alternates: { canonical: "/programs/food-truck-membership" },
-};
+  path: "/programs/food-truck-membership",
+  keywords: ["food truck commissary Newark", "food truck kitchen rental NJ", "mobile food vendor support", "food truck storage Newark"],
+});
+
+const breadcrumb = breadcrumbJsonLd([
+  { name: "Programs", path: "/start-a-food-business" },
+  { name: "Food Truck Membership", path: "/programs/food-truck-membership" },
+]);
 
 export default function FoodTruckMembershipPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <PageHero
         icon={Truck}
         title="Your Commissary Kitchen + Business Growth Partner"

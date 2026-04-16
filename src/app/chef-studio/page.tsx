@@ -23,14 +23,15 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Chef Studio",
   description:
     "Create content. Host live dining experiences. Grow your audience. At Newark Food Factory, chefs step into a platform — not just a kitchen.",
-  alternates: { canonical: "/chef-studio" },
-};
+  path: "/chef-studio",
+  keywords: ["chef studio Newark", "culinary content creation", "live dining experience NJ", "chef platform Newark Food Factory"],
+});
 
 export default function ChefStudioPage() {
   return (

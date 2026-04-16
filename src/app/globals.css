@@ -3,10 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --primary: #d30100;
-  --primary-light: #c23a3a;
-  --primary-bright: #ff6b6b;
-  --primary-dark: #b00100;
+  --primary: #8d1c0d;
+  --primary-light: #b8432f;
+  --primary-bright: #e8735e;
+  --primary-dark: #6e1509;
 }
 
 @theme inline {

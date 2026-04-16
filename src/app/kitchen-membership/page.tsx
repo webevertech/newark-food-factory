@@ -27,14 +27,15 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Kitchen Membership",
   description:
     "More than a commissary kitchen — Newark Food Factory is where food entrepreneurs launch, operate, and scale real businesses. Explore membership plans from $149/mo.",
-  alternates: { canonical: "/kitchen-membership" },
-};
+  path: "/kitchen-membership",
+  keywords: ["commissary kitchen rental Newark", "commercial kitchen membership NJ", "shared kitchen space Newark", "food truck commissary Newark"],
+});
 
 export default function KitchenMembershipPage() {
   return (

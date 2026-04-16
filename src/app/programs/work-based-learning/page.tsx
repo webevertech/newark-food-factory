@@ -14,18 +14,25 @@ import {
 import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Work-Based Learning",
   description:
     "Gain real-world culinary and business experience while earning in a real production kitchen environment in Newark, NJ.",
-  alternates: { canonical: "/programs/work-based-learning" },
-};
+  path: "/programs/work-based-learning",
+  keywords: ["culinary training Newark NJ", "work-based learning food", "paid culinary apprenticeship", "kitchen job training Newark"],
+});
+
+const breadcrumb = breadcrumbJsonLd([
+  { name: "Programs", path: "/start-a-food-business" },
+  { name: "Work-Based Learning", path: "/programs/work-based-learning" },
+]);
 
 export default function WorkBasedLearningPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <PageHero
         icon={GraduationCap}
         title="Work-Based Learning"
