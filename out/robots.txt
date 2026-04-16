@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+Sitemap: https://newarkfoodfactory.com/sitemap.xml
