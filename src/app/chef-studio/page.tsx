@@ -61,9 +61,9 @@ export default function ChefStudioPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold tracking-tight text-white leading-[1.1]">
-                Chefs Don&apos;t Just Cook Here.
+                Chef Studio &amp; Content Platform
                 <br />
-                <span className="text-primary-bright">They Build Their Brand.</span>
+                <span className="text-primary-bright">Newark Food Factory</span>
               </h1>
 
               <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">

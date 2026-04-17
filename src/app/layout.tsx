@@ -74,22 +74,22 @@ export const metadata: Metadata = {
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "FoodEstablishment"],
     "@id": `${BASE_URL}/#localbusiness`,
     name: "Newark Food Factory",
     description:
       "A food innovation hub powering daily meals, delivery, events, and food entrepreneurs in Newark, NJ.",
     url: BASE_URL,
-    telephone: "(973) 555-0100",
     email: "info@newarkfoodfactory.com",
     image: `${BASE_URL}/3.png`,
     logo: `${BASE_URL}/3.png`,
     priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card",
+    servesCuisine: ["American", "Multi-Cuisine"],
+    hasMenu: `${BASE_URL}/meals-events/`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Newark",
       addressLocality: "Newark",
       addressRegion: "NJ",
       postalCode: "07102",
@@ -123,14 +123,53 @@ const jsonLd = [
       "@type": "OfferCatalog",
       name: "Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commissary Kitchen Membership" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Food Business Incubator" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Daily Meals & Catering" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Event Space Rental" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Food Truck Commissary" } },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commissary Kitchen Membership",
+            description: "Licensed commercial kitchen access with flexible scheduling, storage, and business support for food entrepreneurs.",
+            url: `${BASE_URL}/kitchen-membership/`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Food Business Incubator",
+            description: "Launch and grow your food business with mentorship, resources, and commercial kitchen access.",
+            url: `${BASE_URL}/programs/food-business-incubator/`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Daily Meals & Catering",
+            description: "Fresh daily meals for pickup and delivery, plus full-service catering for events in Newark, NJ.",
+            url: `${BASE_URL}/meals-events/`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Event Space Rental",
+            description: "Book our venue for private events, corporate gatherings, and community celebrations.",
+            url: `${BASE_URL}/meals-events/`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Food Truck Commissary",
+            description: "Commissary base for food truck operators with storage, prep space, and business coaching.",
+            url: `${BASE_URL}/programs/food-truck-membership/`,
+          },
+        },
       ],
     },
-    sameAs: [],
   },
   {
     "@context": "https://schema.org",
@@ -160,11 +199,6 @@ const jsonLd = [
     name: "Newark Food Factory",
     url: BASE_URL,
     publisher: { "@id": `${BASE_URL}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${BASE_URL}/?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   },
 ];
 

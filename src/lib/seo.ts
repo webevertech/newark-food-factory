@@ -19,7 +19,7 @@ export function createMetadata({
     title,
     description,
     keywords,
-    alternates: { canonical: path },
+    alternates: { canonical: `${BASE_URL}${path}` },
     openGraph: {
       title: `${title} | ${SITE_NAME}`,
       description,

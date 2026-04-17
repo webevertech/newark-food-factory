@@ -7,13 +7,16 @@ import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/seo";
 
-export const metadata = createMetadata({
-  title: "Food Entrepreneurs",
-  description:
-    "Resources, support, and community for food entrepreneurs at Newark Food Factory. Launch, operate, and scale your food business.",
-  path: "/food-entrepreneurs",
-  keywords: ["food entrepreneur Newark", "food business support NJ", "food startup resources", "culinary entrepreneur program"],
-});
+export const metadata = {
+  ...createMetadata({
+    title: "Food Entrepreneurs",
+    description:
+      "Resources, support, and community for food entrepreneurs at Newark Food Factory. Launch, operate, and scale your food business.",
+    path: "/food-entrepreneurs",
+    keywords: ["food entrepreneur Newark", "food business support NJ", "food startup resources", "culinary entrepreneur program"],
+  }),
+  robots: { index: false, follow: true },
+};
 
 export default function FoodEntrepreneursPage() {
   return (

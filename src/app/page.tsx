@@ -494,53 +494,74 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          EVENTS — full-bleed event space photo + frosted glass cards
+          EVENTS — stacked: heading + 4 image cards + CTA
       ════════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[560px] flex items-center overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&q=95"
-          alt="Event space"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gray-950/60" />
-
-        <div className="relative z-10 w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-20">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-bright mb-4">
-              Events & Catering
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Your Next Event Starts Here
-            </h2>
-            <p className="mt-4 text-gray-300 max-w-xl mx-auto">
-              5,000 sq ft event space for weddings, corporate gatherings,
-              markets, and community celebrations.
-            </p>
-
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {[
-                { label: "Birthdays", icon: Balloon },
-                { label: "Weddings", icon: Heart },
-                { label: "Corporate", icon: Briefcase },
-                { label: "Markets", icon: Store },
-              ].map(({ label, icon: Icon }) => (
-                <div
-                  key={label}
-                  className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 text-center hover:bg-white/15 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-3">
-                    <Icon className="h-6 w-6 text-primary-bright" />
-                  </div>
-                  <p className="font-semibold text-white">{label}</p>
-                </div>
-              ))}
+      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+                Events &amp; Catering
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+                Your Next Event Starts Here
+              </h2>
+              <p className="mt-3 text-gray-600 max-w-lg leading-relaxed">
+                5,000 sq ft event space for weddings, corporate gatherings,
+                markets, and community celebrations.
+              </p>
             </div>
+            <div className="flex gap-4 shrink-0">
+              <Button href="/meals-events#events">Book Event</Button>
+              <Button href="/contact" variant="outline">
+                Request a Quote
+              </Button>
+            </div>
+          </div>
 
-            <Button href="/meals-events#events" className="mt-10">
-              Book Event
-            </Button>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                label: "Birthdays",
+                icon: Balloon,
+                img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+              },
+              {
+                label: "Weddings",
+                icon: Heart,
+                img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
+              },
+              {
+                label: "Corporate",
+                icon: Briefcase,
+                img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+              },
+              {
+                label: "Markets",
+                icon: Store,
+                img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+              },
+            ].map(({ label, icon: Icon, img }) => (
+              <div
+                key={label}
+                className="group relative rounded-2xl overflow-hidden h-72"
+              >
+                <Image
+                  src={img}
+                  alt={`${label} at Newark Food Factory`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/90 flex items-center justify-center shrink-0">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <p className="font-bold text-white text-lg">{label}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

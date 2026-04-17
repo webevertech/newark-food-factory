@@ -26,8 +26,8 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center text-white mb-4" aria-label="Newark Food Factory - Home">
-              <img src="/2.png" alt="" className="h-14 w-14" aria-hidden="true" />
-              <img src="/6.png" alt="Newark Food Factory" className="h-26 w-auto" />
+              <img src="/2.png" alt="" className="h-14 w-14" width={56} height={56} aria-hidden="true" />
+              <img src="/6.png" alt="Newark Food Factory" className="h-26 w-auto" width={260} height={104} />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               A food innovation hub powering daily meals, delivery, events, and food entrepreneurs in Newark.

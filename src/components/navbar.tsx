@@ -61,8 +61,8 @@ export function Navbar() {
           <div className="flex h-20 items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0 mr-8" aria-label="Newark Food Factory - Home">
-              <img src="/3.png" alt="" className="h-14 w-14" aria-hidden="true" />
-              <img src="/7.png" alt="Newark Food Factory" className="h-26 w-auto hidden sm:block" />
+              <img src="/3.png" alt="" className="h-14 w-14" width={56} height={56} aria-hidden="true" />
+              <img src="/7.png" alt="Newark Food Factory" className="h-26 w-auto hidden sm:block" width={260} height={104} />
               <span className="font-bold text-lg text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
                 NFF
               </span>
