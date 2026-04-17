@@ -12,6 +12,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
 import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
@@ -274,30 +275,11 @@ export default function WorkBasedLearningPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <GraduationCap className="h-10 w-10 text-white/80 mx-auto mb-6" />
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            Start Your Journey
-          </h2>
-          <p className="mt-4 text-lg text-white/80">
-            Apply for our Work-Based Learning program today and take the first
-            step toward a career in food.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/contact" variant="white">
-              Apply Now
-            </Button>
-            <Button href="/about" variant="outline-light">
-              Learn More
-            </Button>
-            <Button href="/meals-events#events" variant="outline-light">
-              Book an Event
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Start Your Journey"
+        subtitle="Apply for our Work-Based Learning program today and take the first step toward a career in food."
+      />
     </>
   );
 }

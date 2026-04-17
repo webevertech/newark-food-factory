@@ -17,10 +17,10 @@ import {
   Heart,
   Clock,
   Award,
-  Flame,
   Balloon,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -403,6 +403,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CTASection
+        title="Three Ways to Get Started"
+        subtitle="Apply for a program, join our kitchen community, or tour the facility in person."
+      />
+
       {/* ════════════════════════════════════════════════════════════════
           COMMISSARY — white bg, large image, overlapping feature cards
       ════════════════════════════════════════════════════════════════ */}
@@ -630,47 +635,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          FINAL CTA — split: team photo left + solid red panel right
-      ════════════════════════════════════════════════════════════════ */}
-      <section className="grid lg:grid-cols-2 min-h-[400px]">
-        {/* Left — image */}
-        <div className="relative h-64 lg:h-auto">
-          <Image
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=95"
-            alt="Newark Food Factory team"
-            fill
-            className="object-cover"
-            sizes="50vw"
-          />
-        </div>
-
-        {/* Right — red panel */}
-        <div className="bg-primary flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-20 py-16 lg:py-24">
-          <Flame className="h-10 w-10 text-white/80 mb-6" />
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Ready to Get Started?
-          </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-md">
-            Whether you want to start a food business, join our kitchen, or
-            order fresh meals — we&apos;re here for you.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact" variant="white">
-              Apply Now
-            </Button>
-            <Button href="/kitchen-membership" variant="outline-light">
-              Join Membership
-            </Button>
-            <Button href="/meals-events" variant="outline-light">
-              Order Food
-            </Button>
-            <Button href="/meals-events#events" variant="outline-light">
-              Book an Event
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Ready to Get Started?"
+        subtitle="Whether you want to start a food business, join our kitchen, or book a tour — we're here for you."
+      />
     </>
   );
 }

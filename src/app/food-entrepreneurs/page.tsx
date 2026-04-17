@@ -1,9 +1,8 @@
 import {
   Rocket,
-  ArrowRight,
   Flame,
 } from "lucide-react";
-import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/seo";
 
@@ -29,7 +28,7 @@ export default function FoodEntrepreneursPage() {
         imageAlt="Food entrepreneur in commercial kitchen"
       />
 
-      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white text-center">
+      <section className="py-20 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white text-center">
         <div className="max-w-2xl mx-auto">
           <Flame className="h-10 w-10 text-primary mx-auto mb-6" />
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -39,17 +38,14 @@ export default function FoodEntrepreneursPage() {
             We&apos;re building something special for food entrepreneurs. In the
             meantime, explore our programs or get in touch to learn more.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/start-a-food-business">Start a Food Business</Button>
-            <Button href="/contact" variant="outline">
-              Contact Us
-            </Button>
-            <Button href="/meals-events#events" variant="outline">
-              Book an Event
-            </Button>
-          </div>
         </div>
       </section>
+
+      <CTASection
+        dark
+        title="Get Involved Today"
+        subtitle="Start a food business, join our kitchen, or come take a tour."
+      />
     </>
   );
 }

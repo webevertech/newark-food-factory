@@ -19,13 +19,12 @@ import {
   FileCheck,
   Clapperboard,
   ArrowRight,
-  Phone,
   CalendarDays,
-  Flame,
   BookOpen,
   Smartphone,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 
@@ -405,6 +404,11 @@ export default function KitchenMembershipPage() {
         </div>
       </section>
 
+      <CTASection
+        title="See the Kitchen for Yourself"
+        subtitle="Apply, join a membership plan, or book a tour to walk the facility with our team."
+      />
+
       {/* ════════════════════════════════════════════════════════════════
           SECTION 4 — WHY THIS MODEL WINS
       ════════════════════════════════════════════════════════════════ */}
@@ -648,56 +652,11 @@ export default function KitchenMembershipPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          SECTION 8 — FINAL CTA
-      ════════════════════════════════════════════════════════════════ */}
-      <section className="grid lg:grid-cols-2 min-h-[400px]">
-        <div className="relative h-64 lg:h-auto">
-          <Image
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=95"
-            alt="Newark Food Factory team"
-            fill
-            className="object-cover"
-            sizes="50vw"
-          />
-        </div>
-
-        <div className="bg-primary flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-20 py-16 lg:py-24">
-          <Flame className="h-10 w-10 text-white/80 mb-6" />
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Ready to Build Your Food Business?
-          </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-md">
-            Whether you&apos;re just starting out or scaling fast — there&apos;s a
-            place for you at Newark Food Factory.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact" variant="white">
-              Join Membership
-            </Button>
-            <Button href="/start-a-food-business" variant="outline-light">
-              Apply for Food Truck Program
-            </Button>
-            <Button href="/meals-events#events" variant="outline-light">
-              Book an Event
-            </Button>
-          </div>
-          <div className="mt-4 flex flex-wrap gap-6">
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 hover:text-white transition-colors"
-            >
-              <CalendarDays className="h-4 w-4" /> Book a Tour
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 hover:text-white transition-colors"
-            >
-              <Phone className="h-4 w-4" /> Talk to Our Team
-            </a>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Ready to Build Your Food Business?"
+        subtitle="Whether you're just starting out or scaling fast — there's a place for you at Newark Food Factory."
+      />
     </>
   );
 }

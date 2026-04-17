@@ -2,13 +2,12 @@ import { LucideIcon } from "lucide-react";
 import Image from "next/image";
 
 export function PageHero({
-  icon: Icon,
   title,
   subtitle,
   image,
   imageAlt = "",
 }: {
-  icon: LucideIcon;
+  icon?: LucideIcon;
   title: string;
   subtitle?: string;
   image?: string;
@@ -37,10 +36,6 @@ export function PageHero({
       {/* Content — centered */}
       <div className="relative z-10 w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 mx-auto mb-6">
-            <Icon className="h-6 w-6 text-primary-bright" aria-hidden="true" />
-          </div>
-
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
             {title}
           </h1>

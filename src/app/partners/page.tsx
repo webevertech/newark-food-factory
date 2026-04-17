@@ -8,7 +8,7 @@ import {
   GraduationCap,
   ShoppingCart,
 } from "lucide-react";
-import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
@@ -131,18 +131,11 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary text-white py-24 px-6 sm:px-10 lg:px-16 xl:px-20 text-center">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold">Become a Partner</h2>
-          <p className="mt-3 text-white/80 max-w-xl mx-auto">
-            Let&apos;s build Newark&apos;s food ecosystem together.
-          </p>
-          <Button href="/contact" variant="outline-light" className="mt-6">
-            Get in Touch
-          </Button>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Become a Partner"
+        subtitle="Let's build Newark's food ecosystem together."
+      />
     </>
   );
 }

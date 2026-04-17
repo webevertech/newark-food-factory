@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const quickLinks = [
@@ -22,12 +23,18 @@ export function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-300" role="contentinfo">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center text-white mb-4" aria-label="Newark Food Factory - Home">
-              <img src="/2.png" alt="" className="h-14 w-14" width={56} height={56} aria-hidden="true" />
-              <img src="/6.png" alt="Newark Food Factory" className="h-26 w-auto" width={260} height={104} />
+              <Image src="/2.png" alt="" width={56} height={56} className="h-14 w-14" aria-hidden="true" />
+              <Image
+                src="/6.png"
+                alt="Newark Food Factory"
+                width={260}
+                height={260}
+                className="h-26 w-26"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               A food innovation hub powering daily meals, delivery, events, and food entrepreneurs in Newark.
@@ -80,10 +87,24 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* IITNJ */}
+          <div className="flex flex-col items-end gap-3">
+            <Image
+              src="/iitnj-white-logo (2).png"
+              alt="Ideal Institute of Technology"
+              width={160}
+              height={48}
+              className="w-30"
+              style={{ height: "auto" }}
+            />
+            <p className="text-sm leading-relaxed text-gray-400 text-right">
+              Newark Food Factory at Maker Hoods — Social Enterprise of Ideal Institute of Technology
+            </p>
+          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 space-y-1">
-          <p>Newark Food Factory at Maker Hoods — Social Enterprise of Ideal Institute of Technology</p>
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
           <p>&copy; {new Date().getFullYear()} Newark Food Factory. All rights reserved.</p>
         </div>
       </div>

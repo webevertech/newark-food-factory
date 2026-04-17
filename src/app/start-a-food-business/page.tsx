@@ -13,6 +13,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/seo";
 
@@ -221,28 +222,11 @@ export default function StartFoodBusinessPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          CTA — primary bg with outline-light variant
-      ════════════════════════════════════════════════════════════════ */}
-      <section className="bg-primary py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Ready to Launch?</h2>
-          <p className="mt-4 text-lg text-white/80">
-            Apply now and take the first step toward your food business.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/contact" variant="white">
-              Apply Now
-            </Button>
-            <Button href="/contact" variant="outline-light">
-              Learn More
-            </Button>
-            <Button href="/meals-events#events" variant="outline-light">
-              Book an Event
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Ready to Launch?"
+        subtitle="Apply now and take the first step toward your food business."
+      />
     </>
   );
 }

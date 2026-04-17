@@ -10,6 +10,7 @@ import {
   Check,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
 import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
@@ -253,18 +254,11 @@ export default function FoodTruckMembershipPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Join Our Membership</h2>
-          <p className="mt-4 text-lg text-white/80">Get started with the commissary that helps you grow.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/contact" variant="white">Join Membership</Button>
-            <Button href="/kitchen-membership#pricing" variant="outline-light">View Plans</Button>
-            <Button href="/meals-events#events" variant="outline-light">Book an Event</Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Join Our Membership"
+        subtitle="Get started with the commissary that helps you grow."
+      />
     </>
   );
 }

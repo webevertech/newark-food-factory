@@ -10,7 +10,7 @@ import {
   CalendarDays,
   Handshake,
 } from "lucide-react";
-import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
 import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
@@ -157,18 +157,11 @@ export default function ProductDevelopmentLabPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-20 px-6 sm:px-10 lg:px-16 xl:px-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Bring Your Product to Life</h2>
-          <p className="mt-4 text-lg text-white/80">Apply to our Product Development Lab.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/contact" variant="white">Apply Now</Button>
-            <Button href="/programs/food-business-incubator" variant="outline-light">Explore Incubator</Button>
-            <Button href="/meals-events#events" variant="outline-light">Book an Event</Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Bring Your Product to Life"
+        subtitle="Apply to our Product Development Lab."
+      />
     </>
   );
 }

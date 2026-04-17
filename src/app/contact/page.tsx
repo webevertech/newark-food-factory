@@ -7,12 +7,12 @@ import {
   Clock,
   Send,
 } from "lucide-react";
-import { Button } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { useState } from "react";
 import Image from "next/image";
 
 const inquiryTypes = [
+  "Book a Tour",
   "Food Truck Membership",
   "Kitchen Rental",
   "Catering / Events",
@@ -195,7 +195,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="rounded-xl bg-gray-900 text-white p-6">
+              <div id="tour" className="rounded-xl bg-gray-900 text-white p-6 scroll-mt-24">
                 <h4 className="font-bold text-primary-bright mb-2">Book a Tour</h4>
                 <p className="text-sm text-gray-300">
                   Want to see our facility in person? Schedule a tour and we&apos;ll show you everything

@@ -22,6 +22,7 @@ import {
   Repeat,
 } from "lucide-react";
 import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 
@@ -412,6 +413,11 @@ export default function ChefStudioPage() {
         </div>
       </section>
 
+      <CTASection
+        title="Bring Your Concept to Life"
+        subtitle="Apply for Chef Studio, join a membership, or book a tour to see the space."
+      />
+
       {/* ════════════════════════════════════════════════════════════════
           SECTION 6 — HOW YOU MAKE MONEY
       ════════════════════════════════════════════════════════════════ */}
@@ -623,43 +629,11 @@ export default function ChefStudioPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          SECTION 10 — FINAL CTA
-      ════════════════════════════════════════════════════════════════ */}
-      <section className="grid lg:grid-cols-2 min-h-[400px]">
-        <div className="relative h-64 lg:h-auto">
-          <Image
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=95"
-            alt="Chef studio team"
-            fill
-            className="object-cover"
-            sizes="50vw"
-          />
-        </div>
-
-        <div className="bg-primary flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-20 py-16 lg:py-24">
-          <Clapperboard className="h-10 w-10 text-white/80 mb-6" />
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Create. Host. Build Your Culinary Brand.
-          </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-md">
-            We host a limited number of Chef Studio Experiences each month to
-            maintain quality and audience impact. Dates fill quickly — secure yours
-            early.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/contact" variant="white">
-              Book Your Chef Studio Experience
-            </Button>
-            <Button href="/contact" variant="outline-light">
-              Schedule a Consultation
-            </Button>
-            <Button href="/meals-events#events" variant="outline-light">
-              Book an Event
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        dark
+        title="Create. Host. Build Your Culinary Brand."
+        subtitle="We host a limited number of Chef Studio Experiences each month. Dates fill quickly — secure yours early."
+      />
 
       {/* ════════════════════════════════════════════════════════════════
           CLOSING BRAND STATEMENT
