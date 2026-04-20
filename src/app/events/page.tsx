@@ -211,9 +211,6 @@ export default function EventsPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
               Inquiry Form
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Tell Us About Your Event
-            </h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
               Share a few details and we&apos;ll get back to you with
               availability, pricing, and next steps.
