@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Newark Food Factory",
   },
   description:
-    "A food innovation hub powering daily meals, delivery, events, and food entrepreneurs — from students to food truck owners in Newark, NJ.",
+    "A food innovation hub powering daily meals, delivery, events, and food entrepreneurs, from students to food truck owners in Newark, NJ.",
   keywords: [
     "Newark food business",
     "commercial kitchen rental",

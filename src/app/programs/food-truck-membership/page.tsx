@@ -212,7 +212,7 @@ export default function FoodTruckMembershipPage() {
         </div>
       </section>
 
-      {/* EVENT INTEGRATION — full-bleed image with overlay content */}
+      {/* EVENT INTEGRATION, full-bleed image with overlay content */}
       <section className="relative min-h-[400px] sm:min-h-[480px] flex items-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1555244162-803834f70033?w=1920&q=85"

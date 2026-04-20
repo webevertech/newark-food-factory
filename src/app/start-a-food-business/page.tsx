@@ -37,7 +37,7 @@ export default function StartFoodBusinessPage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          PATHWAY — dark numbered squares with connecting line
+          PATHWAY, dark numbered squares with connecting line
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -79,7 +79,7 @@ export default function StartFoodBusinessPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SALES CHANNELS — dark bg, frosted glass cards
+          SALES CHANNELS, dark bg, frosted glass cards
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto">
@@ -118,7 +118,7 @@ export default function StartFoodBusinessPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SUPPORT SYSTEM — split: content left + stacked items right
+          SUPPORT SYSTEM, split: content left + stacked items right
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -166,7 +166,7 @@ export default function StartFoodBusinessPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          PROGRAM TIERS — 3-tier pricing layout
+          PROGRAM TIERS, 3-tier pricing layout
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">

@@ -21,7 +21,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "About Us",
   description:
-    "Newark Food Factory is where futures are built through food — a place to learn, earn, launch, and own. Built by Ideal Institute of Technology.",
+    "Newark Food Factory is where futures are built through food, a place to learn, earn, launch, and own. Built by Ideal Institute of Technology.",
   path: "/about",
   keywords: [
     "about Newark Food Factory",
@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 1 — HERO
+          SECTION 1, HERO
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gray-950 overflow-hidden min-h-[460px] sm:min-h-[520px] flex items-center">
         <Image
@@ -53,7 +53,7 @@ export default function AboutPage() {
         <div className="relative z-10 w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-20 lg:py-28 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
-              This Is Where Futures Are Built—Through Food
+              This Is Where Futures Are Built, Through Food
             </h1>
 
             <div className="mt-5 text-base sm:text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
@@ -62,7 +62,7 @@ export default function AboutPage() {
             </div>
 
             <p className="mt-4 text-base sm:text-lg text-white/90 max-w-xl mx-auto leading-relaxed">
-              Newark Food Factory exists to change that—one person, one plate,
+              Newark Food Factory exists to change that, one person, one plate,
               one business at a time.
             </p>
 
@@ -79,14 +79,14 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 2 — THE REALITY
+          SECTION 2, THE REALITY
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative rounded-2xl overflow-hidden h-80 lg:h-[460px] order-2 lg:order-1">
             <Image
               src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=90"
-              alt="Home cooking — raw and real"
+              alt="Home cooking, raw and real"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -108,19 +108,19 @@ export default function AboutPage() {
             <ul className="space-y-4">
               {[
                 {
-                  has: "There are people in Newark who can cook better than most restaurants—",
+                  has: "There are people in Newark who can cook better than most restaurants, ",
                   but: "but have no kitchen.",
                 },
                 {
-                  has: "Students with potential—",
+                  has: "Students with potential, ",
                   but: "but no clear path forward.",
                 },
                 {
-                  has: "Entrepreneurs with ideas—",
+                  has: "Entrepreneurs with ideas, ",
                   but: "but no way to start.",
                 },
                 {
-                  has: "Communities full of culture—",
+                  has: "Communities full of culture, ",
                   but: "but disconnected from ownership.",
                 },
               ].map(({ has, but }) => (
@@ -138,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 3 — THE TURNING POINT
+          SECTION 3, THE TURNING POINT
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gradient-to-br from-primary to-primary-dark text-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
@@ -188,7 +188,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 4 — WHAT WE ARE
+          SECTION 4, WHAT WE ARE
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -245,7 +245,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 5 — IDEAL INSTITUTE
+          SECTION 5, IDEAL INSTITUTE
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -269,7 +269,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="mt-5 text-gray-300 leading-relaxed">
-              Newark Food Factory is an Ideal Social Enterprise—an initiative
+              Newark Food Factory is an Ideal Social Enterprise, an initiative
               of the Ideal Institute of Technology, a nonprofit rethinking how
               education works.
             </p>
@@ -280,7 +280,7 @@ export default function AboutPage() {
               {[
                 "Education should lead to income",
                 "Work should lead to ownership",
-                "Opportunity should be built—not waited for",
+                "Opportunity should be built, not waited for",
               ].map((line) => (
                 <div
                   key={line}
@@ -293,12 +293,12 @@ export default function AboutPage() {
           </div>
         </div>
         <p className="relative mt-14 max-w-4xl mx-auto text-center text-xl sm:text-2xl font-bold text-white">
-          This is education, employment, and entrepreneurship—working together.
+          This is education, employment, and entrepreneurship, working together.
         </p>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 6 — THE JOURNEY
+          SECTION 6, THE JOURNEY
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -373,7 +373,7 @@ export default function AboutPage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 7 — REAL LIFE INSIDE
+          SECTION 7, REAL LIFE INSIDE
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -443,7 +443,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 8 — THE PEOPLE
+          SECTION 8, THE PEOPLE
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -467,7 +467,7 @@ export default function AboutPage() {
                 role: "The Entrepreneur",
                 image:
                   "https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&q=90",
-                quote: "I started with an idea—now I have customers.",
+                quote: "I started with an idea, now I have customers.",
               },
               {
                 role: "The Community",
@@ -504,7 +504,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 9 — THE BIGGER IMPACT
+          SECTION 9, THE BIGGER IMPACT
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -538,14 +538,14 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-10 text-center text-xl sm:text-2xl font-bold text-gray-900 max-w-2xl mx-auto">
-            This is how a city grows—
+            This is how a city grows, 
             <span className="text-primary">from the inside out.</span>
           </p>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 10 — FINAL STATEMENT
+          SECTION 10, FINAL STATEMENT
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-gray-950 to-gray-950" />
@@ -581,7 +581,7 @@ export default function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 11 — CTA
+          SECTION 11, CTA
       ════════════════════════════════════════════════════════════════ */}
       <CTASection dark title="Ready to Start Your Journey?" />
     </>

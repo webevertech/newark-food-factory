@@ -42,7 +42,7 @@ export default function MealsEventsPage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          DAILY MEALS — white bg, split layout
+          DAILY MEALS, white bg, split layout
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -90,7 +90,7 @@ export default function MealsEventsPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          WEEKLY MENU — dark bg, frosted glass cards
+          WEEKLY MENU, dark bg, frosted glass cards
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950" id="order">
         <div className="max-w-7xl mx-auto">
@@ -140,7 +140,7 @@ export default function MealsEventsPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          EVENTS — white bg, split layout (image left, content right)
+          EVENTS, white bg, split layout (image left, content right)
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white" id="events">
         <div className="max-w-7xl mx-auto">

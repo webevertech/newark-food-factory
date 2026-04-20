@@ -100,7 +100,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* WHY PARTNER WITH US — horizontal list */}
+      {/* WHY PARTNER WITH US, horizontal list */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">

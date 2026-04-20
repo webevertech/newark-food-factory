@@ -42,7 +42,7 @@ export default function WorkBasedLearningPage() {
         imageAlt="Students learning in a professional kitchen"
       />
 
-      {/* THE PROGRAM — split: content left + image right */}
+      {/* THE PROGRAM, split: content left + image right */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -109,7 +109,7 @@ export default function WorkBasedLearningPage() {
             </h2>
             <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
               Students work on actual food operations that serve the Newark
-              community every day — not simulations, not practice runs.
+              community every day, not simulations, not practice runs.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export default function WorkBasedLearningPage() {
               {
                 icon: UtensilsCrossed,
                 title: "Daily Meals",
-                desc: "Prepare breakfast, lunch, and dinner for pickup and delivery — real customers, real deadlines.",
+                desc: "Prepare breakfast, lunch, and dinner for pickup and delivery, real customers, real deadlines.",
               },
               {
                 icon: CalendarDays,
@@ -128,7 +128,7 @@ export default function WorkBasedLearningPage() {
               {
                 icon: Truck,
                 title: "Food Truck Operations",
-                desc: "Learn the full food truck workflow — from commissary prep to on-site service.",
+                desc: "Learn the full food truck workflow, from commissary prep to on-site service.",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div
@@ -148,7 +148,7 @@ export default function WorkBasedLearningPage() {
         </div>
       </section>
 
-      {/* HOW IT WORKS — numbered steps */}
+      {/* HOW IT WORKS, numbered steps */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div>
@@ -190,7 +190,7 @@ export default function WorkBasedLearningPage() {
         </div>
       </section>
 
-      {/* WHAT YOU'LL GAIN — dark section with glass cards */}
+      {/* WHAT YOU'LL GAIN, dark section with glass cards */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <div>
@@ -230,7 +230,7 @@ export default function WorkBasedLearningPage() {
         </div>
       </section>
 
-      {/* WHO IT'S FOR — split: image left + checklist right */}
+      {/* WHO IT'S FOR, split: image left + checklist right */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>

@@ -31,7 +31,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Kitchen Membership",
   description:
-    "More than a commissary kitchen — Newark Food Factory is where food entrepreneurs launch, operate, and scale real businesses. Explore membership plans from $149/mo.",
+    "More than a commissary kitchen, Newark Food Factory is where food entrepreneurs launch, operate, and scale real businesses. Explore membership plans from $149/mo.",
   path: "/kitchen-membership",
   keywords: ["commissary kitchen rental Newark", "commercial kitchen membership NJ", "shared kitchen space Newark", "food truck commissary Newark"],
 });
@@ -67,7 +67,7 @@ export default function KitchenMembershipPage() {
               </h1>
 
               <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
-                More than a commissary kitchen — Newark Food Factory is where food
+                More than a commissary kitchen, Newark Food Factory is where food
                 entrepreneurs launch, operate, and scale real businesses.
               </p>
 
@@ -116,7 +116,7 @@ export default function KitchenMembershipPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 1 — WHAT THIS REALLY IS
+          SECTION 1, WHAT THIS REALLY IS
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -133,12 +133,12 @@ export default function KitchenMembershipPage() {
               <p>Most commissary kitchens give you space.</p>
               <p>We give you a <strong>system</strong>.</p>
               <p>
-                At Newark Food Factory, you don&apos;t just rent a kitchen — you
+                At Newark Food Factory, you don&apos;t just rent a kitchen, you
                 plug into a live food economy:
               </p>
             </div>
             <p className="mt-6 text-sm font-semibold text-primary">
-              This is where food businesses are built — not just cooked.
+              This is where food businesses are built, not just cooked.
             </p>
           </div>
 
@@ -188,7 +188,7 @@ export default function KitchenMembershipPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 2 — WHAT YOU GET
+          SECTION 2, WHAT YOU GET
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto">
@@ -200,7 +200,7 @@ export default function KitchenMembershipPage() {
               Everything You Need to Operate &amp; Grow
             </h2>
             <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-              You&apos;re not figuring it out alone — you&apos;re building inside a
+              You&apos;re not figuring it out alone, you&apos;re building inside a
               system.
             </p>
           </div>
@@ -280,7 +280,7 @@ export default function KitchenMembershipPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 3 — MEMBERSHIP PLANS
+          SECTION 3, MEMBERSHIP PLANS
       ════════════════════════════════════════════════════════════════ */}
       <section
         className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50"
@@ -295,12 +295,12 @@ export default function KitchenMembershipPage() {
               Choose the Plan That Fits Your Stage
             </h2>
             <p className="mt-4 text-gray-600 max-w-xl mx-auto">
-              From aspiring entrepreneurs to scaling brands — there&apos;s a plan
+              From aspiring entrepreneurs to scaling brands, there&apos;s a plan
               for every stage of your food business journey.
             </p>
           </div>
 
-          {/* Top row — 3 core plans */}
+          {/* Top row, 3 core plans */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* STARTER */}
             <PlanCard
@@ -318,7 +318,7 @@ export default function KitchenMembershipPage() {
               idealFor="Side hustlers, students, early-stage ideas"
             />
 
-            {/* BUILDER — featured */}
+            {/* BUILDER, featured */}
             <PlanCard
               tier="Builder"
               subtitle="Food Truck Owners / Active Businesses"
@@ -360,7 +360,7 @@ export default function KitchenMembershipPage() {
             />
           </div>
 
-          {/* Bottom row — 2 specialty plans */}
+          {/* Bottom row, 2 specialty plans */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
             {/* STARTER PROGRAM */}
             <PlanCard
@@ -410,7 +410,7 @@ export default function KitchenMembershipPage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 4 — WHY THIS MODEL WINS
+          SECTION 4, WHY THIS MODEL WINS
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -458,13 +458,13 @@ export default function KitchenMembershipPage() {
           </div>
 
           <p className="mt-8 text-center text-sm font-semibold text-primary">
-            You don&apos;t just rent space — you gain momentum.
+            You don&apos;t just rent space, you gain momentum.
           </p>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 5 — BUILT-IN REVENUE OPPORTUNITIES
+          SECTION 5, BUILT-IN REVENUE OPPORTUNITIES
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[560px] flex items-center overflow-hidden">
         <Image
@@ -532,14 +532,14 @@ export default function KitchenMembershipPage() {
             </div>
 
             <p className="mt-10 text-center text-sm font-semibold text-primary-bright">
-              You don&apos;t wait for customers — the system brings customers to you.
+              You don&apos;t wait for customers, the system brings customers to you.
             </p>
           </div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 6 — ADD-ON SERVICES
+          SECTION 6, ADD-ON SERVICES
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -585,7 +585,7 @@ export default function KitchenMembershipPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 7 — HOW IT FITS THE ECOSYSTEM
+          SECTION 7, HOW IT FITS THE ECOSYSTEM
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto">
@@ -655,7 +655,7 @@ export default function KitchenMembershipPage() {
       <CTASection
         dark
         title="Ready to Build Your Food Business?"
-        subtitle="Whether you're just starting out or scaling fast — there's a place for you at Newark Food Factory."
+        subtitle="Whether you're just starting out or scaling fast, there's a place for you at Newark Food Factory."
       />
     </>
   );
@@ -771,7 +771,7 @@ function PlanCard({
         Includes
       </p>
 
-      {/* Features list — grows to push content down */}
+      {/* Features list, grows to push content down */}
       <ul className="space-y-3 flex-1">
         {features.map((f) => (
           <li

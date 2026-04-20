@@ -33,7 +33,7 @@ export function PageHero({
       <div className="absolute inset-0 bg-gray-950/65" />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/30 to-transparent" />
 
-      {/* Content — centered */}
+      {/* Content, centered */}
       <div className="relative z-10 w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-20 lg:py-28 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">

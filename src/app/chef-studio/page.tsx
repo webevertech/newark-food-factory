@@ -29,7 +29,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Chef Studio",
   description:
-    "Create content. Host live dining experiences. Grow your audience. At Newark Food Factory, chefs step into a platform — not just a kitchen.",
+    "Create content. Host live dining experiences. Grow your audience. At Newark Food Factory, chefs step into a platform, not just a kitchen.",
   path: "/chef-studio",
   keywords: ["chef studio Newark", "culinary content creation", "live dining experience NJ", "chef platform Newark Food Factory"],
 });
@@ -69,7 +69,7 @@ export default function ChefStudioPage() {
 
               <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
                 Create content. Host live dining experiences. Grow your audience.
-                At Newark Food Factory, you step into a platform — not just a kitchen.
+                At Newark Food Factory, you step into a platform, not just a kitchen.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -112,7 +112,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 2 — THE SHIFT
+          SECTION 2, THE SHIFT
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -163,7 +163,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 3 — WHAT YOU CAN DO
+          SECTION 3, WHAT YOU CAN DO
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto">
@@ -214,7 +214,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 4 — SIGNATURE EXPERIENCES
+          SECTION 4, SIGNATURE EXPERIENCES
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -277,7 +277,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 5 — PRICING & PACKAGES
+          SECTION 5, PRICING & PACKAGES
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50" id="pricing">
         <div className="max-w-7xl mx-auto">
@@ -290,7 +290,7 @@ export default function ChefStudioPage() {
             </h2>
           </div>
 
-          {/* Top row — 2 main packages */}
+          {/* Top row, 2 main packages */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Studio Session */}
             <PackageCard
@@ -325,7 +325,7 @@ export default function ChefStudioPage() {
             />
           </div>
 
-          {/* Bottom row — 2 premium packages */}
+          {/* Bottom row, 2 premium packages */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             {/* Chef Studio + Live Experience */}
             <PackageCard
@@ -419,7 +419,7 @@ export default function ChefStudioPage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 6 — HOW YOU MAKE MONEY
+          SECTION 6, HOW YOU MAKE MONEY
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[560px] flex items-center overflow-hidden">
         <Image
@@ -473,7 +473,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 7 — WHY NEWARK FOOD FACTORY
+          SECTION 7, WHY NEWARK FOOD FACTORY
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -516,7 +516,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 8 — YOUR EDGE
+          SECTION 8, YOUR EDGE
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -582,7 +582,7 @@ export default function ChefStudioPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 9 — FOR BRANDS & SPONSORS
+          SECTION 9, FOR BRANDS & SPONSORS
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -632,7 +632,7 @@ export default function ChefStudioPage() {
       <CTASection
         dark
         title="Create. Host. Build Your Culinary Brand."
-        subtitle="We host a limited number of Chef Studio Experiences each month. Dates fill quickly — secure yours early."
+        subtitle="We host a limited number of Chef Studio Experiences each month. Dates fill quickly, secure yours early."
       />
 
       {/* ════════════════════════════════════════════════════════════════
@@ -641,7 +641,7 @@ export default function ChefStudioPage() {
       <section className="bg-gray-950 py-16 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed italic">
-            At Newark Food Factory, chefs don&apos;t just cook —
+            At Newark Food Factory, chefs don&apos;t just cook, 
             <br className="hidden sm:inline" />
             <span className="text-white font-semibold">
               {" "}they create experiences, build brands, and connect with a community.

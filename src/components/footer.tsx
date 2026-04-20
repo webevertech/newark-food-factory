@@ -99,7 +99,7 @@ export function Footer() {
               style={{ height: "auto" }}
             />
             <p className="text-sm leading-relaxed text-gray-400 text-right">
-              Newark Food Factory at Maker Hoods — Social Enterprise of Ideal Institute of Technology
+              Newark Food Factory at Maker Hoods, Social Enterprise of Ideal Institute of Technology
             </p>
           </div>
         </div>

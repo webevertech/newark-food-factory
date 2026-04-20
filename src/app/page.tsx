@@ -28,11 +28,11 @@ export default function HomePage() {
   return (
     <>
       {/* ════════════════════════════════════════════════════════════════
-          HERO — split gradient + full bleed image
+          HERO, split gradient + full bleed image
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gray-950 overflow-hidden">
         <div className="grid lg:grid-cols-2 min-h-[700px] lg:min-h-[750px]">
-          {/* LEFT — gradient panel with content */}
+          {/* LEFT, gradient panel with content */}
           <div className="relative flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-20 py-20 lg:py-28 z-10">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-orange-500/15 to-amber-400/10" />
             <div
@@ -58,7 +58,7 @@ export default function HomePage() {
                 <strong className="text-white">
                   daily meals, delivery, events, and food entrepreneurs
                 </strong>
-                —from students to food truck owners.
+                , from students to food truck owners.
               </p>
 
               <div className="mt-10">
@@ -126,7 +126,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT — full bleed image */}
+          {/* RIGHT, full bleed image */}
           <div className="relative hidden lg:block">
             <Image
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136"
@@ -155,7 +155,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          WHO WE ARE — dark section, text left + glass icon cards right
+          WHO WE ARE, dark section, text left + glass icon cards right
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gray-950 py-24 px-6 sm:px-10 lg:px-16 xl:px-20 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
@@ -173,7 +173,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-6 text-gray-400 leading-relaxed max-w-lg">
               From commercial kitchen access to business incubation, daily meal
-              production to event hosting — everything under one roof to help you
+              production to event hosting, everything under one roof to help you
               build, launch, and grow.
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
               {
                 icon: UtensilsCrossed,
                 title: "Daily Meals",
-                desc: "Breakfast, lunch & dinner — pickup or delivery",
+                desc: "Breakfast, lunch & dinner, pickup or delivery",
               },
               {
                 icon: CalendarDays,
@@ -219,7 +219,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          HOW IT WORKS — numbered dark squares + connecting gradient line
+          HOW IT WORKS, numbered dark squares + connecting gradient line
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -282,7 +282,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          PATHWAYS — image-backed cards with hover zoom + gradient overlay
+          PATHWAYS, image-backed cards with hover zoom + gradient overlay
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -356,7 +356,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          DAILY MEALS — full-bleed photo with dark gradient overlay
+          DAILY MEALS, full-bleed photo with dark gradient overlay
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <Image
@@ -409,12 +409,12 @@ export default function HomePage() {
       />
 
       {/* ════════════════════════════════════════════════════════════════
-          COMMISSARY — white bg, large image, overlapping feature cards
+          COMMISSARY, white bg, large image, overlapping feature cards
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left — stacked images */}
+            {/* Left, stacked images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="relative rounded-2xl overflow-hidden h-52 sm:h-64 lg:h-72 col-span-2">
                 <Image
@@ -445,7 +445,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right — text + feature list */}
+            {/* Right, text + feature list */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
                 Commissary Kitchen
@@ -456,7 +456,7 @@ export default function HomePage() {
               <p className="mt-4 text-gray-600 leading-relaxed">
                 Newark Food Factory operates as a{" "}
                 <strong>commissary kitchen</strong>, providing food
-                truck owners and caterers with everything they need to grow —
+                truck owners and caterers with everything they need to grow, 
                 from prep space to compliance support.
               </p>
 
@@ -499,7 +499,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          EVENTS — stacked: heading + 4 image cards + CTA
+          EVENTS, stacked: heading + 4 image cards + CTA
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -571,7 +571,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* IMPACT — dark section, ecosystem flow, gradient stat cards */}
+      {/* IMPACT, dark section, ecosystem flow, gradient stat cards */}
       <section className="bg-gray-950 py-24 px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -638,7 +638,7 @@ export default function HomePage() {
       <CTASection
         dark
         title="Ready to Get Started?"
-        subtitle="Whether you want to start a food business, join our kitchen, or book a tour — we're here for you."
+        subtitle="Whether you want to start a food business, join our kitchen, or book a tour, we're here for you."
       />
     </>
   );

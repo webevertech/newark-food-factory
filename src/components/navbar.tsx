@@ -68,7 +68,7 @@ export function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop nav links — centered */}
+            {/* Desktop nav links, centered */}
             <div className="hidden xl:flex items-center flex-1" role="menubar">
               <div className="flex items-center gap-0.5 mx-auto">
                 <DesktopLink href="/">Home</DesktopLink>
