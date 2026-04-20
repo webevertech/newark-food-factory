@@ -31,7 +31,8 @@ Newark, NJ 07102, United States
 - Homepage: https://newarkfoodfactory.com/
 - Start a Food Business: https://newarkfoodfactory.com/start-a-food-business/
 - Kitchen Membership: https://newarkfoodfactory.com/kitchen-membership/
-- Meals & Events: https://newarkfoodfactory.com/meals-events/
+- Daily Meals: https://newarkfoodfactory.com/meals/
+- Event Space: https://newarkfoodfactory.com/events/
 - Chef Studio: https://newarkfoodfactory.com/chef-studio/
 - About: https://newarkfoodfactory.com/about/
 - Contact: https://newarkfoodfactory.com/contact/

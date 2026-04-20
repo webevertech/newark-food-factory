@@ -246,7 +246,7 @@ export default function FoodTruckMembershipPage() {
                   </li>
                 ))}
               </ul>
-              <Button href="/meals-events#events" className="mt-10">
+              <Button href="/events" className="mt-10">
                 Explore Events
               </Button>
             </div>

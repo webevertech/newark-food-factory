@@ -5,7 +5,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Start a Food Business", href: "/start-a-food-business" },
-  { name: "Meals + Events", href: "/meals-events" },
+  { name: "Daily Meals", href: "/meals" },
+  { name: "Event Space", href: "/events" },
   { name: "Kitchen Membership", href: "/kitchen-membership" },
   { name: "Partners", href: "/partners" },
   { name: "About", href: "/about" },

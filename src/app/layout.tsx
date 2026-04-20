@@ -88,7 +88,7 @@ const jsonLd = [
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card",
     servesCuisine: ["American", "Multi-Cuisine"],
-    hasMenu: `${BASE_URL}/meals-events/`,
+    hasMenu: `${BASE_URL}/meals/`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Newark",
@@ -148,7 +148,7 @@ const jsonLd = [
             "@type": "Service",
             name: "Daily Meals & Catering",
             description: "Fresh daily meals for pickup and delivery, plus full-service catering for events in Newark, NJ.",
-            url: `${BASE_URL}/meals-events/`,
+            url: `${BASE_URL}/meals/`,
           },
         },
         {
@@ -157,7 +157,7 @@ const jsonLd = [
             "@type": "Service",
             name: "Event Space Rental",
             description: "Book our venue for private events, corporate gatherings, and community celebrations.",
-            url: `${BASE_URL}/meals-events/`,
+            url: `${BASE_URL}/events/`,
           },
         },
         {

@@ -66,9 +66,9 @@ export default function HomePage() {
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 {[
-                  { label: "Order Meals", href: "/meals-events", icon: UtensilsCrossed },
-                  { label: "Book a Tour", href: "/contact", icon: Warehouse },
-                  { label: "Book an Event", href: "/meals-events#events", icon: CalendarDays },
+                  { label: "Order Meals", href: "/meals", icon: UtensilsCrossed },
+                  { label: "Book a Tour", href: "/contact#tour", icon: Warehouse },
+                  { label: "Book an Event", href: "/events#inquiry", icon: CalendarDays },
                 ].map(({ label, href, icon: Icon }) => (
                   <Link
                     key={label}
@@ -319,9 +319,9 @@ export default function HomePage() {
                   "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&q=80",
               },
               {
-                title: "Meals & Events",
-                desc: "Fresh daily meals and chef-driven event experiences.",
-                href: "/meals-events",
+                title: "Event Space",
+                desc: "A 5,000 sq ft venue for chef-driven celebrations and brand activations.",
+                href: "/events",
                 image:
                   "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80",
               },
@@ -395,8 +395,8 @@ export default function HomePage() {
             ))}
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/meals-events">View Menu</Button>
-            <Button href="/meals-events#order" variant="outline-light">
+            <Button href="/meals">View Menu</Button>
+            <Button href="/meals#order" variant="outline-light">
               Order Now
             </Button>
           </div>
@@ -517,9 +517,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex gap-4 shrink-0">
-              <Button href="/meals-events#events">Book Event</Button>
-              <Button href="/contact" variant="outline">
-                Request a Quote
+              <Button href="/events#inquiry">Book Event</Button>
+              <Button href="/contact#tour" variant="outline">
+                Book a Tour
               </Button>
             </div>
           </div>

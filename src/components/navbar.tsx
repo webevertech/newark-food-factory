@@ -112,7 +112,8 @@ export function Navbar() {
                   )}
                 </div>
 
-                <DesktopLink href="/meals-events">Meals + Events</DesktopLink>
+                <DesktopLink href="/meals">Meals</DesktopLink>
+                <DesktopLink href="/events">Events</DesktopLink>
 
                 {/* Kitchen Membership dropdown */}
                 <div
@@ -207,7 +208,8 @@ export function Navbar() {
               ))}
             </div>
 
-            <MobileLink href="/meals-events" onClick={closeMobile}>Meals + Events</MobileLink>
+            <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink>
+            <MobileLink href="/events" onClick={closeMobile}>Events</MobileLink>
 
             <div className="pt-4 pb-1">
               <p className="px-3 text-xs font-semibold uppercase text-gray-400 tracking-wider mb-2">Kitchen Membership</p>

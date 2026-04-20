@@ -22,9 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     {
-      path: "/meals-events/",
+      path: "/meals/",
       priority: 0.8,
       changeFrequency: "weekly" as const,
+    },
+    {
+      path: "/events/",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
     },
     { path: "/partners/", priority: 0.7, changeFrequency: "monthly" as const },
     {
