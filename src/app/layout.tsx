@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -230,6 +231,13 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script
+          id="leadconnector-chat-widget"
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69e652ba0518610c46bf3272"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
