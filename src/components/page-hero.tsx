@@ -1,11 +1,13 @@
 import { LucideIcon } from "lucide-react";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 export function PageHero({
   title,
   subtitle,
   image,
   imageAlt = "",
+  children,
 }: {
   icon?: LucideIcon;
   title: string;
@@ -13,6 +15,7 @@ export function PageHero({
   image?: string;
   imageAlt?: string;
   variant?: string;
+  children?: ReactNode;
 }) {
   return (
     <section className="relative bg-gray-950 overflow-hidden min-h-[400px] sm:min-h-[460px] flex items-center">
@@ -44,6 +47,12 @@ export function PageHero({
             <p className="mt-5 text-base sm:text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
               {subtitle}
             </p>
+          )}
+
+          {children && (
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              {children}
+            </div>
           )}
         </div>
       </div>

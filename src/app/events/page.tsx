@@ -17,6 +17,7 @@ import {
 import Script from "next/script";
 import Image from "next/image";
 import { Button } from "@/components/button";
+import { EventInquiryButton } from "@/components/event-inquiry-button";
 import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/seo";
 
@@ -179,7 +180,12 @@ export default function EventsPage() {
         subtitle="Host your next private, corporate, or community event inside Newark Food Factory — a dynamic venue where food, culture, entrepreneurship, and unforgettable experiences come together."
         image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=90"
         imageAlt="Elegant event space with set tables"
-      />
+      >
+        <Button href="/contact#tour" variant="white">
+          Book a Tour
+        </Button>
+        <EventInquiryButton label="Get Pricing" variant="outline-light" />
+      </PageHero>
 
       {/* HERO SUPPORTING + PRIMARY CTAS */}
       <section className="py-16 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
@@ -194,51 +200,7 @@ export default function EventsPage() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button href="/contact#tour">Book a Tour</Button>
-            <Button href="#inquiry" variant="outline">
-              Get Event Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* INQUIRY FORM */}
-      <section
-        id="inquiry"
-        className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50 scroll-mt-24"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
-              Inquiry Form
-            </p>
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              Share a few details and we&apos;ll get back to you with
-              availability, pricing, and next steps.
-            </p>
-          </div>
-          <div className="rounded-2xl p-4 sm:p-6">
-            <iframe
-              src="https://links.newarkfoodfactory.com/widget/form/GDCC6scNQSyzpKEpLr8g"
-              style={{
-                width: "100%",
-                minHeight: "1200px",
-                border: "none",
-                borderRadius: "8px",
-              }}
-              id="inline-GDCC6scNQSyzpKEpLr8g"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="INQUIRY FORM"
-              data-height="1156"
-              data-layout-iframe-id="inline-GDCC6scNQSyzpKEpLr8g"
-              data-form-id="GDCC6scNQSyzpKEpLr8g"
-              title="Event Inquiry Form"
-            />
+            <EventInquiryButton label="Get Pricing" variant="outline" />
           </div>
         </div>
       </section>
@@ -384,10 +346,11 @@ export default function EventsPage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button href="#inquiry" variant="white">
-              Request Custom Quote
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Button href="/contact#tour" variant="outline-light">
+              Book a Tour
             </Button>
+            <EventInquiryButton label="Get Pricing" variant="white" />
           </div>
         </div>
       </section>
@@ -434,9 +397,12 @@ export default function EventsPage() {
                   </li>
                 ))}
               </ul>
-              <Button href="#inquiry" className="mt-8">
-                Ask About Chef Experience Add-Ons
-              </Button>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button href="/contact#tour" variant="outline">
+                  Book a Tour
+                </Button>
+                <EventInquiryButton label="Get Pricing" variant="primary" />
+              </div>
             </div>
           </div>
         </div>
@@ -514,9 +480,7 @@ export default function EventsPage() {
             <Button href="/contact#tour" variant="white">
               Book a Tour
             </Button>
-            <Button href="#inquiry" variant="outline-light">
-              Get Pricing
-            </Button>
+            <EventInquiryButton label="Get Pricing" variant="outline-light" />
           </div>
         </div>
       </section>
