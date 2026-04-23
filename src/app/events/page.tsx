@@ -19,7 +19,11 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 import { EventInquiryButton } from "@/components/event-inquiry-button";
 import { PageHero } from "@/components/page-hero";
+import { UpcomingEventsSection } from "@/components/upcoming-events-section";
+import { getUpcomingEvents } from "@/lib/events-store";
 import { createMetadata } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
   title: "Event Space",
@@ -171,7 +175,10 @@ const trustCards = [
   },
 ];
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const upcomingEvents = await getUpcomingEvents();
+  const hasUpcomingEvents = upcomingEvents.length > 0;
+
   return (
     <>
       <PageHero
@@ -201,6 +208,11 @@ export default function EventsPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button href="/contact#tour">Book a Tour</Button>
             <EventInquiryButton label="Get Pricing" variant="outline" />
+            {hasUpcomingEvents && (
+              <Button href="#upcoming-events" variant="outline">
+                See Upcoming Events
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -281,6 +293,9 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+
+      {/* UPCOMING PUBLIC EVENTS — section + section CTA only render when there's data */}
+      <UpcomingEventsSection id="upcoming-events" events={upcomingEvents} />
 
       {/* EVENT PACKAGES */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950">
