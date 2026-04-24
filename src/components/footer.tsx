@@ -89,17 +89,27 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* IITNJ */}
-          <div className="flex flex-col items-end gap-3">
-            <Image
-              src="/iitnj-white-logo (2).png"
-              alt="Ideal Institute of Technology"
-              width={160}
-              height={48}
-              className="w-30"
-              style={{ height: "auto" }}
-            />
-            <p className="text-sm leading-relaxed text-gray-400 text-right">
+          {/* IITNJ + Maker Hoods */}
+          <div className="flex flex-col items-start lg:items-end gap-3">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/iitnj-white-logo (2).png"
+                alt="Ideal Institute of Technology"
+                width={160}
+                height={48}
+                className="w-28"
+                style={{ height: "auto" }}
+              />
+              <Image
+                src="/MHOODLOGO.png"
+                alt="Maker Hoods"
+                width={160}
+                height={48}
+                className="w-18 -mb-2"
+                style={{ height: "auto" }}
+              />
+            </div>
+            <p className="text-sm leading-relaxed text-gray-400 text-left lg:text-right">
               Newark Food Factory at Maker Hoods, Social Enterprise of Ideal Institute of Technology
             </p>
           </div>
