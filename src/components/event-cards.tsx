@@ -194,7 +194,7 @@ function EventModal({
             {event.venue && (
               <DetailRow icon={MapPin} label="Venue">
                 <div>{event.venue}</div>
-                {event.address && (
+                {event.address && event.address !== event.venue && (
                   <div className="text-xs text-gray-500 mt-0.5">
                     {event.address}
                   </div>

@@ -6,13 +6,15 @@ export type PublicEvent = {
   title: string;
   date: string;
   time?: string;
+  startTime?: string;
+  endTime?: string;
   venue?: string;
   address?: string;
   description?: string;
-  imageUrl?: string;
   ticketUrl?: string;
   category?: string;
   price?: string;
+  calendarId?: string;
   createdAt: string;
 };
 
@@ -39,7 +41,8 @@ async function writeStoredEvents(events: PublicEvent[]): Promise<void> {
 }
 
 function sortByDateAsc(a: PublicEvent, b: PublicEvent): number {
-  return a.date.localeCompare(b.date);
+  if (a.date !== b.date) return a.date.localeCompare(b.date);
+  return (a.startTime ?? "").localeCompare(b.startTime ?? "");
 }
 
 function isUpcoming(event: PublicEvent, now: Date): boolean {
@@ -53,9 +56,93 @@ function isUpcoming(event: PublicEvent, now: Date): boolean {
   return eventDate.getTime() >= startOfToday.getTime();
 }
 
+function formatTime12h(hhmm: string): string {
+  const [hStr, mStr] = hhmm.split(":");
+  const h = Number(hStr);
+  const m = Number(mStr);
+  if (Number.isNaN(h) || Number.isNaN(m)) return hhmm;
+  const suffix = h >= 12 ? "PM" : "AM";
+  const hour12 = h % 12 === 0 ? 12 : h % 12;
+  const minutes = m === 0 ? "" : `:${String(m).padStart(2, "0")}`;
+  return `${hour12}${minutes} ${suffix}`;
+}
+
+function formatTimeRange(start?: string, end?: string): string | undefined {
+  if (start && end) return `${formatTime12h(start)} – ${formatTime12h(end)}`;
+  if (start) return formatTime12h(start);
+  if (end) return formatTime12h(end);
+  return undefined;
+}
+
+function venueKey(venue?: string): string {
+  return (venue ?? "").trim().toLowerCase();
+}
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "")
+    .slice(0, 60);
+}
+
+function mergeSameDayVenue(events: PublicEvent[]): PublicEvent[] {
+  type Group = { key: string; list: PublicEvent[] };
+  const groups: Group[] = [];
+  const groupIndex = new Map<string, number>();
+
+  for (const event of events) {
+    const vk = venueKey(event.venue);
+    const groupingKey = vk || event.calendarId;
+    const key = groupingKey ? `${event.date}|${groupingKey}` : `__solo__|${event.id}`;
+    const idx = groupIndex.get(key);
+    if (idx === undefined) {
+      groupIndex.set(key, groups.length);
+      groups.push({ key, list: [event] });
+    } else {
+      groups[idx].list.push(event);
+    }
+  }
+
+  const result: PublicEvent[] = [];
+  for (const { list } of groups) {
+    if (list.length === 1) {
+      result.push(list[0]);
+      continue;
+    }
+    const sorted = [...list].sort((a, b) =>
+      (a.startTime ?? "").localeCompare(b.startTime ?? ""),
+    );
+    const first = sorted[0];
+    const startTime = sorted
+      .map((e) => e.startTime)
+      .filter((t): t is string => Boolean(t))
+      .sort()[0];
+    const endTime = sorted
+      .map((e) => e.endTime)
+      .filter((t): t is string => Boolean(t))
+      .sort()
+      .pop();
+    const time = formatTimeRange(startTime, endTime) ?? first.time;
+    const groupSlug = slugify(first.venue ?? first.calendarId ?? "venue");
+    result.push({
+      ...first,
+      id: `fullday-${first.date}-${groupSlug}`,
+      startTime,
+      endTime,
+      time,
+      category: first.category ?? "Full Day Event",
+      description:
+        first.description ??
+        `Both day and evening sessions are booked at ${first.venue ?? "the venue"} — full-day event.`,
+    });
+  }
+  return result.sort(sortByDateAsc);
+}
+
 export async function getAllEvents(): Promise<PublicEvent[]> {
   const stored = await readStoredEvents();
-  return [...stored].sort(sortByDateAsc);
+  return mergeSameDayVenue([...stored].sort(sortByDateAsc));
 }
 
 export async function getUpcomingEvents(): Promise<PublicEvent[]> {
@@ -65,32 +152,41 @@ export async function getUpcomingEvents(): Promise<PublicEvent[]> {
 }
 
 function generateId(title: string): string {
-  const slug = title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "")
-    .slice(0, 60);
+  const slug = slugify(title);
   const suffix = Math.random().toString(36).slice(2, 8);
   return `${slug || "event"}-${suffix}`;
 }
 
 export async function addEvent(input: EventInput): Promise<PublicEvent> {
   const stored = await readStoredEvents();
+  const id = input.id ?? generateId(input.title);
+  const existingIdx = stored.findIndex((e) => e.id === id);
+  const createdAt =
+    input.createdAt ??
+    (existingIdx >= 0 ? stored[existingIdx].createdAt : new Date().toISOString());
+  const time =
+    input.time ?? formatTimeRange(input.startTime, input.endTime);
   const event: PublicEvent = {
-    id: input.id ?? generateId(input.title),
+    id,
     title: input.title,
     date: input.date,
-    time: input.time,
+    time,
+    startTime: input.startTime,
+    endTime: input.endTime,
     venue: input.venue,
     address: input.address,
     description: input.description,
-    imageUrl: input.imageUrl,
     ticketUrl: input.ticketUrl,
     category: input.category,
     price: input.price,
-    createdAt: input.createdAt ?? new Date().toISOString(),
+    calendarId: input.calendarId,
+    createdAt,
   };
-  stored.push(event);
+  if (existingIdx >= 0) {
+    stored[existingIdx] = event;
+  } else {
+    stored.push(event);
+  }
   await writeStoredEvents(stored);
   return event;
 }
