@@ -226,8 +226,8 @@ export function Navbar() {
             <MobileLink href="/contact" onClick={closeMobile}>Contact</MobileLink>
 
             <div className="pt-6 border-t border-gray-100 mt-4 space-y-3">
-              <a href="tel:+19735550100" className="flex items-center gap-2 px-3 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-primary" aria-hidden="true" /> (973) 555-0100
+              <a href="tel:+16095445569" className="flex items-center gap-2 px-3 text-sm text-gray-600">
+                <Phone className="h-4 w-4 text-primary" aria-hidden="true" /> +1 609-544-5569
               </a>
               <a href="mailto:info@newarkfoodfactory.com" className="flex items-center gap-2 px-3 text-sm text-gray-600">
                 <Mail className="h-4 w-4 text-primary" aria-hidden="true" /> info@newarkfoodfactory.com

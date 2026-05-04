@@ -11,6 +11,9 @@ import {
 } from "lucide-react";
 import type { PublicEvent } from "@/lib/events-store";
 
+const VENUE_ADDRESS =
+  "Newark Food Factory at Makerhoods, 145 Court Street, Newark, New Jersey 07102";
+
 const MONTH_SHORT = [
   "JAN",
   "FEB",
@@ -194,11 +197,11 @@ function EventModal({
             {event.venue && (
               <DetailRow icon={MapPin} label="Venue">
                 <div>{event.venue}</div>
-                {event.address && event.address !== event.venue && (
-                  <div className="text-xs text-gray-500 mt-0.5">
-                    {event.address}
-                  </div>
-                )}
+                <div className="text-xs text-gray-500 mt-0.5">
+                  {event.address && event.address !== event.venue
+                    ? `${event.address}, ${VENUE_ADDRESS}`
+                    : VENUE_ADDRESS}
+                </div>
               </DetailRow>
             )}
             {event.price && (
@@ -336,6 +339,12 @@ export function FeaturedEventCard({ event }: { event: PublicEvent }) {
               )}
             </div>
 
+            <p className="mt-3 text-xs text-white/55 leading-relaxed">
+              {event.address && event.address !== event.venue
+                ? `${event.address}, ${VENUE_ADDRESS}`
+                : VENUE_ADDRESS}
+            </p>
+
             <div className="mt-10">
               <button
                 type="button"
@@ -400,7 +409,14 @@ export function MiniEventCard({ event }: { event: PublicEvent }) {
           {event.venue && (
             <div className="flex items-start gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-gray-400 mt-0.5 shrink-0" />
-              <span className="line-clamp-1">{event.venue}</span>
+              <div className="min-w-0">
+                <div className="line-clamp-1">{event.venue}</div>
+                <div className="text-[11px] text-gray-400 line-clamp-2 mt-0.5">
+                  {event.address && event.address !== event.venue
+                    ? `${event.address}, ${VENUE_ADDRESS}`
+                    : VENUE_ADDRESS}
+                </div>
+              </div>
             </div>
           )}
         </div>

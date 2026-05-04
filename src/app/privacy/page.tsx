@@ -255,7 +255,18 @@ export default function PrivacyPage() {
               <li>
                 <strong>Newark Food Factory LLC</strong>
               </li>
-              <li>Newark, NJ</li>
+              <li>Newark Food Factory at Makerhoods</li>
+              <li>145 Court Street</li>
+              <li>Newark, New Jersey 07102</li>
+              <li>
+                Phone:{" "}
+                <a
+                  href="tel:+16095445569"
+                  className="text-primary hover:underline"
+                >
+                  +1 609-544-5569
+                </a>
+              </li>
               <li>
                 Email:{" "}
                 <a

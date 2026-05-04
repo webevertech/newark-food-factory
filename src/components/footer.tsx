@@ -76,11 +76,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary-bright shrink-0" aria-hidden="true" />
-                <span>Newark, NJ</span>
+                <span>
+                  Newark Food Factory at Makerhoods<br />
+                  145 Court Street<br />
+                  Newark, New Jersey 07102
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary-bright shrink-0" aria-hidden="true" />
-                <a href="tel:+19735550100" className="hover:text-white transition-colors">(973) 555-0100</a>
+                <a href="tel:+16095445569" className="hover:text-white transition-colors">+1 609-544-5569</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary-bright shrink-0" aria-hidden="true" />

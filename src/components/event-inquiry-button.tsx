@@ -88,14 +88,14 @@ export function EventInquiryButton({
                 availability, pricing, and next steps.
               </p>
               <iframe
-                src="https://links.newarkfoodfactory.com/widget/form/GDCC6scNQSyzpKEpLr8g"
+                src="https://links.newarkfoodfactory.com/widget/form/EAhcOVf99w5QTvW9ongE"
                 style={{
                   width: "100%",
-                  minHeight: "1200px",
+                  minHeight: "1050px",
                   border: "none",
                   borderRadius: "8px",
                 }}
-                id="inline-GDCC6scNQSyzpKEpLr8g-modal"
+                id="inline-EAhcOVf99w5QTvW9ongE-modal"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
@@ -103,11 +103,11 @@ export function EventInquiryButton({
                 data-activation-value=""
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
-                data-form-name="INQUIRY FORM"
-                data-height="1156"
-                data-layout-iframe-id="inline-GDCC6scNQSyzpKEpLr8g-modal"
-                data-form-id="GDCC6scNQSyzpKEpLr8g"
-                title="Event Inquiry Form"
+                data-form-name="Event Details Form"
+                data-height="1020"
+                data-layout-iframe-id="inline-EAhcOVf99w5QTvW9ongE-modal"
+                data-form-id="EAhcOVf99w5QTvW9ongE"
+                title="Event Details Form"
               />
             </div>
           </div>

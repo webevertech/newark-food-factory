@@ -82,6 +82,7 @@ const jsonLd = [
       "A food innovation hub powering daily meals, delivery, events, and food entrepreneurs in Newark, NJ.",
     url: BASE_URL,
     email: "info@newarkfoodfactory.com",
+    telephone: "+1-609-544-5569",
     image: `${BASE_URL}/3.png`,
     logo: `${BASE_URL}/3.png`,
     priceRange: "$$",
@@ -91,6 +92,7 @@ const jsonLd = [
     hasMenu: `${BASE_URL}/meals/`,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "145 Court Street",
       addressLocality: "Newark",
       addressRegion: "NJ",
       postalCode: "07102",
