@@ -237,7 +237,7 @@ export default function RootLayout({
           id="leadconnector-chat-widget"
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69e652ba0518610c46bf3272"
+          data-widget-id="69f9eefb3cc757bd5a49b852"
           strategy="afterInteractive"
         />
       </body>
