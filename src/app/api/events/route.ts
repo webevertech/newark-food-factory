@@ -124,6 +124,15 @@ function buildInput(raw: IncomingPayload): BuildResult {
     return { kind: "skip", reason: "deleted", id: pickString(raw, "id") };
   }
 
+  const status = pickString(raw, "appointmentStatus", "appoinmentStatus");
+  if (status && status.toLowerCase() !== "confirmed") {
+    return {
+      kind: "skip",
+      reason: `appointmentStatus=${status}`,
+      id: pickString(raw, "id"),
+    };
+  }
+
   const title = pickString(raw, "event_title", "title", "name");
   const startRaw = pickString(
     raw,
