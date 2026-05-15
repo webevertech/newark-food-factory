@@ -85,6 +85,17 @@ function countdownLabel(value: string): string {
   return `In ${Math.round(days / 30)} months`;
 }
 
+function normalizeTicketUrl(url: string | undefined): string | null {
+  if (!url) return null;
+  const trimmed = url.trim();
+  if (!trimmed) return null;
+  if (/^(https?:)?\/\//i.test(trimmed)) return trimmed;
+  if (trimmed.startsWith("/") || trimmed.startsWith("mailto:") || trimmed.startsWith("tel:")) {
+    return trimmed;
+  }
+  return `https://${trimmed}`;
+}
+
 function EventModal({
   event,
   onClose,
@@ -110,7 +121,9 @@ function EventModal({
   }, [handleEscape]);
 
   const parts = dateParts(event.date);
-  const ticketHref = event.ticketUrl ?? "/contact/";
+  const normalizedTicketUrl = normalizeTicketUrl(event.ticketUrl);
+  const ticketHref = normalizedTicketUrl ?? "/contact/";
+  const isExternalTicket = !!normalizedTicketUrl && /^https?:\/\//i.test(normalizedTicketUrl);
   const titleId = `event-${event.id}-title`;
 
   return (
@@ -214,9 +227,12 @@ function EventModal({
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={ticketHref}
+              {...(isExternalTicket
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="inline-flex items-center gap-2 rounded-full bg-primary text-white px-6 py-3 text-sm font-bold hover:bg-primary-dark transition-colors"
             >
-              {event.ticketUrl ? "Reserve a Spot" : "Inquire to Attend"}
+              {normalizedTicketUrl ? "Reserve a Spot" : "Inquire to Attend"}
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <button
