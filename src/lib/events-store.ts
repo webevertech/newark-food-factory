@@ -21,7 +21,9 @@ export type PublicEvent = {
 export type EventInput = Omit<PublicEvent, "id" | "createdAt"> &
   Partial<Pick<PublicEvent, "id" | "createdAt">>;
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = process.env.EVENTS_DATA_DIR
+  ? path.resolve(process.env.EVENTS_DATA_DIR)
+  : path.join(process.cwd(), "data");
 const DATA_FILE = path.join(DATA_DIR, "events.json");
 
 async function readStoredEvents(): Promise<PublicEvent[]> {
