@@ -3,6 +3,15 @@ import { promises as fs } from "fs";
 import path from "path";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+async function safeList(dir: string): Promise<string[] | string> {
+  try {
+    return await fs.readdir(dir);
+  } catch (err) {
+    return `ERR: ${(err as Error).message}`;
+  }
+}
 
 export async function GET() {
   const envValue = process.env.EVENTS_DATA_DIR ?? null;
@@ -27,8 +36,14 @@ export async function GET() {
     readError = (err as Error).message;
   }
 
+  const homeDir = process.env.HOME ?? null;
+  const homeListing = homeDir ? await safeList(homeDir) : null;
+  const eventsDataListing = await safeList(resolvedDataDir);
+  const cwdParentListing = await safeList(path.dirname(process.cwd()));
+
   return NextResponse.json({
     cwd: process.cwd(),
+    homeDir,
     envEventsDataDir: envValue,
     resolvedDataDir,
     dataFile,
@@ -36,7 +51,11 @@ export async function GET() {
     fileSize,
     eventCount,
     readError,
+    homeListing,
+    eventsDataListing,
+    cwdParentListing,
     nodeVersion: process.version,
-    deployMarker: "debug-v1",
+    deployMarker: "debug-v2",
+    timestamp: new Date().toISOString(),
   });
 }
