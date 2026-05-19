@@ -32,8 +32,8 @@ export default function FoodBusinessIncubatorPage() {
         icon={Rocket}
         title="Food Business Incubator"
         subtitle="A structured program to take your food business from concept to revenue."
-        image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=90"
-        imageAlt="Chef plating food in a restaurant kitchen"
+        image="/food business incubator.jpg"
+        imageAlt="Newark Food Factory food business incubator"
       />
 
       {/* BUILD TEST LAUNCH */}

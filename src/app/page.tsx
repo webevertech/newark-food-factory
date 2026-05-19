@@ -126,30 +126,18 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* RIGHT, full bleed image */}
-          <div className="relative hidden lg:block">
+          {/* Image: full-bleed on desktop, banner on mobile */}
+          <div className="relative h-72 lg:h-auto">
             <Image
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136"
-              alt="Commercial kitchen in action"
+              src="/nff homepage.jpg"
+              alt="Newark Food Factory"
               fill
               className="object-cover"
               priority
-              sizes="50vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
             />
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950/80 to-transparent" />
-          </div>
-
-          {/* Mobile image fallback */}
-          <div className="relative h-72 lg:hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136"
-              alt="Commercial kitchen in action"
-              fill
-              className="object-cover"
-              priority
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950/80 to-transparent hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent lg:hidden" />
           </div>
         </div>
       </section>

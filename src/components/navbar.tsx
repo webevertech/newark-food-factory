@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import {
   Menu,
@@ -60,10 +61,32 @@ export function Navbar() {
         <nav aria-label="Main navigation" className="px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex h-20 items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0 mr-8" aria-label="Newark Food Factory - Home">
-              <img src="/3.png" alt="" className="h-14 w-14" width={56} height={56} aria-hidden="true" />
-              <img src="/7.png" alt="Newark Food Factory" className="h-26 w-auto hidden sm:block" width={260} height={104} />
-              <span className="font-bold text-lg text-gray-900 tracking-tight sm:hidden" aria-hidden="true">
+            <Link
+              href="/"
+              className="flex items-center shrink-0 mr-8"
+              aria-label="Newark Food Factory - Home"
+            >
+              <Image
+                src="/3.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-14 w-14"
+                priority
+                aria-hidden="true"
+              />
+              <Image
+                src="/7.png"
+                alt="Newark Food Factory"
+                width={260}
+                height={104}
+                className="h-26 w-auto hidden sm:block"
+                priority
+              />
+              <span
+                className="font-bold text-lg text-gray-900 tracking-tight sm:hidden"
+                aria-hidden="true"
+              >
                 NFF
               </span>
             </Link>

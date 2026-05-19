@@ -32,8 +32,8 @@ export default function StartFoodBusinessPage() {
         icon={Rocket}
         title="Launch Your Food Business"
         subtitle="From idea to thriving business. We provide the kitchen, coaching, sales channels, and community to help you succeed."
-        image="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1920&q=90"
-        imageAlt="Entrepreneur preparing food in commercial kitchen"
+        image="/start a food business.jpg"
+        imageAlt="Start a food business at Newark Food Factory"
       />
 
       {/* ════════════════════════════════════════════════════════════════

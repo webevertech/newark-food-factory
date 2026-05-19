@@ -19,6 +19,8 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 import { EventInquiryButton } from "@/components/event-inquiry-button";
 import { PageHero } from "@/components/page-hero";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { UpcomingEventsSection } from "@/components/upcoming-events-section";
 import { getUpcomingEvents } from "@/lib/events-store";
 import { createMetadata } from "@/lib/seo";
@@ -185,8 +187,8 @@ export default async function EventsPage() {
         icon={CalendarCheck}
         title="Book Newark's Most Unique Food-Centered Event Space"
         subtitle="Host your next private, corporate, or community event inside Newark Food Factory — a dynamic venue where food, culture, entrepreneurship, and unforgettable experiences come together."
-        image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=90"
-        imageAlt="Elegant event space with set tables"
+        image="/1st floor birthday party setup.jpg"
+        imageAlt="Newark Food Factory event space"
       >
         <Button href="/contact#tour" variant="white">
           Book a Tour
@@ -261,8 +263,66 @@ export default async function EventsPage() {
         </div>
       </section>
 
+      {/* OUR SPACES — TEASER (full gallery lives at /gallery) */}
+      <section className="py-20 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+              Our Spaces
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+              Five Distinct Spaces Under One Roof
+            </h2>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              From the 1st floor event hall to the courtyard and greenhouse —
+              pick one or combine them for something bigger.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+            {[
+              { src: "/1st floor 1.jpeg", alt: "1st floor" },
+              { src: "/2nd floor 1.jpeg", alt: "2nd floor" },
+              { src: "/courtyard 1.jpeg", alt: "Courtyard" },
+              { src: "/outdoor patio 1.jpeg", alt: "Outdoor patio" },
+              {
+                src: "/Green house sweet 16 party image.jpg",
+                alt: "Greenhouse",
+              },
+              {
+                src: "/1st floor workshop pics.jpg",
+                alt: "1st floor workshop",
+              },
+            ].map(({ src, alt }) => (
+              <div
+                key={src}
+                className="relative aspect-4/3 rounded-xl overflow-hidden bg-gray-100 group"
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(min-width: 640px) 30vw, 45vw"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 rounded-full bg-gray-950 text-white px-6 py-3 text-sm font-bold hover:bg-primary transition-colors"
+            >
+              View Full Gallery
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* PERFECT FOR */}
-      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
+      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">

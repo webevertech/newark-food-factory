@@ -24,8 +24,8 @@ export default function FoodEntrepreneursPage() {
         icon={Rocket}
         title="Food Entrepreneurs"
         subtitle="Resources, support, and community for food entrepreneurs building real businesses at Newark Food Factory."
-        image="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=90"
-        imageAlt="Food entrepreneur in commercial kitchen"
+        image="/food entrepreneurs.jpg"
+        imageAlt="Food entrepreneurs at Newark Food Factory"
       />
 
       <section className="py-20 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white text-center">

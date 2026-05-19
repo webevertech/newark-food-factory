@@ -36,8 +36,8 @@ export default function FoodTruckMembershipPage() {
         icon={Truck}
         title="Your Commissary Kitchen + Business Growth Partner"
         subtitle="More than a kitchen. We help food truck owners and caterers build and scale their businesses."
-        image="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=1920&q=90"
-        imageAlt="Food truck serving customers"
+        image="/food truck.jpg"
+        imageAlt="Newark Food Factory food truck commissary"
       />
 
       {/* WHAT WE OFFER */}

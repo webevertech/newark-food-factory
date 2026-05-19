@@ -39,8 +39,8 @@ export default function AboutPage() {
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative bg-gray-950 overflow-hidden min-h-[460px] sm:min-h-[520px] flex items-center">
         <Image
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=90"
-          alt="Chef at work in the kitchen"
+          src="/newark food factory orientation.jpg"
+          alt="Newark Food Factory orientation"
           fill
           className="object-cover"
           priority

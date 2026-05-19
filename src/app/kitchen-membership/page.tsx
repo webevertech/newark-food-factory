@@ -89,28 +89,17 @@ export default function KitchenMembershipPage() {
             </div>
           </div>
 
-          <div className="relative hidden lg:block">
+          <div className="relative h-72 lg:h-auto">
             <Image
-              src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1920&q=90"
-              alt="Professional commercial kitchen"
+              src="/kitchen membership.jpg"
+              alt="Newark Food Factory kitchen membership"
               fill
               className="object-cover"
               priority
-              sizes="50vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
             />
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950/80 to-transparent" />
-          </div>
-
-          <div className="relative h-72 lg:hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1920&q=90"
-              alt="Professional commercial kitchen"
-              fill
-              className="object-cover"
-              priority
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950/80 to-transparent hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent lg:hidden" />
           </div>
         </div>
       </section>

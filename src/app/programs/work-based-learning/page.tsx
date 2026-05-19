@@ -38,8 +38,8 @@ export default function WorkBasedLearningPage() {
         icon={GraduationCap}
         title="Work-Based Learning"
         subtitle="Gain real-world culinary and business experience while earning in a real production environment."
-        image="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1920&q=90"
-        imageAlt="Students learning in a professional kitchen"
+        image="/work based learning.jpg"
+        imageAlt="Newark Food Factory work-based learning"
       />
 
       {/* THE PROGRAM, split: content left + image right */}
