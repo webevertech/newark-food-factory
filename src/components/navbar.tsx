@@ -71,7 +71,7 @@ export function Navbar() {
                 alt=""
                 width={56}
                 height={56}
-                className="h-14 w-14"
+                className="h-14 w-14 hidden sm:block"
                 priority
                 aria-hidden="true"
               />
@@ -80,7 +80,7 @@ export function Navbar() {
                 alt="Newark Food Factory"
                 width={260}
                 height={104}
-                className="h-26 w-auto hidden sm:block"
+                className="h-16 sm:h-26 w-auto"
                 priority
               />
             </Link>
