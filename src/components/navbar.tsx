@@ -83,12 +83,6 @@ export function Navbar() {
                 className="h-26 w-auto hidden sm:block"
                 priority
               />
-              <span
-                className="font-bold text-lg text-gray-900 tracking-tight sm:hidden"
-                aria-hidden="true"
-              >
-                NFF
-              </span>
             </Link>
 
             {/* Desktop nav links, centered */}

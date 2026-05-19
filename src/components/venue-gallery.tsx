@@ -12,28 +12,47 @@ type VenueImage = {
 };
 
 const AREA_LABEL: Record<string, string> = {
-  "1st-floor": "1st Floor",
-  "2nd-floor": "2nd Floor",
+  "culinary-hall": "Culinary Hall",
   courtyard: "Courtyard",
   patio: "Outdoor Patio",
   greenhouse: "Greenhouse",
 };
 
 const VENUE_IMAGES: VenueImage[] = [
-  { src: "/1st floor 1.jpeg", area: "1st-floor", alt: "1st floor event space" },
-  { src: "/1st floor 2.jpeg", area: "1st-floor", alt: "1st floor event space" },
-  { src: "/1st floor 3.jpeg", area: "1st-floor", alt: "1st floor event space" },
-  { src: "/1st floor 4.jpeg", area: "1st-floor", alt: "1st floor event space" },
-  { src: "/1st floor 5.jpeg", area: "1st-floor", alt: "1st floor event space" },
+  {
+    src: "/1st floor 1.jpeg",
+    area: "culinary-hall",
+    alt: "Culinary Hall event space",
+  },
+  {
+    src: "/1st floor 2.jpeg",
+    area: "culinary-hall",
+    alt: "Culinary Hall event space",
+  },
+  {
+    src: "/1st floor 3.jpeg",
+    area: "culinary-hall",
+    alt: "Culinary Hall event space",
+  },
+  {
+    src: "/1st floor 4.jpeg",
+    area: "culinary-hall",
+    alt: "Culinary Hall event space",
+  },
+  {
+    src: "/1st floor 5.jpeg",
+    area: "culinary-hall",
+    alt: "Culinary Hall event space",
+  },
   {
     src: "/1st floor workshop pics.jpg",
-    area: "1st-floor",
-    alt: "1st floor workshop",
+    area: "culinary-hall",
+    alt: "Culinary Hall workshop",
   },
-  { src: "/2nd floor 1.jpeg", area: "2nd-floor", alt: "2nd floor space" },
-  { src: "/2nd floor 2.jpeg", area: "2nd-floor", alt: "2nd floor space" },
-  { src: "/2nd floor 3.jpeg", area: "2nd-floor", alt: "2nd floor space" },
-  { src: "/2nd floor 4.jpeg", area: "2nd-floor", alt: "2nd floor space" },
+  { src: "/2nd floor 1.jpeg", area: "greenhouse", alt: "Greenhouse" },
+  { src: "/2nd floor 2.jpeg", area: "greenhouse", alt: "Greenhouse" },
+  { src: "/2nd floor 3.jpeg", area: "greenhouse", alt: "Greenhouse" },
+  { src: "/2nd floor 4.jpeg", area: "greenhouse", alt: "Greenhouse" },
   { src: "/courtyard 1.jpeg", area: "courtyard", alt: "Courtyard" },
   { src: "/courtyard 2.jpeg", area: "courtyard", alt: "Courtyard" },
   { src: "/courtyard 3.jpeg", area: "courtyard", alt: "Courtyard" },
@@ -59,8 +78,7 @@ const VENUE_IMAGES: VenueImage[] = [
 
 const FILTERS = [
   { key: "all", label: "All" },
-  { key: "1st-floor", label: "1st Floor" },
-  { key: "2nd-floor", label: "2nd Floor" },
+  { key: "culinary-hall", label: "Culinary Hall" },
   { key: "courtyard", label: "Courtyard" },
   { key: "patio", label: "Outdoor Patio" },
   { key: "greenhouse", label: "Greenhouse" },
