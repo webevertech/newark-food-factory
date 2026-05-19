@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ChatLauncher } from "@/components/chat-launcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -233,13 +233,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Script
-          id="leadconnector-chat-widget"
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69f9eefb3cc757bd5a49b852"
-          strategy="afterInteractive"
-        />
+        <ChatLauncher />
       </body>
     </html>
   );
