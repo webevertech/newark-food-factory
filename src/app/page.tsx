@@ -289,29 +289,25 @@ export default function HomePage() {
                 title: "Start a Food Business",
                 desc: "Launch and scale your own food venture with full support.",
                 href: "/start-a-food-business",
-                image:
-                  "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80",
+                image: "/start a food business.jpg",
               },
               {
                 title: "Work-Based Learning",
                 desc: "Students gain real-world culinary and business experience.",
                 href: "/programs/work-based-learning",
-                image:
-                  "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80",
+                image: "/work based learning.jpg",
               },
               {
                 title: "Food Truck Membership",
                 desc: "Commissary kitchen access, storage, and business coaching.",
                 href: "/programs/food-truck-membership",
-                image:
-                  "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&q=80",
+                image: "/food truck.jpg",
               },
               {
                 title: "Event Space",
                 desc: "A 5,000 sq ft venue for chef-driven celebrations and brand activations.",
                 href: "/events",
-                image:
-                  "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80",
+                image: "/1st floor birthday party setup.jpg",
               },
             ].map(({ title, desc, href, image }) => (
               <Link
@@ -348,7 +344,7 @@ export default function HomePage() {
       ════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[520px] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1920&q=80"
           alt="Fresh daily meals"
           fill
           className="object-cover"
@@ -406,8 +402,8 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative rounded-2xl overflow-hidden h-52 sm:h-64 lg:h-72 col-span-2">
                 <Image
-                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=90"
-                  alt="Commissary kitchen prep area"
+                  src="/start a food business.jpg"
+                  alt="Newark Food Factory commissary kitchen"
                   fill
                   className="object-cover"
                   sizes="(min-width:1024px) 50vw, 100vw"
@@ -415,8 +411,8 @@ export default function HomePage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-36 sm:h-44">
                 <Image
-                  src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=90"
-                  alt="Chef preparing food"
+                  src="/food entrepreneurs.jpg"
+                  alt="Food entrepreneurs prepping in the kitchen"
                   fill
                   className="object-cover"
                   sizes="(min-width:1024px) 25vw, 50vw"
@@ -424,8 +420,8 @@ export default function HomePage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden h-36 sm:h-44">
                 <Image
-                  src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=800&q=90"
-                  alt="Commercial kitchen equipment"
+                  src="/food business incubator.jpg"
+                  alt="Production line inside the commissary kitchen"
                   fill
                   className="object-cover"
                   sizes="(min-width:1024px) 25vw, 50vw"
@@ -517,22 +513,22 @@ export default function HomePage() {
               {
                 label: "Birthdays",
                 icon: Balloon,
-                img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+                img: "/Green house 25th bday party decor.jpg",
               },
               {
                 label: "Weddings",
                 icon: Heart,
-                img: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80",
+                img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
               },
               {
                 label: "Corporate",
                 icon: Briefcase,
-                img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+                img: "/1st floor workshop pics.jpg",
               },
               {
                 label: "Markets",
                 icon: Store,
-                img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+                img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
               },
             ].map(({ label, icon: Icon, img }) => (
               <div

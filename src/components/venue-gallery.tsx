@@ -13,74 +13,40 @@ type VenueImage = {
 
 const AREA_LABEL: Record<string, string> = {
   "culinary-hall": "Culinary Hall",
-  courtyard: "Courtyard",
-  patio: "Outdoor Patio",
   greenhouse: "Greenhouse",
 };
 
 const VENUE_IMAGES: VenueImage[] = [
   {
-    src: "/1st floor 1.jpeg",
+    src: "/1st floor birthday party setup.jpg",
     area: "culinary-hall",
-    alt: "Culinary Hall event space",
+    alt: "Culinary Hall set up for a birthday celebration",
   },
   {
-    src: "/1st floor 2.jpeg",
+    src: "/1st floor private chef experience.jpg",
     area: "culinary-hall",
-    alt: "Culinary Hall event space",
-  },
-  {
-    src: "/1st floor 3.jpeg",
-    area: "culinary-hall",
-    alt: "Culinary Hall event space",
-  },
-  {
-    src: "/1st floor 4.jpeg",
-    area: "culinary-hall",
-    alt: "Culinary Hall event space",
-  },
-  {
-    src: "/1st floor 5.jpeg",
-    area: "culinary-hall",
-    alt: "Culinary Hall event space",
+    alt: "Private chef experience in the Culinary Hall",
   },
   {
     src: "/1st floor workshop pics.jpg",
     area: "culinary-hall",
-    alt: "Culinary Hall workshop",
+    alt: "Workshop in the Culinary Hall",
   },
-  { src: "/2nd floor 1.jpeg", area: "greenhouse", alt: "Greenhouse" },
-  { src: "/2nd floor 2.jpeg", area: "greenhouse", alt: "Greenhouse" },
-  { src: "/2nd floor 3.jpeg", area: "greenhouse", alt: "Greenhouse" },
-  { src: "/2nd floor 4.jpeg", area: "greenhouse", alt: "Greenhouse" },
-  { src: "/courtyard 1.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 2.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 3.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 4.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 5.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 6.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 7.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/courtyard 8.jpeg", area: "courtyard", alt: "Courtyard" },
-  { src: "/outdoor patio 1.jpeg", area: "patio", alt: "Outdoor patio" },
-  { src: "/outdoor patio 2.jpeg", area: "patio", alt: "Outdoor patio" },
-  { src: "/outdoor patio 3.jpeg", area: "patio", alt: "Outdoor patio" },
   {
     src: "/Green house sweet 16 party image.jpg",
     area: "greenhouse",
-    alt: "Greenhouse — sweet sixteen",
+    alt: "Greenhouse styled for a sweet sixteen",
   },
   {
     src: "/Green house 25th bday party decor.jpg",
     area: "greenhouse",
-    alt: "Greenhouse — 25th birthday",
+    alt: "Greenhouse decorated for a 25th birthday",
   },
 ];
 
 const FILTERS = [
   { key: "all", label: "All" },
   { key: "culinary-hall", label: "Culinary Hall" },
-  { key: "courtyard", label: "Courtyard" },
-  { key: "patio", label: "Outdoor Patio" },
   { key: "greenhouse", label: "Greenhouse" },
 ];
 

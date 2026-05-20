@@ -274,24 +274,28 @@ export default async function EventsPage() {
               Five Distinct Spaces Under One Roof
             </h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              From the 1st floor event hall to the courtyard and greenhouse —
-              pick one or combine them for something bigger.
+              From the Culinary Hall to the courtyard and greenhouse — pick one
+              or combine them for something bigger.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {[
-              { src: "/1st floor 1.jpeg", alt: "1st floor" },
-              { src: "/2nd floor 1.jpeg", alt: "2nd floor" },
-              { src: "/courtyard 1.jpeg", alt: "Courtyard" },
-              { src: "/outdoor patio 1.jpeg", alt: "Outdoor patio" },
               {
-                src: "/Green house sweet 16 party image.jpg",
-                alt: "Greenhouse",
+                src: "/1st floor birthday party setup.jpg",
+                alt: "Culinary Hall set up for a birthday celebration",
               },
               {
-                src: "/1st floor workshop pics.jpg",
-                alt: "1st floor workshop",
+                src: "/1st floor private chef experience.jpg",
+                alt: "Private chef experience in the Culinary Hall",
+              },
+              {
+                src: "/Green house sweet 16 party image.jpg",
+                alt: "Greenhouse styled for a sweet sixteen",
+              },
+              {
+                src: "/Green house 25th bday party decor.jpg",
+                alt: "Greenhouse decorated for a 25th birthday",
               },
             ].map(({ src, alt }) => (
               <div
@@ -303,7 +307,7 @@ export default async function EventsPage() {
                   alt={alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 640px) 30vw, 45vw"
+                  sizes="(min-width: 1024px) 22vw, 45vw"
                 />
               </div>
             ))}
