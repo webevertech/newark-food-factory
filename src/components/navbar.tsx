@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -32,6 +33,7 @@ const kitchenLinks = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [kitchenOpen, setKitchenOpen] = useState(false);
@@ -93,12 +95,14 @@ export function Navbar() {
 
                 {/* Programs dropdown */}
                 <div
-                  className="relative"
+                  className="relative group"
                   onMouseEnter={() => setProgramsOpen(true)}
                   onMouseLeave={() => setProgramsOpen(false)}
                 >
                   <button
-                    className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-0.5 whitespace-nowrap"
+                    className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 cursor-pointer flex items-center gap-0.5 whitespace-nowrap ${
+                      pathname.startsWith("/programs") ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+                    }`}
                     aria-expanded={programsOpen}
                     aria-haspopup="true"
                     onClick={() => setProgramsOpen((p) => !p)}
@@ -106,6 +110,11 @@ export function Navbar() {
                   >
                     Programs
                     <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${programsOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                    <span
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+                        pathname.startsWith("/programs") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
                   </button>
                   {programsOpen && (
                     <div className="absolute top-full left-0 w-[300px] pt-2" role="menu">
@@ -134,12 +143,14 @@ export function Navbar() {
 
                 {/* Kitchen Membership dropdown */}
                 <div
-                  className="relative"
+                  className="relative group"
                   onMouseEnter={() => setKitchenOpen(true)}
                   onMouseLeave={() => setKitchenOpen(false)}
                 >
                   <button
-                    className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors cursor-pointer flex items-center gap-0.5 whitespace-nowrap"
+                    className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 cursor-pointer flex items-center gap-0.5 whitespace-nowrap ${
+                      pathname.startsWith("/kitchen-membership") ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+                    }`}
                     aria-expanded={kitchenOpen}
                     aria-haspopup="true"
                     onClick={() => setKitchenOpen((k) => !k)}
@@ -147,6 +158,11 @@ export function Navbar() {
                   >
                     Kitchen Membership
                     <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                    <span
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+                        pathname.startsWith("/kitchen-membership") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
                   </button>
                   {kitchenOpen && (
                     <div className="absolute top-full left-0 w-[270px] pt-2" role="menu">
@@ -268,12 +284,21 @@ export function Navbar() {
 }
 
 function DesktopLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
   return (
     <Link
       href={href}
-      className="px-2.5 py-2 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"
+      className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 whitespace-nowrap group ${
+        isActive ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+      }`}
     >
       {children}
+      <span
+        className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+          isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+        }`}
+      />
     </Link>
   );
 }
@@ -289,11 +314,15 @@ function MobileLink({
   onClick: () => void;
   nested?: boolean;
 }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
   return (
     <Link
       href={href}
-      className={`block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-gray-50 hover:text-primary transition-colors ${
-        nested ? "pl-6 text-gray-600" : "text-gray-800"
+      className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+        isActive
+          ? `text-primary bg-primary/5 border-l-2 border-primary ${nested ? "pl-5.5" : "pl-2.5"}`
+          : `hover:bg-gray-50 hover:text-primary ${nested ? "pl-6 text-gray-600" : "text-gray-800"}`
       }`}
       onClick={onClick}
     >
