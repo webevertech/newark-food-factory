@@ -56,14 +56,11 @@ export default function PartnersPage() {
                 title: "Community Food Access",
                 desc: "We work with community organizations to expand healthy food access across Newark neighborhoods.",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-xl border border-gray-200 p-6 transition-all hover:border-primary/20 hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
                 <h3 className="font-bold text-lg text-gray-900">{title}</h3>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">{desc}</p>
               </div>
@@ -113,18 +110,13 @@ export default function PartnersPage() {
               { icon: Users, label: "Community Reach", desc: "Thousands of community members served through daily meals and programming." },
               { icon: Briefcase, label: "Business Pipeline", desc: "Active entrepreneur development programs generating new food businesses." },
               { icon: ShoppingCart, label: "Revenue Channels", desc: "Daily meals, events, and catering create multiple revenue opportunities." },
-            ].map(({ icon: Icon, label, desc }) => (
+            ].map(({ label, desc }) => (
               <div
                 key={label}
-                className="flex items-start gap-4 bg-white rounded-xl border border-gray-100 p-5 hover:border-primary/20 hover:shadow-md transition-all"
+                className="bg-white rounded-xl border border-gray-100 p-5 hover:border-primary/20 hover:shadow-md transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{label}</h3>
-                  <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
-                </div>
+                <h3 className="font-semibold text-gray-900">{label}</h3>
+                <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
               </div>
             ))}
           </div>

@@ -46,7 +46,7 @@ export default function StartFoodBusinessPage() {
               Your Pathway
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Six steps to building your food business
+              Six Steps to Building Your Food Business
             </h2>
           </div>
 
@@ -101,14 +101,11 @@ export default function StartFoodBusinessPage() {
               { icon: Handshake, title: "Catering", desc: "Access catering gigs through our network." },
               { icon: CalendarDays, title: "Events", desc: "Vend at events hosted at our 5,000 sq ft space." },
               { icon: Truck, title: "Food Truck Collabs", desc: "Partner with food truck members for pop-ups." },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-2xl bg-white/[0.05] border border-white/10 p-6 hover:bg-white/[0.08] transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-4">
-                  <Icon className="h-5 w-5 text-primary-bright" />
-                </div>
                 <h3 className="font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm text-gray-400 leading-relaxed">{desc}</p>
               </div>
@@ -146,18 +143,13 @@ export default function StartFoodBusinessPage() {
                 { icon: Palette, label: "Branding", desc: "Logo, packaging, and brand identity support" },
                 { icon: DollarSign, label: "Pricing Strategy", desc: "Cost analysis and competitive pricing guidance" },
                 { icon: Users, label: "Growth Coaching", desc: "One-on-one mentorship from industry experts" },
-              ].map(({ icon: Icon, label, desc }) => (
+              ].map(({ label, desc }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-4 bg-white rounded-xl border border-gray-100 p-4 hover:border-primary/20 hover:shadow-md transition-all"
+                  className="bg-white rounded-xl border border-gray-100 p-4 hover:border-primary/20 hover:shadow-md transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">{label}</h3>
-                    <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
-                  </div>
+                  <h3 className="font-semibold text-gray-900">{label}</h3>
+                  <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
                 </div>
               ))}
             </div>
@@ -175,7 +167,7 @@ export default function StartFoodBusinessPage() {
               Program Tiers
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Choose the level that matches where you are
+              Choose the Level That Matches Where You Are
             </h2>
           </div>
 

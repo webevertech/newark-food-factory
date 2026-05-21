@@ -2,7 +2,6 @@ import {
   CalendarCheck,
   PartyPopper,
   Briefcase,
-  Users,
   ChefHat,
   Megaphone,
   Store,
@@ -187,7 +186,7 @@ export default async function EventsPage() {
         icon={CalendarCheck}
         title="Book Newark's Most Unique Food-Centered Event Space"
         subtitle="Host your next private, corporate, or community event inside Newark Food Factory — a dynamic venue where food, culture, entrepreneurship, and unforgettable experiences come together."
-        image="/1st floor birthday party setup.jpg"
+        image="/Updated Images/culinary hall.webp"
         imageAlt="Newark Food Factory event space"
       >
         <Button href="/contact#tour" variant="white">
@@ -245,14 +244,11 @@ export default async function EventsPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-            {differentiators.map(({ icon: Icon, title, desc }) => (
+            {differentiators.map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-primary/20 hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
                 <h3 className="font-bold text-lg text-gray-900">{title}</h3>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">
                   {desc}
@@ -279,23 +275,39 @@ export default async function EventsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {[
               {
-                src: "/1st floor birthday party setup.jpg",
+                src: "/Updated Images/1st floor birthday party setup.webp",
                 alt: "Culinary Hall set up for a birthday celebration",
               },
               {
-                src: "/1st floor private chef experience.jpg",
-                alt: "Private chef experience in the Culinary Hall",
+                src: "/Updated Images/culinary hall.webp",
+                alt: "Culinary Hall",
               },
               {
-                src: "/Green house sweet 16 party image.jpg",
+                src: "/Updated Images/1st floor workshop pics.webp",
+                alt: "Workshop in the Culinary Hall",
+              },
+              {
+                src: "/Updated Images/courtyard.webp",
+                alt: "Courtyard",
+              },
+              {
+                src: "/Updated Images/courtyard 1.webp",
+                alt: "Courtyard view",
+              },
+              {
+                src: "/Updated Images/outdoor patio.webp",
+                alt: "Outdoor patio",
+              },
+              {
+                src: "/Updated Images/greenhouse.webp",
+                alt: "Greenhouse",
+              },
+              {
+                src: "/Updated Images/Green house sweet 16 party image.webp",
                 alt: "Greenhouse styled for a sweet sixteen",
-              },
-              {
-                src: "/Green house 25th bday party decor.jpg",
-                alt: "Greenhouse decorated for a 25th birthday",
               },
             ].map(({ src, alt }) => (
               <div
@@ -338,20 +350,15 @@ export default async function EventsPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {perfectFor.map(({ icon: Icon, title, desc }) => (
+            {perfectFor.map(({ title, desc }) => (
               <div
                 key={title}
-                className="flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-md transition-all"
+                className="p-5 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{title}</h3>
-                  <p className="text-sm text-gray-500 mt-1 leading-relaxed">
-                    {desc}
-                  </p>
-                </div>
+                <h3 className="font-semibold text-gray-900">{title}</h3>
+                <p className="text-sm text-gray-500 mt-1 leading-relaxed">
+                  {desc}
+                </p>
               </div>
             ))}
           </div>
@@ -440,8 +447,8 @@ export default async function EventsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden h-72 lg:h-96 order-2 lg:order-1">
               <Image
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=90"
-                alt="Chef plating food during a live culinary experience"
+                src="/Updated Images/1st floor private chef experience.webp"
+                alt="Private chef experience at Newark Food Factory"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -527,14 +534,11 @@ export default async function EventsPage() {
             </h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
-            {trustCards.map(({ icon: Icon, title, desc }) => (
+            {trustCards.map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-xl border border-gray-200 p-6 transition-all hover:border-primary/20 hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
                 <h3 className="font-bold text-lg text-gray-900">{title}</h3>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed">
                   {desc}

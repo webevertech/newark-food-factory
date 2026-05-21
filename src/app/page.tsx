@@ -50,7 +50,7 @@ export default function HomePage() {
               </p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold tracking-tight leading-[1.1] text-white">
-                Where Newark builds food businesses.
+                Where Newark Builds Food Businesses.
               </h1>
 
               <p className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
@@ -153,10 +153,10 @@ export default function HomePage() {
               Who We Are
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Not just a kitchen.
+              Not Just a Kitchen.
               <br />
               <span className="text-primary-bright">
-                A complete food business ecosystem.
+                A Complete Food Business Ecosystem.
               </span>
             </h2>
             <p className="mt-6 text-gray-400 leading-relaxed max-w-lg">
@@ -188,14 +188,11 @@ export default function HomePage() {
                 title: "Business Incubator",
                 desc: "Launch your food brand with mentorship & support",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="bg-white/[0.05] border border-white/10 rounded-2xl p-5 hover:bg-white/[0.08] transition-colors"
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-3">
-                  <Icon className="h-5 w-5 text-primary-bright" />
-                </div>
                 <h3 className="font-semibold text-white text-sm">{title}</h3>
                 <p className="mt-1 text-xs text-gray-400 leading-relaxed">
                   {desc}
@@ -216,7 +213,7 @@ export default function HomePage() {
               How It Works
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Four steps to building your food business
+              Four Steps to Building Your Food Business
             </h2>
           </div>
 
@@ -279,7 +276,7 @@ export default function HomePage() {
               Your Pathway
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Choose the track that fits your goals
+              Choose the Track That Fits Your Goals
             </h2>
           </div>
 
@@ -307,7 +304,7 @@ export default function HomePage() {
                 title: "Event Space",
                 desc: "A 5,000 sq ft venue for chef-driven celebrations and brand activations.",
                 href: "/events",
-                image: "/1st floor birthday party setup.jpg",
+                image: "/Updated Images/culinary hall.webp",
               },
             ].map(({ title, desc, href, image }) => (
               <Link
@@ -453,20 +450,15 @@ export default function HomePage() {
                   { icon: Truck, title: "Storage", desc: "Dry, cold, and frozen storage" },
                   { icon: Award, title: "Coaching", desc: "Business mentorship & guidance" },
                   { icon: CalendarDays, title: "Scheduling", desc: "Easy online booking system" },
-                ].map(({ icon: Icon, title, desc }) => (
+                ].map(({ title, desc }) => (
                   <div
                     key={title}
-                    className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors"
+                    className="p-3 rounded-xl hover:bg-gray-50 transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <Icon className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 text-sm">
-                        {title}
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
-                    </div>
+                    <h3 className="font-semibold text-gray-900 text-sm">
+                      {title}
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
                   </div>
                 ))}
               </div>
@@ -513,7 +505,7 @@ export default function HomePage() {
               {
                 label: "Birthdays",
                 icon: Balloon,
-                img: "/Green house 25th bday party decor.jpg",
+                img: "/Updated Images/greenhouse.webp",
               },
               {
                 label: "Weddings",
@@ -523,7 +515,7 @@ export default function HomePage() {
               {
                 label: "Corporate",
                 icon: Briefcase,
-                img: "/1st floor workshop pics.jpg",
+                img: "/Updated Images/1st floor workshop pics.webp",
               },
               {
                 label: "Markets",
@@ -563,7 +555,7 @@ export default function HomePage() {
               Our Impact
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              Building a thriving food ecosystem in Newark
+              Building a Thriving Food Ecosystem in Newark
             </h2>
           </div>
 

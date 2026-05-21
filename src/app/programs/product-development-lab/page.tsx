@@ -141,14 +141,11 @@ export default function ProductDevelopmentLabPage() {
               { icon: UtensilsCrossed, title: "Daily Meals", desc: "Feature your product in our rotating meal program." },
               { icon: CalendarDays, title: "Events", desc: "Sample and sell at community events." },
               { icon: Handshake, title: "Catering", desc: "Include your product in catering orders." },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-xl bg-white/[0.05] border border-white/10 p-6 text-center hover:border-primary/20 transition-all"
               >
-                <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-4">
-                  <Icon className="h-6 w-6 text-primary-bright" />
-                </div>
                 <h3 className="font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm text-gray-400">{desc}</p>
               </div>

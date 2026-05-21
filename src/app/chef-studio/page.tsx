@@ -87,7 +87,7 @@ export default function ChefStudioPage() {
 
           <div className="relative h-72 lg:h-auto">
             <Image
-              src="/1st floor private chef experience.jpg"
+              src="/Updated Images/1st floor private chef experience.webp"
               alt="Private chef experience at Newark Food Factory"
               fill
               className="object-cover"
@@ -169,19 +169,19 @@ export default function ChefStudioPage() {
             {[
               {
                 icon: Video,
-                title: "Film recipes, reels, and branded content",
+                title: "Film Recipes, Reels, and Branded Content",
               },
               {
                 icon: UtensilsCrossed,
-                title: "Host ticketed dining experiences",
+                title: "Host Ticketed Dining Experiences",
               },
               {
                 icon: Megaphone,
-                title: "Build your personal chef brand",
+                title: "Build Your Personal Chef Brand",
               },
               {
                 icon: Handshake,
-                title: "Partner with sponsors and food brands",
+                title: "Partner With Sponsors and Food Brands",
               },
             ].map(({ icon: Icon, title }) => (
               <div
@@ -243,18 +243,13 @@ export default function ChefStudioPage() {
                 title: "Chef Takeover Night",
                 desc: "Own the kitchen + menu",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
-                className="flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-sm transition-all"
+                className="p-5 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-sm transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">{title}</h3>
-                  <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
-                </div>
+                <h3 className="font-bold text-gray-900">{title}</h3>
+                <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
               </div>
             ))}
           </div>

@@ -102,7 +102,7 @@ export default function MealsPage() {
               Weekly Menu
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              See what&apos;s cooking this week
+              See What&apos;s Cooking This Week
             </h2>
           </div>
 

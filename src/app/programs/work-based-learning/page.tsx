@@ -81,8 +81,8 @@ export default function WorkBasedLearningPage() {
           <div>
             <div className="relative rounded-2xl overflow-hidden h-80 lg:h-[28rem]">
               <Image
-                src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=90"
-                alt="Students working in commercial kitchen"
+                src="/Updated Images/work based learning.webp"
+                alt="Students working in commercial kitchen at Newark Food Factory"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -130,14 +130,11 @@ export default function WorkBasedLearningPage() {
                 title: "Food Truck Operations",
                 desc: "Learn the full food truck workflow, from commissary prep to on-site service.",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-2xl bg-white/[0.05] border border-white/10 p-6 text-center hover:bg-white/[0.08] transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mx-auto mb-4">
-                  <Icon className="h-6 w-6 text-primary-bright" />
-                </div>
                 <h3 className="font-bold text-white text-lg">{title}</h3>
                 <p className="mt-2 text-sm text-gray-400 leading-relaxed">
                   {desc}
@@ -157,7 +154,7 @@ export default function WorkBasedLearningPage() {
                 How It Works
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Your learning journey
+                Your Learning Journey
               </h2>
             </div>
           </div>
@@ -214,14 +211,11 @@ export default function WorkBasedLearningPage() {
               { icon: Award, title: "Certifications", desc: "Food safety, ServSafe, and industry-recognized credentials." },
               { icon: Clock, title: "Paid Experience", desc: "Earn while you learn with real, compensated work hours." },
               { icon: Users, title: "Mentorship", desc: "Work alongside experienced chefs and food entrepreneurs." },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
                 className="rounded-2xl bg-white/[0.05] border border-white/10 p-6 hover:bg-white/[0.08] transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-4">
-                  <Icon className="h-5 w-5 text-primary-bright" />
-                </div>
                 <h3 className="font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm text-gray-400 leading-relaxed">{desc}</p>
               </div>

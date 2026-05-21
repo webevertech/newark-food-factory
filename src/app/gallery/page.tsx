@@ -26,7 +26,7 @@ export default function GalleryPage() {
         icon={Images}
         title="Inside Newark Food Factory"
         subtitle="A look at every space available for your next event — filter by area to see what fits."
-        image="/1st floor birthday party setup.jpg"
+        image="/Updated Images/culinary hall.webp"
         imageAlt="Newark Food Factory event space"
       >
         <Button href="/contact#tour" variant="white">

@@ -14,33 +14,65 @@ type VenueImage = {
 const AREA_LABEL: Record<string, string> = {
   "culinary-hall": "Culinary Hall",
   greenhouse: "Greenhouse",
+  courtyard: "Courtyard",
+  "outdoor-patio": "Outdoor Patio",
 };
 
 const VENUE_IMAGES: VenueImage[] = [
   {
-    src: "/1st floor birthday party setup.jpg",
+    src: "/Updated Images/culinary hall.webp",
+    area: "culinary-hall",
+    alt: "Culinary Hall",
+  },
+  {
+    src: "/Updated Images/1st floor birthday party setup.webp",
     area: "culinary-hall",
     alt: "Culinary Hall set up for a birthday celebration",
   },
   {
-    src: "/1st floor private chef experience.jpg",
+    src: "/Updated Images/1st floor private chef experience.webp",
     area: "culinary-hall",
     alt: "Private chef experience in the Culinary Hall",
   },
   {
-    src: "/1st floor workshop pics.jpg",
+    src: "/Updated Images/1st floor workshop pics.webp",
     area: "culinary-hall",
     alt: "Workshop in the Culinary Hall",
   },
   {
-    src: "/Green house sweet 16 party image.jpg",
+    src: "/Updated Images/greenhouse.webp",
+    area: "greenhouse",
+    alt: "Greenhouse",
+  },
+  {
+    src: "/Updated Images/Green house sweet 16 party image.webp",
     area: "greenhouse",
     alt: "Greenhouse styled for a sweet sixteen",
   },
   {
-    src: "/Green house 25th bday party decor.jpg",
+    src: "/Updated Images/Green house 25th bday party decor.webp",
     area: "greenhouse",
     alt: "Greenhouse decorated for a 25th birthday",
+  },
+  {
+    src: "/Updated Images/courtyard.webp",
+    area: "courtyard",
+    alt: "Courtyard",
+  },
+  {
+    src: "/Updated Images/courtyard 1.webp",
+    area: "courtyard",
+    alt: "Courtyard view",
+  },
+  {
+    src: "/Updated Images/outdoor patio.webp",
+    area: "outdoor-patio",
+    alt: "Outdoor patio",
+  },
+  {
+    src: "/Updated Images/outdoor patio 1.webp",
+    area: "outdoor-patio",
+    alt: "Outdoor patio view",
   },
 ];
 
@@ -48,6 +80,8 @@ const FILTERS = [
   { key: "all", label: "All" },
   { key: "culinary-hall", label: "Culinary Hall" },
   { key: "greenhouse", label: "Greenhouse" },
+  { key: "courtyard", label: "Courtyard" },
+  { key: "outdoor-patio", label: "Outdoor Patio" },
 ];
 
 export function VenueGallery() {

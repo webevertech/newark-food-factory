@@ -223,14 +223,11 @@ export default function AboutPage() {
                 title: "Community",
                 desc: "A built-in market that supports you",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
-                className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 p-7 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 p-7 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <Icon className="h-6 w-6 text-white" />
-                </div>
                 <h3 className="font-bold text-xl text-gray-900">{title}</h3>
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                   {desc}
@@ -368,7 +365,7 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        title="See where your journey starts"
+        title="See Where Your Journey Starts"
         subtitle="Apply, join our kitchen, or book a tour in person."
       />
 
@@ -415,7 +412,7 @@ export default function AboutPage() {
                 image:
                   "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&q=85",
               },
-            ].map(({ icon: Icon, title, desc, image }) => (
+            ].map(({ title, desc, image }) => (
               <div
                 key={title}
                 className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer"
@@ -429,7 +426,6 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                  <Icon className="h-6 w-6 text-primary-bright mb-2" />
                   <h3 className="font-bold text-xl">{title}</h3>
                   <p className="text-sm text-gray-200 mt-1">{desc}</p>
                 </div>
@@ -513,7 +509,7 @@ export default function AboutPage() {
               The Impact
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              This is bigger than food.
+              This Is Bigger Than Food.
             </h2>
             <p className="mt-5 text-lg text-gray-700">
               What happens here doesn&apos;t stay here.

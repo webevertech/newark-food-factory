@@ -158,18 +158,13 @@ export default function KitchenMembershipPage() {
                 title: "Coaching + support",
                 desc: "grow smarter, faster",
               },
-            ].map(({ icon: Icon, title, desc }) => (
+            ].map(({ title, desc }) => (
               <div
                 key={title}
-                className="flex items-start gap-3 p-4 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-sm transition-all"
+                className="p-4 rounded-xl border border-gray-100 hover:border-primary/20 hover:shadow-sm transition-all"
               >
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm">{title}</h3>
-                  <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
-                </div>
+                <h3 className="font-semibold text-gray-900 text-sm">{title}</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
               </div>
             ))}
           </div>
@@ -506,14 +501,11 @@ export default function KitchenMembershipPage() {
                   label: "Product sales",
                   desc: "& retail testing",
                 },
-              ].map(({ icon: Icon, label, desc }) => (
+              ].map(({ label, desc }) => (
                 <div
                   key={label}
                   className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center hover:bg-white/15 transition-colors"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-white/90 flex items-center justify-center mx-auto mb-3">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
                   <p className="font-semibold text-white text-sm">{label}</p>
                   <p className="text-xs text-gray-400 mt-1">{desc}</p>
                 </div>
