@@ -292,7 +292,7 @@ export default function HomePage() {
                 title: "Work-Based Learning",
                 desc: "Students gain real-world culinary and business experience.",
                 href: "/programs/work-based-learning",
-                image: "/work based learning.jpg",
+                image: "/Updated Images/work based learning.webp",
               },
               {
                 title: "Food Truck Membership",
@@ -505,12 +505,12 @@ export default function HomePage() {
               {
                 label: "Birthdays",
                 icon: Balloon,
-                img: "/Updated Images/greenhouse.webp",
+                img: "/Updated Images/Green house sweet 16 party image.webp",
               },
               {
                 label: "Weddings",
                 icon: Heart,
-                img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+                img: "/Updated Images/greenhouse.webp",
               },
               {
                 label: "Corporate",
@@ -520,7 +520,7 @@ export default function HomePage() {
               {
                 label: "Markets",
                 icon: Store,
-                img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+                img: "/Updated Images/courtyard.webp",
               },
             ].map(({ label, icon: Icon, img }) => (
               <div
