@@ -32,8 +32,15 @@ const kitchenLinks = [
   { name: "Book Kitchen", href: "/kitchen-membership#book", icon: CalendarCheck, desc: "Schedule your hours" },
 ];
 
+function normalize(path: string) {
+  if (!path) return "/";
+  const noHash = path.split("#")[0];
+  if (noHash === "/") return "/";
+  return noHash.replace(/\/$/, "");
+}
+
 export function Navbar() {
-  const pathname = usePathname();
+  const pathname = normalize(usePathname());
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [kitchenOpen, setKitchenOpen] = useState(false);
@@ -284,8 +291,8 @@ export function Navbar() {
 }
 
 function DesktopLink({ href, children }: { href: string; children: React.ReactNode }) {
-  const pathname = usePathname();
-  const isActive = pathname === href;
+  const pathname = normalize(usePathname());
+  const isActive = pathname === normalize(href);
   return (
     <Link
       href={href}
@@ -314,8 +321,8 @@ function MobileLink({
   onClick: () => void;
   nested?: boolean;
 }) {
-  const pathname = usePathname();
-  const isActive = pathname === href;
+  const pathname = normalize(usePathname());
+  const isActive = pathname === normalize(href);
   return (
     <Link
       href={href}
