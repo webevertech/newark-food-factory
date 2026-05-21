@@ -108,7 +108,7 @@ export function Navbar() {
                 >
                   <button
                     className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 cursor-pointer flex items-center gap-0.5 whitespace-nowrap ${
-                      pathname.startsWith("/programs") ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+                      pathname.startsWith("/programs") ? "text-primary" : "text-gray-600 hover:text-gray-900"
                     }`}
                     aria-expanded={programsOpen}
                     aria-haspopup="true"
@@ -156,7 +156,7 @@ export function Navbar() {
                 >
                   <button
                     className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 cursor-pointer flex items-center gap-0.5 whitespace-nowrap ${
-                      pathname.startsWith("/kitchen-membership") ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+                      pathname.startsWith("/kitchen-membership") ? "text-primary" : "text-gray-600 hover:text-gray-900"
                     }`}
                     aria-expanded={kitchenOpen}
                     aria-haspopup="true"
@@ -297,7 +297,7 @@ function DesktopLink({ href, children }: { href: string; children: React.ReactNo
     <Link
       href={href}
       className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 whitespace-nowrap group ${
-        isActive ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+        isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
       }`}
     >
       {children}
