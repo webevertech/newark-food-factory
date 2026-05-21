@@ -109,9 +109,9 @@ export function Navbar() {
                     type="button"
                   >
                     Programs
-                    <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${programsOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                    <ChevronDown className={`h-3.5 w-3.5 transition-[rotate] duration-200 ${programsOpen ? "rotate-180" : ""}`} aria-hidden="true" />
                     <span
-                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-[scale] duration-200 ease-out motion-reduce:transition-none ${
                         pathname.startsWith("/programs") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     />
@@ -157,9 +157,9 @@ export function Navbar() {
                     type="button"
                   >
                     Kitchen Membership
-                    <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                    <ChevronDown className={`h-3.5 w-3.5 transition-[rotate] duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
                     <span
-                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-[scale] duration-200 ease-out motion-reduce:transition-none ${
                         pathname.startsWith("/kitchen-membership") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     />
@@ -295,7 +295,7 @@ function DesktopLink({ href, children }: { href: string; children: React.ReactNo
     >
       {children}
       <span
-        className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-transform duration-200 ease-out motion-reduce:transition-none ${
+        className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-[scale] duration-200 ease-out motion-reduce:transition-none ${
           isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
         }`}
       />
