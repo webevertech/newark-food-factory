@@ -63,8 +63,17 @@ export default function HomePage() {
                 <Button href="/start-a-food-business">Start Your Journey</Button>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
+                <span
+                  aria-disabled="true"
+                  className="flex items-center gap-2 rounded-lg bg-white/4 backdrop-blur-sm border border-white/10 px-4 py-2.5 text-sm font-medium text-gray-400 cursor-not-allowed"
+                >
+                  <UtensilsCrossed className="h-4 w-4 text-gray-500" />
+                  Order Meals
+                  <span className="ml-1 rounded-full bg-amber-400/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
+                    Coming Soon
+                  </span>
+                </span>
                 {[
-                  { label: "Order Meals", href: "/meals", icon: UtensilsCrossed },
                   { label: "Book a Tour", href: "/contact#tour", icon: Warehouse },
                   { label: "Book an Event", href: "/events#inquiry", icon: CalendarDays },
                 ].map(({ label, href, icon: Icon }) => (
@@ -375,8 +384,8 @@ export default function HomePage() {
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/meals">View Menu</Button>
-            <Button href="/meals#order" variant="outline-light">
-              Order Now
+            <Button href="/meals#order" variant="outline-light" disabled>
+              Order Now — Coming Soon
             </Button>
           </div>
         </div>

@@ -41,6 +41,18 @@ export default function MealsPage() {
         imageAlt="Beautifully plated fresh meal"
       />
 
+      {/* COMING SOON banner */}
+      <section className="bg-amber-50 border-b border-amber-200 px-6 sm:px-10 lg:px-16 xl:px-20 py-5">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3 text-center sm:text-left">
+          <span className="rounded-full bg-amber-400/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-700">
+            Coming Soon
+          </span>
+          <p className="text-sm sm:text-base text-amber-900">
+            Online ordering for daily meals is launching soon. In the meantime, reach out and we&apos;ll take care of you directly.
+          </p>
+        </div>
+      </section>
+
       {/* DAILY MEALS, white bg, split layout */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -74,8 +86,8 @@ export default function MealsPage() {
                   </li>
                 ))}
               </ul>
-              <Button href="/contact" className="mt-8">
-                Order Now
+              <Button href="/contact" className="mt-8" disabled>
+                Order Now — Coming Soon
               </Button>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-72 lg:h-96">
@@ -139,7 +151,9 @@ export default function MealsPage() {
           </div>
 
           <div className="text-center mt-10">
-            <Button href="/contact">Order Now</Button>
+            <Button href="/contact" disabled>
+              Order Now — Coming Soon
+            </Button>
           </div>
         </div>
       </section>
