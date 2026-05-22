@@ -129,7 +129,7 @@ export default function HomePage() {
           {/* Image: full-bleed on desktop, banner on mobile */}
           <div className="relative h-72 lg:h-auto">
             <Image
-              src="/nff homepage.jpg"
+              src="/Updated Images/nff-building.webp"
               alt="Newark Food Factory"
               fill
               className="object-cover"
@@ -555,7 +555,7 @@ export default function HomePage() {
               Our Impact
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              Building a Thriving Food Ecosystem in Newark
+              Empowering Newark Through Food, Entrepreneurship, and Collaboration
             </h2>
           </div>
 
