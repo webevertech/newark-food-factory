@@ -12,6 +12,14 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Start a Food Business", href: "/start-a-food-business" },
@@ -59,6 +67,15 @@ export function Footer() {
                 className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-primary-bright hover:bg-primary/10 transition-colors"
               >
                 <InstagramIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/newarkfoodfactory/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Newark Food Factory on Facebook"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-primary-bright hover:bg-primary/10 transition-colors"
+              >
+                <FacebookIcon className="h-4 w-4" />
               </a>
             </div>
           </div>

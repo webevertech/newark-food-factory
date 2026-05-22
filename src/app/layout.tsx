@@ -122,7 +122,10 @@ const jsonLd = [
         closes: "18:00",
       },
     ],
-    sameAs: ["https://www.instagram.com/newark.food.factory/"],
+    sameAs: [
+      "https://www.instagram.com/newark.food.factory/",
+      "https://www.facebook.com/newarkfoodfactory/",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services",
