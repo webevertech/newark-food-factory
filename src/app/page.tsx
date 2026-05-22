@@ -13,11 +13,9 @@ import {
   Briefcase,
   Users,
   ArrowRight,
-  Store,
   Heart,
   Clock,
   Award,
-  Balloon,
 } from "lucide-react";
 import { Button } from "@/components/button";
 import { CTASection } from "@/components/cta-section";
@@ -488,7 +486,7 @@ export default function HomePage() {
                 Your Next Event Starts Here
               </h2>
               <p className="mt-3 text-gray-600 max-w-lg leading-relaxed">
-                5,000 sq ft event space for weddings, corporate gatherings,
+                Event space for weddings, corporate gatherings,
                 markets, and community celebrations.
               </p>
             </div>
@@ -503,26 +501,22 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               {
-                label: "Birthdays",
-                icon: Balloon,
-                img: "/Updated Images/Green house sweet 16 party image.webp",
+                label: "Culinary Hall",
+                img: "/Updated Images/culinary hall.webp",
               },
               {
-                label: "Weddings",
-                icon: Heart,
+                label: "Greenhouse",
                 img: "/Updated Images/greenhouse.webp",
               },
               {
-                label: "Corporate",
-                icon: Briefcase,
-                img: "/Updated Images/1st floor workshop pics.webp",
-              },
-              {
-                label: "Markets",
-                icon: Store,
+                label: "Courtyard",
                 img: "/Updated Images/courtyard.webp",
               },
-            ].map(({ label, icon: Icon, img }) => (
+              {
+                label: "Outdoor Patio",
+                img: "/Updated Images/outdoor patio.webp",
+              },
+            ].map(({ label, img }) => (
               <div
                 key={label}
                 className="group relative rounded-2xl overflow-hidden h-72"
@@ -535,10 +529,7 @@ export default function HomePage() {
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/90 flex items-center justify-center shrink-0">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="font-bold text-white text-lg">{label}</p>
                 </div>
               </div>
