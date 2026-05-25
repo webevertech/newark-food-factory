@@ -8,10 +8,10 @@ import {
   Menu,
   X,
   ChevronDown,
-  GraduationCap,
-  Rocket,
-  Truck,
-  FlaskConical,
+  // GraduationCap,
+  // Rocket,
+  // Truck,
+  // FlaskConical,
   Warehouse,
   CreditCard,
   CalendarCheck,
@@ -19,12 +19,12 @@ import {
   Mail,
 } from "lucide-react";
 
-const programs = [
-  { name: "Work-Based Learning", href: "/programs/work-based-learning", icon: GraduationCap, desc: "Hands-on culinary training" },
-  { name: "Food Business Incubator", href: "/programs/food-business-incubator", icon: Rocket, desc: "Launch your food venture" },
-  { name: "Food Truck Membership", href: "/programs/food-truck-membership", icon: Truck, desc: "Commissary + business support" },
-  { name: "Product Development Lab", href: "/programs/product-development-lab", icon: FlaskConical, desc: "Recipe to retail pipeline" },
-];
+// const programs = [
+//   { name: "Work-Based Learning", href: "/programs/work-based-learning", icon: GraduationCap, desc: "Hands-on culinary training" },
+//   { name: "Food Business Incubator", href: "/programs/food-business-incubator", icon: Rocket, desc: "Launch your food venture" },
+//   { name: "Food Truck Membership", href: "/programs/food-truck-membership", icon: Truck, desc: "Commissary + business support" },
+//   { name: "Product Development Lab", href: "/programs/product-development-lab", icon: FlaskConical, desc: "Recipe to retail pipeline" },
+// ];
 
 const kitchenLinks = [
   { name: "Commissary Kitchen", href: "/kitchen-membership", icon: Warehouse, desc: "Licensed facility access" },
@@ -42,7 +42,7 @@ function normalize(path: string) {
 export function Navbar() {
   const pathname = normalize(usePathname());
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [programsOpen, setProgramsOpen] = useState(false);
+  // const [programsOpen, setProgramsOpen] = useState(false);
   const [kitchenOpen, setKitchenOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -101,6 +101,7 @@ export function Navbar() {
                 <DesktopLink href="/start-a-food-business">Start a Food Business</DesktopLink>
 
                 {/* Programs dropdown */}
+                {/*
                 <div
                   className="relative group"
                   onMouseEnter={() => setProgramsOpen(true)}
@@ -144,8 +145,9 @@ export function Navbar() {
                     </div>
                   )}
                 </div>
+                */}
 
-                <DesktopLink href="/meals">Meals</DesktopLink>
+                {/* <DesktopLink href="/meals">Meals</DesktopLink> */}
                 <DesktopLink href="/events">Events</DesktopLink>
 
                 {/* Kitchen Membership dropdown */}
@@ -239,6 +241,7 @@ export function Navbar() {
             <MobileLink href="/" onClick={closeMobile}>Home</MobileLink>
             <MobileLink href="/start-a-food-business" onClick={closeMobile}>Start a Food Business</MobileLink>
 
+            {/*
             <div className="pt-4 pb-1">
               <p className="px-3 text-xs font-semibold uppercase text-gray-400 tracking-wider mb-2">Programs</p>
               {programs.map((p) => (
@@ -247,8 +250,9 @@ export function Navbar() {
                 </MobileLink>
               ))}
             </div>
+            */}
 
-            <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink>
+            {/* <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink> */}
             <MobileLink href="/events" onClick={closeMobile}>Events</MobileLink>
 
             <div className="pt-4 pb-1">
