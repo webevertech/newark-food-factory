@@ -7,30 +7,9 @@ import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
-  ChevronDown,
-  // GraduationCap,
-  // Rocket,
-  // Truck,
-  // FlaskConical,
-  Warehouse,
-  CreditCard,
-  CalendarCheck,
   Phone,
   Mail,
 } from "lucide-react";
-
-// const programs = [
-//   { name: "Work-Based Learning", href: "/programs/work-based-learning", icon: GraduationCap, desc: "Hands-on culinary training" },
-//   { name: "Food Business Incubator", href: "/programs/food-business-incubator", icon: Rocket, desc: "Launch your food venture" },
-//   { name: "Food Truck Membership", href: "/programs/food-truck-membership", icon: Truck, desc: "Commissary + business support" },
-//   { name: "Product Development Lab", href: "/programs/product-development-lab", icon: FlaskConical, desc: "Recipe to retail pipeline" },
-// ];
-
-const kitchenLinks = [
-  { name: "Commissary Kitchen", href: "/kitchen-membership", icon: Warehouse, desc: "Licensed facility access" },
-  { name: "Pricing & Plans", href: "/kitchen-membership#pricing", icon: CreditCard, desc: "Flexible memberships" },
-  { name: "Book Kitchen", href: "/kitchen-membership#book", icon: CalendarCheck, desc: "Schedule your hours" },
-];
 
 function normalize(path: string) {
   if (!path) return "/";
@@ -40,10 +19,8 @@ function normalize(path: string) {
 }
 
 export function Navbar() {
-  const pathname = normalize(usePathname());
   const [mobileOpen, setMobileOpen] = useState(false);
   // const [programsOpen, setProgramsOpen] = useState(false);
-  const [kitchenOpen, setKitchenOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -149,52 +126,7 @@ export function Navbar() {
 
                 {/* <DesktopLink href="/meals">Meals</DesktopLink> */}
                 <DesktopLink href="/events">Events</DesktopLink>
-
-                {/* Kitchen Membership dropdown */}
-                <div
-                  className="relative group"
-                  onMouseEnter={() => setKitchenOpen(true)}
-                  onMouseLeave={() => setKitchenOpen(false)}
-                >
-                  <button
-                    className={`relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 cursor-pointer flex items-center gap-0.5 whitespace-nowrap ${
-                      pathname.startsWith("/kitchen-membership") ? "text-primary" : "text-gray-600 hover:text-gray-900"
-                    }`}
-                    aria-expanded={kitchenOpen}
-                    aria-haspopup="true"
-                    onClick={() => setKitchenOpen((k) => !k)}
-                    type="button"
-                  >
-                    Kitchen Membership
-                    <ChevronDown className={`h-3.5 w-3.5 transition-[rotate] duration-200 ${kitchenOpen ? "rotate-180" : ""}`} aria-hidden="true" />
-                    <span
-                      className={`absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-[scale] duration-200 ease-out motion-reduce:transition-none ${
-                        pathname.startsWith("/kitchen-membership") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                      }`}
-                    />
-                  </button>
-                  {kitchenOpen && (
-                    <div className="absolute top-full left-0 w-[270px] pt-2" role="menu">
-                      <div className="rounded-lg bg-white shadow-lg border border-gray-200 py-2">
-                        {kitchenLinks.map(({ href, name, icon: Icon, desc }) => (
-                          <Link
-                            key={href}
-                            href={href}
-                            role="menuitem"
-                            className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
-                          >
-                            <Icon className="h-4 w-4 text-primary shrink-0" aria-hidden="true" />
-                            <div>
-                              <p className="text-sm font-medium text-gray-900">{name}</p>
-                              <p className="text-xs text-gray-500">{desc}</p>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
+                <DesktopLink href="/kitchen-membership">Kitchen Membership</DesktopLink>
                 <DesktopLink href="/food-entrepreneurs">Food Entrepreneurs</DesktopLink>
                 <DesktopLink href="/chef-studio">Chef Studio</DesktopLink>
                 <DesktopLink href="/about">About</DesktopLink>
@@ -254,16 +186,7 @@ export function Navbar() {
 
             {/* <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink> */}
             <MobileLink href="/events" onClick={closeMobile}>Events</MobileLink>
-
-            <div className="pt-4 pb-1">
-              <p className="px-3 text-xs font-semibold uppercase text-gray-400 tracking-wider mb-2">Kitchen Membership</p>
-              {kitchenLinks.map((k) => (
-                <MobileLink key={k.href} href={k.href} onClick={closeMobile} nested>
-                  {k.name}
-                </MobileLink>
-              ))}
-            </div>
-
+            <MobileLink href="/kitchen-membership" onClick={closeMobile}>Kitchen Membership</MobileLink>
             <MobileLink href="/food-entrepreneurs" onClick={closeMobile}>Food Entrepreneurs</MobileLink>
             <MobileLink href="/chef-studio" onClick={closeMobile}>Chef Studio</MobileLink>
             <MobileLink href="/about" onClick={closeMobile}>About</MobileLink>

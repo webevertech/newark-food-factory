@@ -139,7 +139,7 @@ export default function KitchenMembershipPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold tracking-tight text-white leading-[1.1]">
-                Commissary Kitchen Membership
+                Kitchen Membership
                 <br />
                 <span className="text-primary-bright">in Newark, NJ</span>
               </h1>
