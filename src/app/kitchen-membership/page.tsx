@@ -350,6 +350,31 @@ export default function KitchenMembershipPage() {
             </p>
           </div>
 
+          <div className="mb-10 rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-4">
+              All rental rates include
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+              {[
+                "Onsite employee to wash all dishes and clean",
+                "Use of pots, pans, baking sheets, bowls, mixers, and other small wares",
+                "Onsite parking",
+                "All utilities",
+                "Trash, recycling, and compost service",
+                "Towel and apron service",
+                "Kitchen equipment service, maintenance, and repair",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="text-sm flex items-start gap-2.5 text-gray-700"
+                >
+                  <Check className="h-4 w-4 shrink-0 mt-0.5 text-primary" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <ComparisonTable />
         </div>
       </section>
@@ -639,9 +664,9 @@ export default function KitchenMembershipPage() {
               </h3>
               <div className="space-y-3">
                 {[
-                  { tier: "Builder", std: "$899/mo", founding: "$699/mo" },
-                  { tier: "Operator", std: "$1,499/mo", founding: "$1,299/mo" },
-                  { tier: "Pro", std: "$2,499/mo", founding: "$2,299/mo" },
+                  { tier: "Builder", std: "$1,460/mo", founding: "$1,260/mo" },
+                  { tier: "Operator", std: "$2,660/mo", founding: "$2,460/mo" },
+                  { tier: "Pro", std: "$3,700/mo", founding: "$3,500/mo" },
                 ].map(({ tier, std, founding }) => (
                   <div
                     key={tier}
@@ -906,9 +931,9 @@ export default function KitchenMembershipPage() {
 function ComparisonTable() {
   const tiers = ["Bridge", "Starter", "Builder", "Operator", "Pro"];
   const rows: { label: string; values: (string | "dash" | "check")[] }[] = [
-    { label: "Monthly Fee", values: ["$0", "$179", "$899", "$1,499", "$2,499"] },
+    { label: "Monthly Fee", values: ["$0", "$450", "$1,460", "$2,660", "$3,700"] },
     { label: "Initial Term", values: ["6 mo max", "6 months", "12 months", "12 months", "12 months"] },
-    { label: "Kitchen Hours/Month", values: ["10 off-peak", "10 off-peak", "40 anytime", "80 priority", "130 capped"] },
+    { label: "Kitchen Hours/Month", values: ["10 off-peak", "10 off-peak", "40 anytime", "80 priority", "120 capped"] },
     { label: "Overage Rate", values: ["dash", "$25/hr", "$22/hr", "$20/hr", "$18/hr"] },
     { label: "Booking Window", values: ["14 days", "14 days", "21 days", "30 days", "45 days"] },
     { label: "Dedicated Blocks (recurring)", values: ["dash", "dash", "dash", "dash", "2× 6 hr/week"] },

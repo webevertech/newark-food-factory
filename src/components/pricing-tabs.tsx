@@ -52,7 +52,7 @@ const TIERS: Tier[] = [
     id: "starter",
     name: "Starter",
     stageLabel: "Test your idea",
-    price: "$179",
+    price: "$450",
     period: "per month • 6-month minimum",
     desc: "Validate your concept with low-risk kitchen access.",
     features: [
@@ -73,7 +73,7 @@ const TIERS: Tier[] = [
     id: "builder",
     name: "Builder",
     stageLabel: "Launch your business",
-    price: "$899",
+    price: "$1,460",
     period: "per month • 12-month term",
     desc: "Where real food businesses operate daily.",
     features: [
@@ -104,7 +104,7 @@ const TIERS: Tier[] = [
     id: "operator",
     name: "Operator",
     stageLabel: "Grow steadily",
-    price: "$1,499",
+    price: "$2,660",
     period: "per month • 12-month term • 10% off annual prepay",
     desc: "Built for established food businesses scaling beyond launch.",
     features: [
@@ -138,11 +138,11 @@ const TIERS: Tier[] = [
     id: "pro",
     name: "Pro",
     stageLabel: "Scale multi-unit",
-    price: "$2,499",
+    price: "$3,700",
     period: "per month • 12-month term • 10% off annual prepay",
     desc: "For serious operators running multi-unit businesses or scaling toward wholesale.",
     features: [
-      "130 kitchen hours/month (capped, $18/hr overage)",
+      "120 kitchen hours/month (capped, $18/hr overage)",
       "Up to 2 recurring 6-hour dedicated blocks per week",
       "Dedicated 4-ft storage section + reserved cart",
       "Priority on specialty equipment",
