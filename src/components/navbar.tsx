@@ -127,7 +127,7 @@ export function Navbar() {
                 {/* <DesktopLink href="/meals">Meals</DesktopLink> */}
                 <DesktopLink href="/events">Events</DesktopLink>
                 <DesktopLink href="/kitchen-membership">Kitchen Membership</DesktopLink>
-                <DesktopLink href="/food-entrepreneurs">Food Entrepreneurs</DesktopLink>
+                {/* <DesktopLink href="/food-entrepreneurs">Food Entrepreneurs</DesktopLink> */}
                 <DesktopLink href="/chef-studio">Chef Studio</DesktopLink>
                 <DesktopLink href="/about">About</DesktopLink>
                 <DesktopLink href="/contact">Contact</DesktopLink>
@@ -187,7 +187,7 @@ export function Navbar() {
             {/* <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink> */}
             <MobileLink href="/events" onClick={closeMobile}>Events</MobileLink>
             <MobileLink href="/kitchen-membership" onClick={closeMobile}>Kitchen Membership</MobileLink>
-            <MobileLink href="/food-entrepreneurs" onClick={closeMobile}>Food Entrepreneurs</MobileLink>
+            {/* <MobileLink href="/food-entrepreneurs" onClick={closeMobile}>Food Entrepreneurs</MobileLink> */}
             <MobileLink href="/chef-studio" onClick={closeMobile}>Chef Studio</MobileLink>
             <MobileLink href="/about" onClick={closeMobile}>About</MobileLink>
             <MobileLink href="/contact" onClick={closeMobile}>Contact</MobileLink>
