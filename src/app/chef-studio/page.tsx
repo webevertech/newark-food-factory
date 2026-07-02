@@ -14,6 +14,7 @@ import {
   TrendingUp,
   GraduationCap,
   ArrowRight,
+  ExternalLink,
   Phone,
   CalendarDays,
   Clock,
@@ -257,6 +258,89 @@ export default function ChefStudioPage() {
           <p className="mt-10 text-center text-sm font-semibold text-primary">
             You&apos;re not hosting events. You&apos;re creating moments.
           </p>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          MEET THE HEAD CHEF
+      ════════════════════════════════════════════════════════════════ */}
+      <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-gray-950 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Big Papa Smoke'm logo */}
+          <div className="relative flex items-center justify-center py-6">
+            {/* soft brand glow */}
+            <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-primary/20 blur-3xl" />
+            <Image
+              src="/big-papa-smokem-logo.png"
+              alt="Big Papa Smoke'm logo, Mario Chapé's barbecue brand"
+              width={1000}
+              height={1177}
+              className="relative w-64 sm:w-80 lg:w-[22rem] h-auto drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Bio + CTA */}
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-bright mb-3">
+              Meet the Head Chef
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+              Mario &ldquo;Big Papa&rdquo; Chapé
+            </h2>
+            <p className="mt-2 text-primary-bright font-semibold">
+              Head Chef &middot; Pitmaster &middot; Founder of Big Papa Smoke&rsquo;m
+            </p>
+
+            <div className="mt-6 space-y-4 text-gray-400 leading-relaxed">
+              <p>
+                Born to Puerto Rican and Cuban parents and raised on faith, discipline, and
+                community, Mario earned his B.A. from Johnson &amp; Wales University before
+                sharpening his craft in corporate kitchens, then striking out on his own to
+                build something bigger than a menu.
+              </p>
+              <p>
+                He blends Latino traditions with barbecue and barbacoa, cooking over open fire
+                with sour orange, garlic, onion, and smoke. His 20-foot smoker has fired up
+                marquee events like the Food Network Food &amp; Wine Festival and the Big
+                Apple BBQ, and today he uses food to develop entrepreneurs, empower
+                communities, and generate opportunity, exactly the spirit that powers Chef
+                Studio.
+              </p>
+            </div>
+
+            {/* Specialties */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                "Latino BBQ & Barbacoa",
+                "Open-Fire Cooking",
+                "Culinary Mentorship",
+                "Event Catering & Pop-Ups",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white/90 bg-white/[0.06] border border-white/10 rounded-full px-3 py-1.5"
+                >
+                  <Flame className="h-3.5 w-3.5 text-primary-bright" />
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="https://mariochape.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-primary text-white hover:bg-primary-dark"
+              >
+                Visit Mario&rsquo;s Website
+                <ExternalLink className="h-4 w-4" />
+              </a>
+              <Button href="/contact" variant="outline-light">
+                Book a Chef Experience
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
