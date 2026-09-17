@@ -142,7 +142,7 @@ const TIERS: Tier[] = [
     period: "per month • 12-month term • 10% off annual prepay",
     desc: "For serious operators running multi-unit businesses or scaling toward wholesale.",
     features: [
-      "120 kitchen hours/month (capped, $18/hr overage)",
+      "120 kitchen hours/month (capped, $30/hr overage)",
       "Up to 2 recurring 6-hour dedicated blocks per week",
       "Dedicated 4-ft storage section + reserved cart",
       "Priority on specialty equipment",

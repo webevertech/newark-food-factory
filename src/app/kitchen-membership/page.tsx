@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "What happens if I go over my included hours?",
-    a: "You’re charged the overage rate for your tier: Starter $25/hr, Builder $22/hr, Operator $20/hr, Pro $18/hr. If you’re regularly going over, that usually means you’re ready to upgrade.",
+    a: "You’re charged the overage rate for your tier: Starter $45/hr, Builder $36/hr, Operator $33/hr, Pro $30/hr. If you’re regularly going over, that usually means you’re ready to upgrade.",
   },
   {
     q: "Can I upgrade between tiers?",
@@ -934,7 +934,7 @@ function ComparisonTable() {
     { label: "Monthly Fee", values: ["$0", "$450", "$1,460", "$2,660", "$3,700"] },
     { label: "Initial Term", values: ["6 mo max", "6 months", "12 months", "12 months", "12 months"] },
     { label: "Kitchen Hours/Month", values: ["10 off-peak", "10 off-peak", "40 anytime", "80 priority", "120 capped"] },
-    { label: "Overage Rate", values: ["dash", "$25/hr", "$22/hr", "$20/hr", "$18/hr"] },
+    { label: "Overage Rate", values: ["dash", "$45/hr", "$36/hr", "$33/hr", "$30/hr"] },
     { label: "Booking Window", values: ["14 days", "14 days", "21 days", "30 days", "45 days"] },
     { label: "Dedicated Blocks (recurring)", values: ["dash", "dash", "dash", "dash", "2× 6 hr/week"] },
     { label: "Dry Storage", values: ["Shared bin", "1 dedicated bin", "1 dedicated shelf", "2 shelves + section", "4-ft section + cart"] },
