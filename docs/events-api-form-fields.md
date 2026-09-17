@@ -8,7 +8,7 @@ Source: [src/app/api/events/route.ts](../src/app/api/events/route.ts) · [src/li
 | Header | Value | Required |
 |---|---|---|
 | `Content-Type` | `application/json` | Yes |
-| `x-api-key` | `<EVENTS_API_KEY>` | Only if env var `EVENTS_API_KEY` is set |
+| `x-api-key` | `<EVENTS_API_KEY>` | Yes (one of the two) |
 | `Authorization` | `Bearer <EVENTS_API_KEY>` | Alternative to `x-api-key` |
 
 ## Required fields
@@ -31,7 +31,7 @@ Source: [src/app/api/events/route.ts](../src/app/api/events/route.ts) · [src/li
 | `category` | string | Select / text | `Dining`, `Music`, `Community` | `type` |
 | `price` | string | Text | `$25`, `Free`, `$10–$30` | `ticket_price` |
 
-Note: all string fields are trimmed; empty strings are treated as missing.
+Note: all string fields are trimmed; empty strings are treated as missing. Fields are length-capped (title 200, description 4000, other text 300, URLs 2048 chars). `ticketUrl` must be http(s), a site-relative path, `mailto:` or `tel:`; anything else is dropped. `id` must match `[A-Za-z0-9_-]{1,80}` or a new id is generated.
 
 ## Suggested form layout
 
@@ -78,7 +78,10 @@ Note: all string fields are trimmed; empty strings are treated as missing.
 | `400` | `{ error: "Missing required fields", required: ["title", "date"] }` | Missing `title` or `date` |
 | `400` | `{ error: "Invalid date — use a parseable date string (e.g. 2026-05-15)" }` | Unparseable `date` |
 | `400` | `{ error: "Invalid JSON body" }` | Body wasn't valid JSON |
-| `401` | `{ error: "Unauthorized" }` | API key missing/wrong (when enforced) |
+| `401` | `{ error: "Unauthorized" }` | API key missing/wrong |
+| `413` | `{ error: "Payload too large" }` | Body over 256 KB |
+| `400` | `{ error: "Too many items — max 100 per request" }` | More than 100 events in one call |
+| `503` | `{ error: "Events API is not configured" }` | `EVENTS_API_KEY` is not set on the server; writes are refused until it is |
 
 ## GET (for reference)
 
