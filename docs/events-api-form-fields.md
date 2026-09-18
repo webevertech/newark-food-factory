@@ -2,6 +2,7 @@
 
 Endpoint: `POST /api/events`
 Source: [src/app/api/events/route.ts](../src/app/api/events/route.ts) · [src/lib/events-store.ts](../src/lib/events-store.ts)
+Storage: see [events-database.md](events-database.md) — MySQL when configured, JSON file otherwise.
 
 ## Request headers
 

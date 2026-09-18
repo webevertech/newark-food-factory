@@ -1,5 +1,11 @@
 import { promises as fs } from "fs";
 import path from "path";
+import {
+  ensureReady,
+  isDatabaseConfigured,
+  readAllEvents as readEventsFromDb,
+  upsertEvent as upsertEventInDb,
+} from "./events-db";
 
 export type PublicEvent = {
   id: string;
@@ -26,7 +32,7 @@ const DATA_DIR = process.env.EVENTS_DATA_DIR
   : path.join(process.cwd(), "data");
 const DATA_FILE = path.join(DATA_DIR, "events.json");
 
-async function readStoredEvents(): Promise<PublicEvent[]> {
+async function readEventsFromFile(): Promise<PublicEvent[]> {
   try {
     const raw = await fs.readFile(DATA_FILE, "utf8");
     const parsed = JSON.parse(raw);
@@ -37,9 +43,26 @@ async function readStoredEvents(): Promise<PublicEvent[]> {
   }
 }
 
-async function writeStoredEvents(events: PublicEvent[]): Promise<void> {
+async function writeEventsToFile(events: PublicEvent[]): Promise<void> {
   await fs.mkdir(DATA_DIR, { recursive: true });
   await fs.writeFile(DATA_FILE, JSON.stringify(events, null, 2), "utf8");
+}
+
+/**
+ * MySQL is used whenever the host provides connection details (DATABASE_URL, or
+ * DB_HOST/DB_USER/DB_NAME). Otherwise the original JSON file store is used, so
+ * local development and any host without a database keep working unchanged.
+ */
+export function storageMode(): "mysql" | "file" {
+  return isDatabaseConfigured() ? "mysql" : "file";
+}
+
+async function readStoredEvents(): Promise<PublicEvent[]> {
+  if (isDatabaseConfigured()) {
+    await ensureReady(readEventsFromFile);
+    return readEventsFromDb();
+  }
+  return readEventsFromFile();
 }
 
 function sortByDateAsc(a: PublicEvent, b: PublicEvent): number {
@@ -159,20 +182,16 @@ function generateId(title: string): string {
   return `${slug || "event"}-${suffix}`;
 }
 
-export async function addEvent(input: EventInput): Promise<PublicEvent> {
-  const stored = await readStoredEvents();
-  const id = input.id ?? generateId(input.title);
-  const existingIdx = stored.findIndex((e) => e.id === id);
-  const createdAt =
-    input.createdAt ??
-    (existingIdx >= 0 ? stored[existingIdx].createdAt : new Date().toISOString());
-  const time =
-    input.time ?? formatTimeRange(input.startTime, input.endTime);
-  const event: PublicEvent = {
+function composeEvent(
+  input: EventInput,
+  id: string,
+  createdAt: string,
+): PublicEvent {
+  return {
     id,
     title: input.title,
     date: input.date,
-    time,
+    time: input.time ?? formatTimeRange(input.startTime, input.endTime),
     startTime: input.startTime,
     endTime: input.endTime,
     venue: input.venue,
@@ -184,11 +203,31 @@ export async function addEvent(input: EventInput): Promise<PublicEvent> {
     calendarId: input.calendarId,
     createdAt,
   };
+}
+
+export async function addEvent(input: EventInput): Promise<PublicEvent> {
+  const id = input.id ?? generateId(input.title);
+
+  if (isDatabaseConfigured()) {
+    await ensureReady(readEventsFromFile);
+    // Single atomic upsert — two webhook posts arriving together can no longer
+    // overwrite one another the way a read-modify-write on the file could.
+    return upsertEventInDb(
+      composeEvent(input, id, input.createdAt ?? new Date().toISOString()),
+    );
+  }
+
+  const stored = await readEventsFromFile();
+  const existingIdx = stored.findIndex((e) => e.id === id);
+  const createdAt =
+    input.createdAt ??
+    (existingIdx >= 0 ? stored[existingIdx].createdAt : new Date().toISOString());
+  const event = composeEvent(input, id, createdAt);
   if (existingIdx >= 0) {
     stored[existingIdx] = event;
   } else {
     stored.push(event);
   }
-  await writeStoredEvents(stored);
+  await writeEventsToFile(stored);
   return event;
 }
