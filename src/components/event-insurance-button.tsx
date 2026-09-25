@@ -18,9 +18,8 @@ export function EventInsuranceButton({
       icon={<ShieldCheck className="h-4 w-4" />}
       variant={variant}
       className={className}
-      form={{ id: "PKQZDmYzsCQsgxIWic68", name: "[NFF] - Insurance Form", height: 734 }}
+      form={{ kind: "survey", id: "BlFvhzqvdYOBQK7pfvvS", name: "Event Insurance Survey", height: 700 }}
       heading="Get Your Event Covered"
-      description="Tell us about your event and we'll help you line up the liability coverage you need to host at Newark Food Factory."
     />
   );
 }

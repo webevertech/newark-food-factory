@@ -18,10 +18,15 @@ const variants: Record<FormModalVariant, string> = {
   white: "bg-white text-gray-900 hover:bg-gray-100",
 };
 
+/** Blank space GHL renders above a survey's card, in px. */
+const SURVEY_TOP_GAP = 30;
+
 export type GhlForm = {
+  /** GHL embed type; surveys live under /widget/survey/. Defaults to "form". */
+  kind?: "form" | "survey";
   id: string;
   name: string;
-  /** Height reported by the GHL embed code (data-height). */
+  /** Form: data-height from the embed code. Survey: starting height before form_embed.js resizes it. */
   height: number;
 };
 
@@ -40,7 +45,7 @@ export function FormModalButton({
   className?: string;
   form: GhlForm;
   heading: string;
-  description: string;
+  description?: string;
 }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -86,38 +91,64 @@ export function FormModalButton({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="sticky top-4 float-right mr-4 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors shadow-sm"
+              className="sticky top-3 float-right mr-3 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors shadow-sm"
               aria-label="Close form"
             >
               <X className="h-5 w-5" />
             </button>
-            <div className="p-6 sm:p-8 pt-4">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <div className="p-4 sm:p-5 pt-3">
+              <h2
+                className={`text-2xl font-bold text-gray-900 ${description ? "mb-2" : "mb-4"}`}
+              >
                 {heading}
               </h2>
-              <p className="text-gray-600 text-sm mb-6">{description}</p>
-              <iframe
-                src={`https://links.newarkfoodfactory.com/widget/form/${form.id}`}
-                style={{
-                  width: "100%",
-                  minHeight: `${form.height + 26}px`,
-                  border: "none",
-                  borderRadius: "8px",
-                }}
-                id={iframeId}
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name={form.name}
-                data-height={form.height}
-                data-layout-iframe-id={iframeId}
-                data-form-id={form.id}
-                title={form.name}
-              />
+              {description && (
+                <p className="text-gray-600 text-sm mb-4">{description}</p>
+              )}
+              {form.kind === "survey" ? (
+                // The survey renders its own margins inside the iframe, which
+                // CSS can't reach: bleed it over the modal padding and clip
+                // the empty band GHL puts above the survey card.
+                <div className="-mx-4 sm:-mx-5 overflow-hidden">
+                  <iframe
+                    src={`https://links.newarkfoodfactory.com/widget/survey/${form.id}`}
+                    style={{
+                      width: "100%",
+                      minHeight: `${form.height}px`,
+                      marginTop: `-${SURVEY_TOP_GAP}px`,
+                      border: "none",
+                    }}
+                    scrolling="no"
+                    id={form.id}
+                    title={form.name}
+                    data-cookie-consent="true"
+                    data-cookie-consent-provider="auto"
+                  />
+                </div>
+              ) : (
+                <iframe
+                  src={`https://links.newarkfoodfactory.com/widget/form/${form.id}`}
+                  style={{
+                    width: "100%",
+                    minHeight: `${form.height + 26}px`,
+                    border: "none",
+                    borderRadius: "8px",
+                  }}
+                  id={iframeId}
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name={form.name}
+                  data-height={form.height}
+                  data-layout-iframe-id={iframeId}
+                  data-form-id={form.id}
+                  title={form.name}
+                />
+              )}
             </div>
           </div>
         </div>,
