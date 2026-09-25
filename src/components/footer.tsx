@@ -82,7 +82,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <nav aria-label="Quick links">
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h2 className="text-base text-white font-semibold mb-4">Quick Links</h2>
             <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.href}>
@@ -96,7 +96,7 @@ export function Footer() {
 
           {/* Programs */}
           <nav aria-label="Programs">
-            <h4 className="text-white font-semibold mb-4">Programs</h4>
+            <h2 className="text-base text-white font-semibold mb-4">Programs</h2>
             <ul className="space-y-2">
               {programLinks.map((l) => (
                 <li key={l.href}>
@@ -110,7 +110,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <h2 className="text-base text-white font-semibold mb-4">Contact</h2>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary-bright shrink-0" aria-hidden="true" />
@@ -157,7 +157,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p>&copy; {new Date().getFullYear()} Newark Food Factory. All rights reserved.</p>
           <nav aria-label="Legal" className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-white transition-colors">
