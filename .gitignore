@@ -28,6 +28,7 @@
 *.docx
 *.doc
 *.pdf
+!public/nff-start-a-food-business-brochure.pdf
 
 # debug
 npm-debug.log*

@@ -11,7 +11,12 @@ import {
   Palette,
   DollarSign,
   Users,
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  Download,
 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/button";
 import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
@@ -24,6 +29,28 @@ export const metadata = createMetadata({
   path: "/start-a-food-business",
   keywords: ["start food business Newark", "how to start a food business NJ", "food business startup", "commercial kitchen access Newark"],
 });
+
+const BROCHURE_HREF = "/nff-start-a-food-business-brochure.pdf";
+
+const tracks = [
+  { title: "Food Business Incubator", image: "/food business incubator.jpg" },
+  { title: "Work Based Learning", image: "/Updated Images/work based learning.webp" },
+  { title: "Product Development Lab", image: "/Updated Images/product development lab.webp" },
+];
+
+const highlights = [
+  "Commercial Kitchen Training",
+  "Food Business Startup Support",
+  "Work-Based Learning Opportunities",
+  "Branding & Marketing Training",
+  "Licensing & Food Safety Guidance",
+  "Ghost Kitchen & Delivery Operations",
+  "Entrepreneurship & Hospitality Training",
+  "Networking & Mentorship Opportunities",
+  "Full Prepared Menu Development Support",
+  "Chef Studio & Culinary Content Opportunities",
+  "Food Truck Ownership Opportunities",
+];
 
 export default function StartFoodBusinessPage() {
   return (
@@ -158,58 +185,107 @@ export default function StartFoodBusinessPage() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
-          PROGRAM TIERS, 3-tier pricing layout
+          ECOSYSTEM, brochure content: intro + 3 tracks + highlights
       ════════════════════════════════════════════════════════════════ */}
       <section className="py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
-              Program Tiers
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Choose the Level That Matches Where You Are
-            </h2>
+          <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+                Start a Food Business
+              </p>
+              <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 leading-[1.05]">
+                <span className="font-light">A Complete</span>
+                <br />
+                Food Business Ecosystem.
+              </h2>
+              <p className="mt-6 text-gray-600 leading-relaxed text-lg">
+                A hands-on food business incubator designed for aspiring chefs,
+                caterers, bakers, food truck owners, and culinary entrepreneurs.
+                Participants receive entrepreneurship training, commercial
+                kitchen experience, mentorship, and real-world work-based
+                learning opportunities through live events, ghost kitchen
+                operations, and culinary business development.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-gray-950 p-8 text-white">
+              <p className="text-2xl sm:text-3xl font-bold tracking-tight">
+                Launch<span className="text-primary-bright">.</span> Grow
+                <span className="text-primary-bright">.</span> Scale
+                <span className="text-primary-bright">.</span>
+              </p>
+              <p className="mt-2 text-gray-300">
+                Learn the Business. Launch your Future!
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://iitnj.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-primary text-white hover:bg-primary-dark"
+                >
+                  Apply Now
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <a
+                  href={BROCHURE_HREF}
+                  download
+                  className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-colors border-2 border-white text-white hover:bg-white hover:text-gray-900"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Brochure
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              {
-                tier: "Starter",
-                desc: "For aspiring food entrepreneurs just getting started.",
-                features: ["Kitchen orientation", "Business basics workshop", "Menu planning support"],
-              },
-              {
-                tier: "Incubator",
-                desc: "For food businesses ready to build and launch.",
-                features: ["Dedicated kitchen hours", "Licensing & compliance help", "Sales channel access", "Branding support"],
-                featured: true,
-              },
-              {
-                tier: "Growth",
-                desc: "For established businesses ready to scale.",
-                features: ["Priority kitchen access", "Catering & event bookings", "Advanced business coaching", "Distribution partnerships"],
-              },
-            ].map(({ tier, desc, features, featured }) => (
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {tracks.map(({ title, image }, i) => (
               <div
-                key={tier}
-                className={`rounded-2xl p-8 transition-all ${
-                  featured
-                    ? "bg-primary text-white ring-2 ring-primary shadow-xl"
-                    : "bg-white border border-gray-200 hover:shadow-md hover:-translate-y-1"
-                }`}
+                key={title}
+                className="group relative aspect-16/9 md:aspect-3/2 lg:aspect-16/10 overflow-hidden rounded-2xl bg-gray-900"
               >
-                <h3 className={`text-xl font-bold ${featured ? "" : "text-gray-900"}`}>{tier}</h3>
-                <p className={`mt-2 text-sm ${featured ? "text-white/80" : "text-gray-600"}`}>{desc}</p>
-                <ul className="mt-6 space-y-2">
-                  {features.map((f) => (
-                    <li key={f} className={`text-sm flex items-start gap-2 ${featured ? "text-white/90" : "text-gray-700"}`}>
-                      <span className={`mt-1 h-1.5 w-1.5 rounded-full shrink-0 ${featured ? "bg-white" : "bg-primary"}`} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
+                <Image
+                  src={image}
+                  alt={title}
+                  fill
+                  className="object-cover transition-[scale] duration-700 group-hover:scale-105"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <span className="text-xs font-bold tracking-widest text-primary-bright">
+                    0{i + 1}
+                  </span>
+                  <h3 className="mt-1 flex items-center gap-2 text-xl font-bold text-white">
+                    <ArrowRight className="h-5 w-5 text-primary-bright shrink-0" />
+                    {title}
+                  </h3>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl bg-gray-50 border border-gray-100 p-8 sm:p-10">
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Program Highlights
+              </h3>
+              <p className="text-sm text-gray-500">
+                {highlights.length} ways we help you build your food business
+              </p>
+            </div>
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-gray-700">
+                  <span className="mt-0.5 w-6 h-6 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                    <Check className="h-3.5 w-3.5 text-primary" />
+                  </span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
