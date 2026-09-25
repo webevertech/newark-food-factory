@@ -17,6 +17,7 @@ import Script from "next/script";
 import Image from "next/image";
 import { Button } from "@/components/button";
 import { EventInquiryButton } from "@/components/event-inquiry-button";
+import { EventInsuranceButton } from "@/components/event-insurance-button";
 import { PageHero } from "@/components/page-hero";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -193,6 +194,7 @@ export default async function EventsPage() {
           Book a Tour
         </Button>
         <EventInquiryButton label="Get Pricing" variant="outline-light" />
+        <EventInsuranceButton />
       </PageHero>
 
       {/* HERO SUPPORTING + PRIMARY CTAS */}
