@@ -485,11 +485,11 @@ export default function KitchenMembershipPage() {
                 icon: Package,
                 title: "Storage and Operations",
                 items: [
-                  "Dry, cold, and freezer storage",
+                  "Dry, cold, and freezer storage (No Overnight Storage)",
                   "Inventory labeling support",
                   "Online booking system",
                   "Compliance tracking with renewal reminders",
-                  "24/7 access for paid tiers",
+                  "Access available based on pre-scheduled hours that are confirmed and approved by NFF",
                 ],
               },
               {
