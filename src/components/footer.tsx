@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { MENU_PDF_HREF } from "@/lib/site";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -24,6 +25,7 @@ const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Start a Food Business", href: "/start-a-food-business" },
   { name: "Daily Meals", href: "/meals" },
+  { name: "Menu", href: MENU_PDF_HREF, external: true },
   { name: "Event Space", href: "/events" },
   { name: "Kitchen Membership", href: "/kitchen-membership" },
   { name: "Partners", href: "/partners" },
@@ -86,9 +88,15 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="text-sm hover:text-white transition-colors">
-                    {l.name}
-                  </Link>
+                  {"external" in l ? (
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">
+                      {l.name}
+                    </a>
+                  ) : (
+                    <Link href={l.href} className="text-sm hover:text-white transition-colors">
+                      {l.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

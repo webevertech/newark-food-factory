@@ -7,12 +7,14 @@ export function Button({
   variant = "primary",
   className = "",
   disabled = false,
+  external = false,
 }: {
   href: string;
   children: ReactNode;
   variant?: "primary" | "outline" | "outline-light" | "white";
   className?: string;
   disabled?: boolean;
+  external?: boolean;
 }) {
   const base = "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors";
   const variants = {
@@ -31,6 +33,19 @@ export function Button({
       >
         {children}
       </span>
+    );
+  }
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${base} ${variants[variant]} ${className}`}
+      >
+        {children}
+      </a>
     );
   }
 

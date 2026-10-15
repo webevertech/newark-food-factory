@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/button";
 import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { MENU_PDF_HREF } from "@/lib/site";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -86,9 +87,14 @@ export default function MealsPage() {
                   </li>
                 ))}
               </ul>
-              <Button href="/contact" className="mt-8" disabled>
-                Order Now — Coming Soon
-              </Button>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button href={MENU_PDF_HREF} external>
+                  View Full Menu
+                </Button>
+                <Button href="/contact" disabled>
+                  Order Now — Coming Soon
+                </Button>
+              </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-72 lg:h-96">
               <Image
@@ -150,7 +156,10 @@ export default function MealsPage() {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Button href={MENU_PDF_HREF} external>
+              View Full Menu
+            </Button>
             <Button href="/contact" disabled>
               Order Now — Coming Soon
             </Button>

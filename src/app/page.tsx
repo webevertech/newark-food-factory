@@ -21,6 +21,7 @@ import { Button } from "@/components/button";
 import { CTASection } from "@/components/cta-section";
 import Image from "next/image";
 import Link from "next/link";
+import { MENU_PDF_HREF } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -374,7 +375,7 @@ export default function HomePage() {
             ))}
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/meals">View Menu</Button>
+            <Button href={MENU_PDF_HREF} external>View Menu</Button>
             <Button href="/meals#order" variant="outline-light" disabled>
               Order Now — Coming Soon
             </Button>

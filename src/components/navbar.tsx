@@ -10,6 +10,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import { MENU_PDF_HREF } from "@/lib/site";
 
 function normalize(path: string) {
   if (!path) return "/";
@@ -125,6 +126,15 @@ export function Navbar() {
                 */}
 
                 {/* <DesktopLink href="/meals">Meals</DesktopLink> */}
+                <a
+                  href={MENU_PDF_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative px-2.5 py-2 text-[13px] font-medium transition-colors duration-150 whitespace-nowrap group text-gray-600 hover:text-gray-900"
+                >
+                  Menu
+                  <span className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full origin-left transition-[scale] duration-200 ease-out motion-reduce:transition-none scale-x-0 group-hover:scale-x-100" />
+                </a>
                 <DesktopLink href="/events">Events</DesktopLink>
                 <DesktopLink href="/kitchen-membership">Kitchen Membership</DesktopLink>
                 {/* <DesktopLink href="/food-entrepreneurs">Food Entrepreneurs</DesktopLink> */}
@@ -185,6 +195,15 @@ export function Navbar() {
             */}
 
             {/* <MobileLink href="/meals" onClick={closeMobile}>Meals</MobileLink> */}
+            <a
+              href={MENU_PDF_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-gray-50 hover:text-primary text-gray-800"
+              onClick={closeMobile}
+            >
+              Menu
+            </a>
             <MobileLink href="/events" onClick={closeMobile}>Events</MobileLink>
             <MobileLink href="/kitchen-membership" onClick={closeMobile}>Kitchen Membership</MobileLink>
             {/* <MobileLink href="/food-entrepreneurs" onClick={closeMobile}>Food Entrepreneurs</MobileLink> */}

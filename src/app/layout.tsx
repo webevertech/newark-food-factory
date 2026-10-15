@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatLauncher } from "@/components/chat-launcher";
+import { MENU_PDF_HREF } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,7 +90,7 @@ const jsonLd = [
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card",
     servesCuisine: ["American", "Multi-Cuisine"],
-    hasMenu: `${BASE_URL}/meals/`,
+    hasMenu: `${BASE_URL}${MENU_PDF_HREF}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "145 Court Street",
