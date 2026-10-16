@@ -65,10 +65,21 @@ export default function HomePage() {
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 {[
-                  { label: "View Menu", href: MENU_PDF_HREF, icon: UtensilsCrossed },
+                  // Disabled until the online ordering link is ready.
+                  { label: "Order Meals — Coming Soon", href: "", icon: UtensilsCrossed, disabled: true },
                   { label: "Book a Tour", href: "/contact#tour", icon: Warehouse },
                   { label: "Book an Event", href: "/events#inquiry", icon: CalendarDays },
-                ].map(({ label, href, icon: Icon }) => (
+                ].map(({ label, href, icon: Icon, disabled }) =>
+                  disabled ? (
+                    <span
+                      key={label}
+                      aria-disabled="true"
+                      className="flex items-center gap-2 rounded-lg bg-white/[0.04] border border-white/10 px-4 py-2.5 text-sm font-medium text-white/45 cursor-not-allowed select-none"
+                    >
+                      <Icon className="h-4 w-4 text-white/35" />
+                      {label}
+                    </span>
+                  ) : (
                   <Link
                     key={label}
                     href={href}
@@ -77,7 +88,8 @@ export default function HomePage() {
                     <Icon className="h-4 w-4 text-primary-bright" />
                     {label}
                   </Link>
-                ))}
+                  )
+                )}
               </div>
 
               {/* Stat cards */}
