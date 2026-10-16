@@ -65,7 +65,7 @@ export default function HomePage() {
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 {[
-                  { label: "Order Meals", href: "/meals", icon: UtensilsCrossed },
+                  { label: "View Menu", href: MENU_PDF_HREF, icon: UtensilsCrossed },
                   { label: "Book a Tour", href: "/contact#tour", icon: Warehouse },
                   { label: "Book an Event", href: "/events#inquiry", icon: CalendarDays },
                 ].map(({ label, href, icon: Icon }) => (
@@ -175,7 +175,7 @@ export default function HomePage() {
               {
                 icon: UtensilsCrossed,
                 title: "Daily Meals",
-                desc: "Breakfast, lunch & dinner, pickup or delivery",
+                desc: "Signature Sandwiches, Factory Bowls, Wings, pickup or delivery",
               },
               {
                 icon: CalendarDays,
@@ -360,7 +360,7 @@ export default function HomePage() {
           <ul className="mt-8 space-y-3">
             {[
               { icon: Clock, text: "7-day rotating menu" },
-              { icon: UtensilsCrossed, text: "Breakfast, lunch & dinner" },
+              { icon: UtensilsCrossed, text: "Signature Sandwiches, Factory Bowls, Wings" },
               { icon: Truck, text: "Pickup & delivery available" },
             ].map(({ icon: Icon, text }) => (
               <li
@@ -376,7 +376,7 @@ export default function HomePage() {
           </ul>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href={MENU_PDF_HREF} external>View Menu</Button>
-            <Button href="/meals#order" variant="outline-light" disabled>
+            <Button href="/contact" variant="outline-light" disabled>
               Order Now — Coming Soon
             </Button>
           </div>

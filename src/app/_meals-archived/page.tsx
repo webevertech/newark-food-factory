@@ -14,30 +14,42 @@ import { MENU_PDF_HREF } from "@/lib/site";
 import Image from "next/image";
 import { useState } from "react";
 
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const categories = ["Signature Sandwiches", "Factory Bowls", "Wings"] as const;
 
-const menus: Record<
-  string,
-  { breakfast: string; lunch: string; dinner: string }
-> = {
-  Mon: { breakfast: "Scrambled Eggs & Toast", lunch: "Jerk Chicken Bowl", dinner: "Pasta Primavera" },
-  Tue: { breakfast: "Pancakes & Fruit", lunch: "BBQ Pulled Pork Sandwich", dinner: "Grilled Salmon" },
-  Wed: { breakfast: "Oatmeal & Berries", lunch: "Chicken Caesar Wrap", dinner: "Beef Stir Fry" },
-  Thu: { breakfast: "Breakfast Burrito", lunch: "Shrimp Tacos", dinner: "Roasted Chicken" },
-  Fri: { breakfast: "French Toast", lunch: "Fish & Chips", dinner: "Curry Bowl" },
-  Sat: { breakfast: "Eggs Benedict", lunch: "Burger & Fries", dinner: "Chef's Special" },
-  Sun: { breakfast: "Brunch Platter", lunch: "Soul Food Plate", dinner: "Sunday Roast" },
+type Category = (typeof categories)[number];
+
+const menus: Record<Category, { name: string; desc: string; price: string }[]> = {
+  "Signature Sandwiches": [
+    { name: "Brick Press", desc: "Steak, grilled onions, American cheese, and crispy fries pressed on a toasted roll.", price: "$12" },
+    { name: "Newark Cubano", desc: "Mojo pork, sliced ham, Swiss cheese, pickles, and mustard pressed on Cuban-style bread.", price: "$12" },
+    { name: "Iron Chicken", desc: "Peri-peri chicken, pepper jack, garlic aioli, lettuce, and tomato on a toasted roll.", price: "$12" },
+    { name: "Factory Shawarma", desc: "Chicken shawarma, garlic sauce, lettuce, and tomato wrapped in warm flatbread.", price: "$11" },
+    { name: "Brickcity Burger", desc: "Griddled beef burger, American cheese, lettuce, tomato, onion, and house sauce on a toasted bun.", price: "$13" },
+  ],
+  "Factory Bowls": [
+    { name: "Fire-grilled Chicken Bowl", desc: "Grilled chicken with yellow rice, beans, corn medley, pickled onions and fresh herbs.", price: "$15" },
+    { name: "Salmon Bowl", desc: "Grilled salmon with yellow rice, beans, corn medley, pickled onions and fresh herbs.", price: "$17" },
+    { name: "Beef Bowl", desc: "Beef with yellow rice, beans, corn medley, pickled onions and fresh herbs.", price: "$15" },
+    { name: "Vegetable Bowl", desc: "Roasted vegetables with yellow rice, beans, corn medley, pickled onions and fresh herbs.", price: "$13" },
+  ],
+  Wings: [
+    { name: "Regular Wings", desc: "Crispy chicken wings tossed in house sauce.", price: "$12" },
+    { name: "Alabama White Wings", desc: "Crispy wings tossed in tangy Alabama white sauce.", price: "$12" },
+    { name: "Plain Wings", desc: "Crispy chicken wings served plain.", price: "$10" },
+  ],
 };
 
 export default function MealsPage() {
-  const [activeDay, setActiveDay] = useState("Mon");
+  const [activeCategory, setActiveCategory] = useState<Category>(
+    "Signature Sandwiches",
+  );
 
   return (
     <>
       <PageHero
         icon={UtensilsCrossed}
         title="Daily Meals"
-        subtitle="Fresh chef-prepared breakfast, lunch, and dinner made daily. Pickup or delivery."
+        subtitle="Signature sandwiches, factory bowls & wings, chef-prepared fresh daily. Pickup or delivery."
         image="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=90"
         imageAlt="Beautifully plated fresh meal"
       />
@@ -66,13 +78,13 @@ export default function MealsPage() {
                 Fresh Meals. Every Day.
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed max-w-md">
-                Chef-prepared breakfast, lunch, and dinner made fresh daily with
+                Chef-prepared signature sandwiches, factory bowls, and wings made fresh daily with
                 a rotating weekly menu.
               </p>
               <ul className="mt-8 space-y-4">
                 {[
                   { icon: CalendarDays, text: "7-day rotating menu" },
-                  { icon: Clock, text: "Breakfast, lunch & dinner" },
+                  { icon: Clock, text: "Signature Sandwiches, Factory Bowls, Wings" },
                   { icon: MapPin, text: "Pickup available" },
                   { icon: Truck, text: "Delivery available" },
                 ].map(({ icon: Icon, text }) => (
@@ -117,40 +129,43 @@ export default function MealsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-bright mb-3">
-              Weekly Menu
+              Our Menu
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              See What&apos;s Cooking This Week
+              See What&apos;s Cooking
             </h2>
           </div>
 
           <div className="flex justify-center gap-2 mb-10 flex-wrap">
-            {days.map((day) => (
+            {categories.map((category) => (
               <button
-                key={day}
-                onClick={() => setActiveDay(day)}
+                key={category}
+                onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  activeDay === day
+                  activeCategory === category
                     ? "bg-primary text-white"
                     : "bg-white/10 text-gray-300 hover:bg-white/15"
                 }`}
               >
-                {day}
+                {category}
               </button>
             ))}
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {(["breakfast", "lunch", "dinner"] as const).map((meal) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {menus[activeCategory].map((item) => (
               <div
-                key={meal}
-                className="rounded-xl bg-white/[0.05] border border-white/10 p-6 text-center"
+                key={item.name}
+                className="rounded-xl bg-white/[0.05] border border-white/10 p-6"
               >
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary-bright mb-2">
-                  {meal}
-                </p>
-                <p className="font-medium text-white">
-                  {menus[activeDay][meal]}
+                <div className="flex items-baseline justify-between gap-4 mb-2">
+                  <p className="font-semibold text-white">{item.name}</p>
+                  <p className="text-sm font-semibold text-primary-bright shrink-0">
+                    {item.price}
+                  </p>
+                </div>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {item.desc}
                 </p>
               </div>
             ))}

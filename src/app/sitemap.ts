@@ -21,11 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       changeFrequency: "monthly" as const,
     },
-    {
-      path: "/meals/",
-      priority: 0.8,
-      changeFrequency: "weekly" as const,
-    },
+    // /meals/ is archived in src/app/_meals-archived (not routed)
     {
       path: "/events/",
       priority: 0.8,

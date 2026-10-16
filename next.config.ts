@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   compress: true,
   poweredByHeader: false,
+  // /meals is archived (src/app/_meals-archived); send old links home.
+  async redirects() {
+    return [{ source: "/meals", destination: "/", permanent: false }];
+  },
   async headers() {
     return [
       {

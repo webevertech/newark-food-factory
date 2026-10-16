@@ -155,7 +155,7 @@ const jsonLd = [
             "@type": "Service",
             name: "Daily Meals & Catering",
             description: "Fresh daily meals for pickup and delivery, plus full-service catering for events in Newark, NJ.",
-            url: `${BASE_URL}/meals/`,
+            url: `${BASE_URL}/nff-menu.pdf`,
           },
         },
         {

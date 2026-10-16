@@ -118,7 +118,7 @@ export default function WorkBasedLearningPage() {
               {
                 icon: UtensilsCrossed,
                 title: "Daily Meals",
-                desc: "Prepare breakfast, lunch, and dinner for pickup and delivery, real customers, real deadlines.",
+                desc: "Prepare signature sandwiches, factory bowls, and wings for pickup and delivery, real customers, real deadlines.",
               },
               {
                 icon: CalendarDays,

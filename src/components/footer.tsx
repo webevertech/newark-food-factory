@@ -24,7 +24,7 @@ function FacebookIcon({ className }: { className?: string }) {
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Start a Food Business", href: "/start-a-food-business" },
-  { name: "Daily Meals", href: "/meals" },
+  // { name: "Daily Meals", href: "/meals" },
   { name: "Menu", href: MENU_PDF_HREF, external: true },
   { name: "Event Space", href: "/events" },
   { name: "Kitchen Membership", href: "/kitchen-membership" },
