@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import Image from "next/image";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, serializeJsonLd } from "@/lib/seo";
 import { PricingTabs } from "@/components/pricing-tabs";
 
 export const metadata = createMetadata({
@@ -114,7 +114,7 @@ export default function KitchenMembershipPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqSchema) }}
       />
 
       {/* ════════════════════════════════════════════════════════════════

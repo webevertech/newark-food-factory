@@ -36,6 +36,12 @@ export function createMetadata({
   };
 }
 
+// JSON.stringify leaves "<" alone, so a "</script>" inside any value would end
+// the tag early. Escape it before handing the string to dangerouslySetInnerHTML.
+export function serializeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 export function breadcrumbJsonLd(
   items: { name: string; path: string }[],
 ) {

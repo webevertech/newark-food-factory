@@ -13,7 +13,7 @@ import { Button } from "@/components/button";
 import { CTASection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import Image from "next/image";
-import { createMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { createMetadata, breadcrumbJsonLd, serializeJsonLd } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Food Truck Membership",
@@ -31,7 +31,7 @@ const breadcrumb = breadcrumbJsonLd([
 export default function FoodTruckMembershipPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumb) }} />
       <PageHero
         icon={Truck}
         title="Your Commissary Kitchen + Business Growth Partner"
