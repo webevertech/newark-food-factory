@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatLauncher } from "@/components/chat-launcher";
+import { MetaPixel } from "@/components/meta-pixel";
 import { MENU_PDF_HREF } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/seo";
 
@@ -240,6 +241,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ChatLauncher />
+        <MetaPixel />
       </body>
     </html>
   );
