@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ChatLauncher } from "@/components/chat-launcher";
 import { MetaPixel } from "@/components/meta-pixel";
+import { UtmPersist } from "@/components/utm-persist";
 import { MENU_PDF_HREF } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/seo";
 
@@ -242,6 +243,7 @@ export default function RootLayout({
         <Footer />
         <ChatLauncher />
         <MetaPixel />
+        <UtmPersist />
       </body>
     </html>
   );
